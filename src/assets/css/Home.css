@@ -427,4 +427,10 @@ form {
     .name {
         text-align: start;
     }
+
+    /*form*/
+    .box-form {
+        width: 70%;
+        margin: 1rem auto;
+    }
 }

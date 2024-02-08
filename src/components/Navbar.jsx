@@ -63,11 +63,10 @@ function DrawerAppBar(props) {
                 <Toolbar>
                     <IconButton onClick={handleDrawerToggle} color="inherit" aria-label="open drawer" edge="start" sx={{ mr: 2, display: { sm: "none" } }}>
                         <MenuIcon />
-                        <button className="like-text" onClick={handleLikeClick}>
-                            {" "}
-                            ME GUSTA <FavoriteIcon sx={{ color: "tomato", width: "18px" }} />
+                        <button onClick={handleLikeClick} className={liked ? "not-like-text " : "like-text"}>
+                            ME GUSTA <FavoriteIcon sx={{ color: "tomato", width: "18px", marginRight: "10px" }} />
+                            {liked ? "Te gusta esta página!" : ""}
                         </button>
-                        {liked && <p>Te ha gustado esta página!</p>}
                     </IconButton>
                     <Typography
                         variant="h6"
