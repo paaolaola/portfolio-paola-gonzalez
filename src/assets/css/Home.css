@@ -1,0 +1,386 @@
+/*navbar*/
+.logo-text {
+    display: flex;
+    padding: 1rem;
+}
+.like-text {
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    color: #ffddf2;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    margin-left: 2rem;
+    background-color: transparent;
+    border: none;
+}
+.not-like-text {
+    color: #ffddf2;
+    background-color: transparent;
+    border: none;
+    text-shadow: 0px 0px 8px #ffddf2;
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    margin-left: 2rem;
+}
+
+.like-text:hover {
+    border-color: #ffbd59;
+    text-shadow: 0px 0px 8px #ffbd59;
+    cursor: pointer;
+}
+
+.like-message {
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    color: #ffbd59;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    margin-left: 2rem;
+    background-color: transparent;
+    border: none;
+}
+/*header*/
+.box-perfil {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 200px;
+}
+.names-perfil {
+    display: flex;
+    flex-direction: column;
+}
+
+.names-perfil h1 {
+    margin: 0;
+    line-height: 0.9;
+}
+
+.title-name,
+.title-last-name {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 180px;
+    font-weight: 500;
+    color: #ffbd59;
+    text-shadow: 0px 0px 6px #ffbd59;
+}
+
+.image {
+    width: 380px;
+    border-radius: 50%;
+    border: 1.5px solid #545454;
+    box-shadow: 0 0 20px #545454;
+}
+
+.image-perfil {
+    display: flex;
+    align-items: center;
+}
+
+.under-title {
+    letter-spacing: 5px;
+    font-size: 32px;
+    font-weight: 100;
+    text-align: center;
+    color: #b55fcc;
+    text-shadow: 2px 2px 2px #272727;
+    margin: 0;
+}
+.carousel-caption p,
+h5 {
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 0px;
+    color: #ffddf2;
+    text-shadow: 0px 0px 7px #b55fcc;
+}
+
+/*sections*/
+.box-content {
+    display: flex;
+    margin: 20px;
+}
+.box-container {
+    width: 70%;
+    margin: auto;
+    text-align: justify;
+    padding: 3rem;
+}
+
+.box-text {
+    margin: 5rem 0;
+    padding: 3rem;
+    text-align: justify;
+    background-color: rgba(0, 0, 0, 0.15);
+    border-radius: 30px;
+    border: 1px solid #ff66c4;
+    box-shadow: 0px 0px 20px #ffbd59;
+}
+
+.title {
+    font-weight: 100;
+    font-size: 30px;
+    color: #fd81ce;
+    text-shadow: 0px 0px 8px #ff66c4;
+    letter-spacing: 5px;
+    margin-bottom: 2rem;
+}
+
+.text {
+    font-size: 15px;
+    font-weight: 400;
+    color: #ffbd59;
+    text-shadow: 0px 0px 8px #ffbd59;
+    margin-bottom: 4rem;
+}
+
+.btn-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    width: 70%;
+    margin: 1rem auto;
+    padding: 1rem 3rem;
+    border-radius: 20px;
+    border: 1px solid #ff66c4;
+    box-shadow: 0px 0px 30px #fd81ce;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.btn-links:hover {
+    border-color: #ffbd59;
+    box-shadow: 0px 0px 8px #ffbd59;
+}
+
+.btn-cv {
+    background-color: #ffbd59;
+    color: #545454;
+    height: 40px;
+    width: 100px;
+    line-height: 40px;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 15px;
+    border-radius: 10px;
+    border-style: none;
+    cursor: pointer;
+    box-shadow: 0px 0px 5px #545454;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    text-align: center;
+}
+.btn-cv:hover {
+    border-color: #ffbd59;
+    box-shadow: 0px 0px 8px #ffbd59;
+}
+
+/*section studies*/
+.name {
+    font-size: 15px;
+    font-weight: 800;
+    color: #ffbd59;
+    text-shadow: 0px 0px 8px #ffbd59;
+    margin-top: 2rem;
+}
+.date {
+    font-size: 14px;
+    font-weight: 100;
+    font-style: italic;
+    color: #ffbd59;
+}
+.info {
+    font-size: 15px;
+    font-weight: 400;
+    color: #545454;
+    text-shadow: 0px 0px 18px #545454;
+}
+.info-2 {
+    display: flex;
+}
+
+.btn-more {
+    background-color: transparent;
+    border-style: none;
+    color: #545454;
+    font-size: 13px;
+    font-weight: 400;
+    margin-left: 2rem;
+    text-decoration: underline;
+}
+
+.btn-more:hover {
+    color: #fd81ce;
+    text-shadow: 0 0 10px #ff66c4;
+    text-decoration: underline;
+}
+
+/*section hobbies*/
+.carousel-item img {
+    width: 450px;
+    height: 450px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+    border: 1.5px solid #545454;
+    box-shadow: 0 0 6px #545454;
+}
+
+.carousel-caption {
+    height: 25rem;
+}
+
+/*section stack*/
+.stack-image {
+    width: 100%;
+}
+.box-stack {
+    display: flex;
+    justify-content: center;
+}
+/*footer*/
+.footer {
+    display: flex;
+    justify-content: center;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: #ffbd59;
+    letter-spacing: 1px;
+}
+
+/*Form*/
+form {
+    width: 50%;
+    margin: auto;
+}
+.form-btn {
+    background: #ffddf2;
+    border-style: none;
+    border-radius: 10px;
+    width: 100px;
+    height: 40px;
+}
+
+.box-form {
+    width: 50%;
+    min-height: 70vh;
+    margin: auto;
+    padding: 3rem;
+    text-align: justify;
+    background-color: rgba(0, 0, 0, 0.15);
+    border-radius: 30px;
+    border: 1px solid #ff66c4;
+    box-shadow: 0px 0px 20px #ffbd59;
+}
+
+/*responsive*/
+@media screen and (min-width: 996px) and (max-width: 1080px) {
+    /*section perfil*/
+    .image {
+        width: 280px;
+    }
+    .title-name,
+    .title-last-name {
+        font-size: 150px;
+    }
+    .under-title {
+        font-size: 25px;
+    }
+    .btn-links {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 996px) {
+    /*section navbar*/
+    .logo-text {
+        font-size: 25px;
+        width: 250px;
+    }
+    .like-text {
+        font-family: "Montserrat", sans-serif;
+        font-size: 12px;
+        font-weight: 600;
+        color: #ffddf2;
+        transition: border-color 0.3s, box-shadow 0.3s;
+        margin-left: 2rem;
+        background-color: transparent;
+        border: none;
+    }
+    .not-like-text {
+        font-size: 10px;
+    }
+
+    /*section perfil*/
+    .image {
+        width: 240px;
+    }
+    .title-name,
+    .title-last-name {
+        font-size: 120px;
+    }
+    .under-title {
+        font-size: 18px;
+    }
+    .btn-links {
+        width: 100%;
+    }
+
+    /*section hobbies*/
+    .carousel-item img {
+        width: 320px;
+        height: 320px;
+    }
+}
+@media screen and (min-width: 320px) and (max-width: 767px) {
+    /*navbar*/
+    .logo-text {
+        font-size: 25px;
+        width: 100px;
+    }
+    .like-text {
+        font-family: "Montserrat", sans-serif;
+        font-size: 12px;
+        font-weight: 600;
+        color: #ffddf2;
+        transition: border-color 0.3s, box-shadow 0.3s;
+        margin-left: 2rem;
+        background-color: transparent;
+        border: none;
+    }
+    .not-like-text {
+        font-size: 10px;
+    }
+
+    /*section perfil*/
+    .box-perfil {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        margin-top: 20px;
+    }
+
+    .title-name,
+    .title-last-name {
+        font-size: 120px;
+    }
+
+    .image {
+        width: 300px;
+    }
+
+    .under-title {
+        font-size: 20px;
+    }
+
+    /*box section*/
+    .box-container {
+        width: 100%;
+    }
+    .box-text {
+        margin: 0.5rem;
+        padding: 1.5rem;
+    }
+}
