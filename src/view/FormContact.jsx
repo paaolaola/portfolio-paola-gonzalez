@@ -34,9 +34,9 @@ function FormContact() {
 
     return (
         <div className="box-form">
+            <h1 className="title-form">Formulario de contacto</h1>
             <Form onSubmit={handleSubmit}>
                 <Form.Group className="mb-3" controlId="formNombre">
-                    <Form.Label>Nombre</Form.Label>
                     <Form.Control
                         type="text"
                         placeholder="Nombre Apellido"
@@ -51,7 +51,6 @@ function FormContact() {
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="formEmail">
-                    <Form.Label>Correo Electrónico</Form.Label>
                     <Form.Control
                         type="email"
                         placeholder="nombre@email.com"
@@ -66,9 +65,9 @@ function FormContact() {
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="formMensaje">
-                    <Form.Label>Mensaje</Form.Label>
                     <Form.Control
                         as="textarea"
+                        placeholder="Deja tu mensaje"
                         rows={3}
                         value={mensaje}
                         onChange={(e) => {

@@ -251,6 +251,16 @@ h5 {
 }
 
 /*Form*/
+.title-form {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 50px;
+    font-weight: 500;
+    color: #ffbd59;
+    text-shadow: 0px 0px 6px #ffbd59;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
 form {
     width: 50%;
     margin: auto;
@@ -328,13 +338,19 @@ form {
         width: 100%;
     }
 
+    /*box section*/
+    .box-container {
+        width: 100%;
+        margin: 1rem auto;
+    }
+
     /*section hobbies*/
     .carousel-item img {
         width: 320px;
         height: 320px;
     }
 }
-@media screen and (min-width: 320px) and (max-width: 767px) {
+@media screen and (min-width: 320px) and (max-width: 768px) {
     /*navbar*/
     .logo-text {
         font-size: 25px;
@@ -364,23 +380,50 @@ form {
 
     .title-name,
     .title-last-name {
-        font-size: 120px;
+        font-size: 70px;
     }
 
     .image {
-        width: 300px;
+        width: 190px;
+        margin-bottom: 2rem;
     }
 
     .under-title {
-        font-size: 20px;
+        font-size: 11px;
+        font-weight: 400;
+        text-shadow: 0px 1.5px 2px #272727;
+        letter-spacing: 3px;
+    }
+    .btn-links {
+        width: 100%;
+
+        justify-content: space-evenly;
+        align-items: center;
+
+        margin: auto;
+        padding: 0.5rem;
     }
 
     /*box section*/
     .box-container {
         width: 100%;
+        padding: 4rem 1rem;
     }
     .box-text {
-        margin: 0.5rem;
-        padding: 1.5rem;
+        margin: 1rem;
+        padding: 2rem;
+    }
+    .title {
+        text-align: center;
+    }
+
+    /*carousel*/
+    .carousel-item img {
+        width: 220px;
+        height: 220px;
+    }
+    /*section studies*/
+    .name {
+        text-align: start;
     }
 }
