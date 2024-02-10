@@ -18,8 +18,10 @@ import FavoriteIcon from "@mui/icons-material/Favorite";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-const drawerWidth = 240;
-const navItems = ["sobre mi", "hobbies", "stack", "estudios", "contacto"];
+const drawerWidth = 100;
+const drawerHeight = 180;
+const drawerColor = "linear-gradient( #ff66c4, #cb6ce6, #5170ff)";
+const navItems = ["inicio", "contacto"];
 
 function DrawerAppBar(props) {
     const { window } = props;
@@ -37,18 +39,67 @@ function DrawerAppBar(props) {
 
     const drawer = (
         <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
-            <Typography variant="h6" sx={{ my: 2 }}>
-                PG .
-            </Typography>
+            <Link to="/" style={{ textDecoration: "none" }}>
+                <Typography
+                    variant="h6"
+                    sx={{
+                        color: "#ffbd59",
+                        fontFamily: "Bebas Neue",
+                        fontSize: {
+                            xs: "25px",
+                            sm: "10px",
+                            md: "14px",
+                            lg: "14px",
+                        },
+                        fontWeight: "800",
+                        "&:hover": { textShadow: "0 0 10px #ffbd59" },
+                    }}
+                >
+                    {" "}
+                    PG .
+                </Typography>
+            </Link>
 
             <Divider />
             <List>
+                <Button
+                    sx={{
+                        color: "#ffbd59",
+                        fontFamily: "Montserrat",
+
+                        fontWeight: "800",
+                        "&:hover": { textShadow: "0 0 10px #ffbd59" },
+                        fontSize: {
+                            xs: "9px",
+                            sm: "10px",
+                            md: "14px",
+                            lg: "14px",
+                        },
+                        textAlign: "center",
+                    }}
+                ></Button>
+
                 {navItems.map((item) => (
-                    <ListItem key={item} disablePadding>
-                        <ListItemButton sx={{ textAlign: "center" }}>
-                            <ListItemText primary={item} />
-                        </ListItemButton>
-                    </ListItem>
+                    <Link to="/contacto" style={{ textDecoration: "none" }}>
+                        <ListItem key={item} disablePadding>
+                            <ListItemButton
+                                sx={{
+                                    color: "#ffbd59",
+                                    fontFamily: "Montserrat",
+                                    fontSize: {
+                                        xs: "9px",
+                                        sm: "10px",
+                                        md: "14px",
+                                        lg: "14px",
+                                    },
+                                    fontWeight: "800",
+                                    "&:hover": { textShadow: "0 0 10px #ffbd59" },
+                                }}
+                            >
+                                <ListItemText primary={item} />
+                            </ListItemButton>
+                        </ListItem>
+                    </Link>
                 ))}
             </List>
         </Box>
@@ -63,11 +114,8 @@ function DrawerAppBar(props) {
                 <Toolbar>
                     <IconButton onClick={handleDrawerToggle} color="inherit" aria-label="open drawer" edge="start" sx={{ mr: 2, display: { sm: "none" } }}>
                         <MenuIcon />
-                        <button onClick={handleLikeClick} className={liked ? "not-like-text " : "like-text"}>
-                            ME GUSTA <FavoriteIcon sx={{ color: "tomato", width: "18px", marginRight: "10px" }} />
-                            {liked ? "Te gusta esta página!" : ""}
-                        </button>
                     </IconButton>
+
                     <Typography
                         variant="h6"
                         component="div"
@@ -80,14 +128,14 @@ function DrawerAppBar(props) {
                             fontSize: "35px",
                         }}
                     >
-                        <div className="logo-text">
-                            PG .
-                            <button onClick={handleLikeClick} className={liked ? "not-like-text " : "like-text"}>
-                                ME GUSTA <FavoriteIcon sx={{ color: "tomato", width: "18px", marginRight: "10px" }} />
-                                {liked ? "Te gusta esta página!" : ""}
-                            </button>
-                        </div>
+                        <Link to="/" style={{ textDecoration: "none" }}>
+                            <div className="logo-text">PG .</div>
+                        </Link>
                     </Typography>
+                    <button onClick={handleLikeClick} className={liked ? "not-like-text " : "like-text"}>
+                        ME GUSTA <FavoriteIcon sx={{ color: "tomato", width: "18px", marginRight: "10px" }} />
+                        {liked ? "Te gusta esta página!" : ""}
+                    </button>
 
                     <Box sx={{ display: { xs: "none", sm: "block" } }}>
                         <Link to="/" style={{ textDecoration: "none" }}>
@@ -143,8 +191,8 @@ function DrawerAppBar(props) {
                         keepMounted: true,
                     }}
                     sx={{
-                        display: { xs: "block", sm: "none" },
-                        "& .MuiDrawer-paper": { boxSizing: "border-box", width: drawerWidth },
+                        display: { xs: "block", sm: "none", fontFamily: "Montserrat" },
+                        "& .MuiDrawer-paper": { boxSizing: "border-box", width: drawerWidth, height: drawerHeight, background: drawerColor },
                     }}
                 >
                     {drawer}

@@ -2,6 +2,7 @@
 .logo-text {
     display: flex;
     padding: 1rem;
+    color: #ffbd59;
 }
 .like-text {
     font-family: "Montserrat", sans-serif;
@@ -189,6 +190,7 @@ h5 {
     font-weight: 100;
     font-style: italic;
     color: #ffbd59;
+    margin-bottom: 0;
 }
 .info {
     font-size: 15px;
@@ -206,7 +208,7 @@ h5 {
     color: #545454;
     font-size: 13px;
     font-weight: 400;
-    margin-left: 2rem;
+    margin: 0 0 0 0rem;
     text-decoration: underline;
 }
 
@@ -259,12 +261,12 @@ h5 {
     color: #ffbd59;
     text-shadow: 0px 0px 6px #ffbd59;
     text-align: center;
-    margin-bottom: 1.5rem;
+    margin: 1.5rem 0;
 }
 
 form {
     width: 50%;
-    margin: auto;
+    padding: 2rem;
 }
 .form-btn {
     background: #ffddf2;
@@ -276,9 +278,9 @@ form {
 
 .box-form {
     width: 50%;
-    min-height: 70vh;
-    margin: auto;
-    padding: 3rem;
+
+    margin: 3rem auto;
+
     text-align: justify;
     background-color: rgba(0, 0, 0, 0.15);
     border-radius: 30px;
@@ -381,16 +383,16 @@ form {
 
     .title-name,
     .title-last-name {
-        font-size: 70px;
+        font-size: 90px;
     }
 
     .image {
-        width: 190px;
+        width: 250px;
         margin-bottom: 2rem;
     }
 
     .under-title {
-        font-size: 11px;
+        font-size: 15px;
         font-weight: 400;
         text-shadow: 0px 1.5px 2px #272727;
         letter-spacing: 3px;
@@ -430,7 +432,7 @@ form {
 
     /*form*/
     .box-form {
-        width: 70%;
-        margin: 1rem auto;
+        width: 90%;
+        padding: 2rem;
     }
 }
