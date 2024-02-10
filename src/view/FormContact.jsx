@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Form from "react-bootstrap/Form";
-import Alert from "react-bootstrap/Alert"; // Importa el componente Alert de react-bootstrap
+import Alert from "react-bootstrap/Alert";
 
 function FormContact() {
     const [nombre, setNombre] = useState("");
@@ -11,7 +11,7 @@ function FormContact() {
     const [emailValido, setEmailValido] = useState(true);
     const [mensajeValido, setMensajeValido] = useState(true);
 
-    const [formularioEnviado, setFormularioEnviado] = useState(false); // Estado para controlar si el formulario ha sido enviado
+    const [formularioEnviado, setFormularioEnviado] = useState(false);
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -31,13 +31,10 @@ function FormContact() {
             return;
         }
 
-        // Aquí puedes enviar el formulario a través de una solicitud HTTP, si lo deseas
-
-        // Reiniciar el estado del formulario
         setNombre("");
         setEmail("");
         setMensaje("");
-        setFormularioEnviado(true); // Actualizar el estado para indicar que el formulario se ha enviado
+        setFormularioEnviado(true);
     };
 
     return (
@@ -45,9 +42,7 @@ function FormContact() {
             <div className="box-form">
                 <h1 className="title-form">Formulario de contacto</h1>
                 <Form onSubmit={handleSubmit} style={{ width: "100%" }}>
-                    {formularioEnviado && (
-                        <Alert variant="success">¡El formulario se envió exitosamente!</Alert> // Mensaje de éxito mostrado si formularioEnviado es true
-                    )}
+                    {formularioEnviado && <Alert variant="success">¡El formulario se envió exitosamente!</Alert>}
 
                     <Form.Group className="mb-3" controlId="formNombre">
                         <Form.Control
