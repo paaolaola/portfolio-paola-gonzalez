@@ -19,9 +19,9 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 
 const drawerWidth = 100;
-const drawerHeight = 180;
+const drawerHeight = 120;
 const drawerColor = "linear-gradient( #ff66c4, #cb6ce6, #5170ff)";
-const navItems = ["inicio", "contacto"];
+const navItems = ["contacto"];
 
 function DrawerAppBar(props) {
     const { window } = props;
@@ -62,45 +62,46 @@ function DrawerAppBar(props) {
 
             <Divider />
             <List>
-                <Button
-                    sx={{
-                        color: "#ffbd59",
-                        fontFamily: "Montserrat",
+                <Link to="/" style={{ textDecoration: "none" }}>
+                    <Button
+                        sx={{
+                            color: "#ffbd59",
+                            fontFamily: "Montserrat",
 
-                        fontWeight: "800",
-                        "&:hover": { textShadow: "0 0 10px #ffbd59" },
-                        fontSize: {
-                            xs: "9px",
-                            sm: "10px",
-                            md: "14px",
-                            lg: "14px",
-                        },
-                        textAlign: "center",
-                    }}
-                ></Button>
+                            fontWeight: "800",
+                            "&:hover": { textShadow: "0 0 10px #ffbd59" },
+                            fontSize: {
+                                xs: "11px",
+                                sm: "11px",
+                                md: "14px",
+                                lg: "14px",
+                            },
+                            textAlign: "center",
+                        }}
+                    >
+                        Inicio
+                    </Button>
+                </Link>
+                <Link to="/contacto" style={{ textDecoration: "none" }}>
+                    <Button
+                        sx={{
+                            color: "#ffbd59",
+                            fontFamily: "Montserrat",
 
-                {navItems.map((item) => (
-                    <Link to="/contacto" style={{ textDecoration: "none" }}>
-                        <ListItem key={item} disablePadding>
-                            <ListItemButton
-                                sx={{
-                                    color: "#ffbd59",
-                                    fontFamily: "Montserrat",
-                                    fontSize: {
-                                        xs: "9px",
-                                        sm: "10px",
-                                        md: "14px",
-                                        lg: "14px",
-                                    },
-                                    fontWeight: "800",
-                                    "&:hover": { textShadow: "0 0 10px #ffbd59" },
-                                }}
-                            >
-                                <ListItemText primary={item} />
-                            </ListItemButton>
-                        </ListItem>
-                    </Link>
-                ))}
+                            fontWeight: "800",
+                            "&:hover": { textShadow: "0 0 10px #ffbd59" },
+                            fontSize: {
+                                xs: "11px",
+                                sm: "11px",
+                                md: "14px",
+                                lg: "14px",
+                            },
+                            textAlign: "center",
+                        }}
+                    >
+                        Contacto
+                    </Button>
+                </Link>
             </List>
         </Box>
     );
