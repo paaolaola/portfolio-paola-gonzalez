@@ -77,8 +77,8 @@ const Home = () => {
                     <h1 className="title">HOBBIES</h1>
                     <p className="text">
                         Me gustan actividades al aire libre como las caminatas al cerro, acampar, los conciertos de música. También visitar exposiciones de
-                        arte. La fotografía análoga es un pasatiempo y a la vez es parte de mi trabajo autoral, así como también crear fotomontajes digitales
-                        con temática onírica.
+                        arte. La fotografía análoga es un pasatiempo y a la vez es parte de mi trabajo autoral, así como también crear fotomontajes digitales de
+                        temática onírica.
                     </p>
                     <div className="carusel">
                         <Carusel />

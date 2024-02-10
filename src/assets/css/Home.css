@@ -274,6 +274,7 @@ form {
     border-radius: 10px;
     width: 100px;
     height: 40px;
+    color: #545454;
 }
 
 .box-form {
@@ -387,7 +388,7 @@ form {
     }
 
     .image {
-        width: 250px;
+        width: 280px;
         margin-bottom: 2rem;
     }
 

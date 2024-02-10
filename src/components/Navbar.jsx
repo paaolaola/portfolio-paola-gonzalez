@@ -7,9 +7,6 @@ import Divider from "@mui/material/Divider";
 import Drawer from "@mui/material/Drawer";
 import IconButton from "@mui/material/IconButton";
 import List from "@mui/material/List";
-import ListItem from "@mui/material/ListItem";
-import ListItemButton from "@mui/material/ListItemButton";
-import ListItemText from "@mui/material/ListItemText";
 import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
@@ -18,7 +15,7 @@ import FavoriteIcon from "@mui/icons-material/Favorite";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-const drawerWidth = 100;
+const drawerWidth = 90;
 const drawerHeight = 120;
 const drawerColor = "linear-gradient( #ff66c4, #cb6ce6, #5170ff)";
 const navItems = ["contacto"];
@@ -51,7 +48,7 @@ function DrawerAppBar(props) {
                             md: "14px",
                             lg: "14px",
                         },
-                        fontWeight: "800",
+                        fontWeight: "600",
                         "&:hover": { textShadow: "0 0 10px #ffbd59" },
                     }}
                 >
@@ -138,7 +135,7 @@ function DrawerAppBar(props) {
                         {liked ? "Te gusta esta página!" : ""}
                     </button>
 
-                    <Box sx={{ display: { xs: "none", sm: "block" } }}>
+                    <Box sx={{ display: { xs: "none", sm: "block" }, marginLeft: "auto" }}>
                         <Link to="/" style={{ textDecoration: "none" }}>
                             <Button
                                 sx={{
