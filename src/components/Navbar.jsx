@@ -65,7 +65,7 @@ function DrawerAppBar(props) {
                             color: "#ffbd59",
                             fontFamily: "Montserrat",
 
-                            fontWeight: "800",
+                            fontWeight: "600",
                             "&:hover": { textShadow: "0 0 10px #ffbd59" },
                             fontSize: {
                                 xs: "11px",
@@ -84,8 +84,7 @@ function DrawerAppBar(props) {
                         sx={{
                             color: "#ffbd59",
                             fontFamily: "Montserrat",
-
-                            fontWeight: "800",
+                            fontWeight: "600",
                             "&:hover": { textShadow: "0 0 10px #ffbd59" },
                             fontSize: {
                                 xs: "11px",
@@ -110,7 +109,7 @@ function DrawerAppBar(props) {
             <CssBaseline />
             <AppBar component="nav" sx={{ backgroundColor: "transparent", boxShadow: "none" }}>
                 <Toolbar>
-                    <IconButton onClick={handleDrawerToggle} color="inherit" aria-label="open drawer" edge="start" sx={{ mr: 2, display: { sm: "none" } }}>
+                    <IconButton onClick={handleDrawerToggle} color="inherit" aria-label="open drawer" edge="start" sx={{ display: { sm: "none" } }}>
                         <MenuIcon />
                     </IconButton>
 
@@ -131,7 +130,7 @@ function DrawerAppBar(props) {
                         </Link>
                     </Typography>
                     <button onClick={handleLikeClick} className={liked ? "not-like-text " : "like-text"}>
-                        ME GUSTA <FavoriteIcon sx={{ color: "tomato", width: "18px", marginRight: "10px" }} />
+                        <FavoriteIcon sx={{ color: "tomato", width: "18px", marginRight: "10px" }} />
                         {liked ? "Te gusta esta página!" : ""}
                     </button>
 

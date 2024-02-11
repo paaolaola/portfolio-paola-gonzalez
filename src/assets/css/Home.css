@@ -4,16 +4,26 @@
     padding: 1rem;
     color: #ffbd59;
 }
+button.like-text {
+    margin: 0;
+}
+
 .like-text {
     font-family: "Montserrat", sans-serif;
     font-size: 12px;
     font-weight: 600;
     color: #ffddf2;
     transition: border-color 0.3s, box-shadow 0.3s;
-    margin-left: 2rem;
     background-color: transparent;
     border: none;
 }
+
+.like-text:hover {
+    border-color: #ffbd59;
+    text-shadow: 0px 0px 8px #ffbd59;
+    cursor: pointer;
+}
+
 .not-like-text {
     color: #ffddf2;
     background-color: transparent;
@@ -22,13 +32,6 @@
     font-family: "Montserrat", sans-serif;
     font-size: 12px;
     font-weight: 600;
-    margin-left: 2rem;
-}
-
-.like-text:hover {
-    border-color: #ffbd59;
-    text-shadow: 0px 0px 8px #ffbd59;
-    cursor: pointer;
 }
 
 .like-message {

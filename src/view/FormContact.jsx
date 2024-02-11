@@ -79,7 +79,7 @@ function FormContact() {
                     <Form.Group className="mb-3" controlId="formMensaje">
                         <Form.Control
                             as="textarea"
-                            placeholder="Deja tu mensaje"
+                            placeholder="Deja tu mensaje aquí"
                             rows={3}
                             value={mensaje}
                             onChange={(e) => {
