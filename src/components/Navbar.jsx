@@ -1,4 +1,5 @@
 import React from "react";
+import "../assets/css/Navbar.css";
 import PropTypes from "prop-types";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
@@ -14,9 +15,10 @@ import Button from "@mui/material/Button";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { animateScroll as scroll } from "react-scroll";
 
 const drawerWidth = 90;
-const drawerHeight = 120;
+const drawerHeight = 150;
 const drawerColor = "linear-gradient( #ff66c4, #cb6ce6, #5170ff)";
 const navItems = ["contacto"];
 
@@ -32,6 +34,10 @@ function DrawerAppBar(props) {
 
     const handleLikeClick = () => {
         setLiked(!liked);
+    };
+
+    const scrollToTop = () => {
+        scroll.scrollToTop();
     };
 
     const drawer = (
@@ -61,6 +67,7 @@ function DrawerAppBar(props) {
             <List>
                 <Link to="/" style={{ textDecoration: "none" }}>
                     <Button
+                        onClick={scrollToTop}
                         sx={{
                             color: "#ffbd59",
                             fontFamily: "Montserrat",
@@ -79,6 +86,28 @@ function DrawerAppBar(props) {
                         Inicio
                     </Button>
                 </Link>
+
+                <Link to="/curriculum" style={{ textDecoration: "none" }}>
+                    <Button
+                        sx={{
+                            color: "#ffbd59",
+                            fontFamily: "Montserrat",
+
+                            fontWeight: "600",
+                            "&:hover": { textShadow: "0 0 10px #ffbd59" },
+                            fontSize: {
+                                xs: "11px",
+                                sm: "11px",
+                                md: "14px",
+                                lg: "14px",
+                            },
+                            textAlign: "center",
+                        }}
+                    >
+                        CV
+                    </Button>
+                </Link>
+
                 <Link to="/contacto" style={{ textDecoration: "none" }}>
                     <Button
                         sx={{
@@ -137,6 +166,7 @@ function DrawerAppBar(props) {
                     <Box sx={{ display: { xs: "none", sm: "block" }, marginLeft: "auto" }}>
                         <Link to="/" style={{ textDecoration: "none" }}>
                             <Button
+                                onClick={scrollToTop}
                                 sx={{
                                     color: "#ffbd59",
                                     fontFamily: "Montserrat",
@@ -152,6 +182,26 @@ function DrawerAppBar(props) {
                                 }}
                             >
                                 Inicio
+                            </Button>
+                        </Link>
+                        <Link to="/curriculum" style={{ textDecoration: "none" }}>
+                            <Button
+                                sx={{
+                                    color: "#ffbd59",
+                                    fontFamily: "Montserrat",
+
+                                    fontWeight: "600",
+                                    "&:hover": { textShadow: "0 0 10px #ffbd59" },
+                                    fontSize: {
+                                        xs: "11px",
+                                        sm: "11px",
+                                        md: "14px",
+                                        lg: "14px",
+                                    },
+                                    textAlign: "center",
+                                }}
+                            >
+                                CV
                             </Button>
                         </Link>
 

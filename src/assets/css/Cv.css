@@ -1,0 +1,88 @@
+/*pagina cv*/
+.img-cv {
+    width: 380px;
+    height: 540px;
+    margin: 0 0rem 2rem 0;
+    background-color: rgba(0, 0, 0, 0.15);
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.box-content-cv {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.box-cv {
+    display: flex;
+    flex-direction: column;
+}
+.btn-cv {
+    background-color: #ffbd59;
+    color: #545454;
+    height: 50px;
+    width: 150px;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 20px;
+    border-radius: 10px;
+    border-style: none;
+    cursor: pointer;
+    box-shadow: 0px 0px 5px #545454;
+    transition: border-color 0.3s, box-shadow 0.3s, transform 1s ease;
+    margin: 1rem auto;
+    animation: zoomInfinito 5s infinite;
+}
+
+.btn-cv:hover {
+    border-color: #ffbd59;
+    box-shadow: 0px 0px 8px #ffbd59;
+}
+
+@keyframes zoomInfinito {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/*RESPONSIVE*/
+@media screen and (min-width: 768px) and (max-width: 996px) {
+    .img-cv {
+        margin: auto;
+        width: 90%;
+        height: 90%;
+    }
+
+    .box-content-cv {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+
+    .btn-cv {
+        margin: 1rem auto;
+    }
+}
+
+@media screen and (min-width: 280px) and (max-width: 768px) {
+    .img-cv {
+        margin: auto;
+        width: 90%;
+        height: 90%;
+    }
+
+    .box-content-cv {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+
+    .btn-cv {
+        margin: 1rem auto;
+    }
+}

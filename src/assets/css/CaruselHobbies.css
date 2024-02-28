@@ -1,0 +1,41 @@
+/*carousel*/
+
+.carousel-caption p,
+h5 {
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 0px;
+    color: #ffddf2;
+    text-shadow: 0px 0px 7px #b55fcc;
+}
+
+.custom-carousel-item img {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: 0.4rem auto;
+    border: 1.5px solid #545454;
+    box-shadow: 0 0 10px #545454;
+}
+
+/*RESPONSIVE*/
+@media screen and (min-width: 996px) and (max-width: 1080px) {
+    .carousel-item {
+        width: 220px;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 996px) {
+    .carousel-item img {
+        width: 320px;
+        height: 320px;
+    }
+}
+
+@media screen and (min-width: 280px) and (max-width: 768px) {
+    .carousel-item img {
+        width: 220px;
+        height: 220px;
+    }
+}

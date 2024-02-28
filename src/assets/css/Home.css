@@ -1,51 +1,4 @@
-/*navbar*/
-.logo-text {
-    display: flex;
-    padding: 1rem;
-    color: #ffbd59;
-}
-button.like-text {
-    margin: 0;
-}
-
-.like-text {
-    font-family: "Montserrat", sans-serif;
-    font-size: 12px;
-    font-weight: 600;
-    color: #ffddf2;
-    transition: border-color 0.3s, box-shadow 0.3s;
-    background-color: transparent;
-    border: none;
-}
-
-.like-text:hover {
-    border-color: #ffbd59;
-    text-shadow: 0px 0px 8px #ffbd59;
-    cursor: pointer;
-}
-
-.not-like-text {
-    color: #ffddf2;
-    background-color: transparent;
-    border: none;
-    text-shadow: 0px 0px 8px #ffddf2;
-    font-family: "Montserrat", sans-serif;
-    font-size: 12px;
-    font-weight: 600;
-}
-
-.like-message {
-    font-family: "Montserrat", sans-serif;
-    font-size: 12px;
-    font-weight: 400;
-    color: #ffbd59;
-    transition: border-color 0.3s, box-shadow 0.3s;
-    margin-left: 2rem;
-    background-color: transparent;
-    border: none;
-}
 /*header*/
-
 .box-perfil {
     display: flex;
     justify-content: space-evenly;
@@ -58,17 +11,45 @@ button.like-text {
 }
 
 .names-perfil h1 {
-    margin: 0;
-    line-height: 0.9;
-}
-
-.title-name,
-.title-last-name {
     font-family: "Bebas Neue", sans-serif;
     font-size: 180px;
     font-weight: 500;
     color: #ffbd59;
     text-shadow: 0px 0px 6px #ffbd59;
+    margin: 0rem auto;
+    width: 40rem;
+}
+
+.title-name {
+    height: 190px;
+}
+.title-last-name {
+    border-right: 0.8rem solid #ffbd59;
+    line-height: 0.9;
+    height: 136px;
+}
+
+.title-last-name {
+    animation: 1.5s forwards, blink-caret 0.75s step-end infinite 0.5s;
+}
+
+@keyframes blink-caret {
+    from,
+    to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: #ffbd59;
+    }
+}
+.under-title {
+    letter-spacing: 5px;
+    font-size: 32px;
+    font-weight: 100;
+    text-align: center;
+    color: #b55fcc;
+    text-shadow: 2px 2px 2px #272727;
+    margin-top: 2rem;
 }
 
 .image {
@@ -83,44 +64,16 @@ button.like-text {
     align-items: center;
 }
 
-.under-title {
-    letter-spacing: 5px;
-    font-size: 32px;
-    font-weight: 100;
-    text-align: center;
-    color: #b55fcc;
-    text-shadow: 2px 2px 2px #272727;
-    margin: 0;
-}
-.carousel-caption p,
-h5 {
-    font-size: 14px;
-    font-weight: 400;
-    margin-bottom: 0px;
-    color: #ffddf2;
-    text-shadow: 0px 0px 7px #b55fcc;
-}
-
-/*sections*/
-.box-content {
-    display: flex;
-    margin: 20px;
-}
+/*seccion general*/
 .box-container {
-    width: 70%;
-    margin: auto;
     text-align: justify;
-    padding: 3rem;
 }
 
-.box-text {
-    margin: 5rem;
-    padding: 3rem;
-    text-align: justify;
-    background-color: rgba(0, 0, 0, 0.15);
-    border-radius: 30px;
-    border: 1px solid #ff66c4;
-    box-shadow: 0px 0px 20px #ffbd59;
+.first-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    padding: 1rem 5rem;
 }
 
 .title {
@@ -130,6 +83,7 @@ h5 {
     text-shadow: 0px 0px 8px #ff66c4;
     letter-spacing: 5px;
     margin-bottom: 2rem;
+    text-align: justify;
 }
 
 .text {
@@ -140,14 +94,24 @@ h5 {
     margin-bottom: 4rem;
 }
 
+/*seccion sobre mi*/
+.box-about {
+    background-color: rgba(0, 0, 0, 0.15);
+    border-radius: 30px;
+    text-align: justify;
+    width: 100%;
+
+    margin: 1rem;
+    padding: 3rem;
+}
+
 .btn-links {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: rgba(0, 0, 0, 0.2);
     cursor: pointer;
-    width: 70%;
-    margin: 1rem auto;
+    width: 100%;
     padding: 1rem 3rem;
     border-radius: 20px;
     border: 1px solid #ff66c4;
@@ -160,7 +124,7 @@ h5 {
     box-shadow: 0px 0px 8px #ffbd59;
 }
 
-.btn-cv {
+.section-btn-cv {
     background-color: #ffbd59;
     color: #545454;
     height: 40px;
@@ -175,12 +139,50 @@ h5 {
     transition: border-color 0.3s, box-shadow 0.3s;
     text-align: center;
 }
-.btn-cv:hover {
+.section-btn-cv:hover {
     border-color: #ffbd59;
     box-shadow: 0px 0px 8px #ffbd59;
 }
 
-/*section studies*/
+/*seccion hobbies*/
+.box-hobbies {
+    background-color: rgba(0, 0, 0, 0.15);
+    border-radius: 30px;
+    margin: 1rem;
+    padding: 3rem;
+    text-align: justify;
+}
+
+/*seccion stack*/
+.box-stack {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.15);
+    border-radius: 30px;
+    width: 100%;
+    margin: 1rem;
+    padding: 3rem;
+    text-align: justify;
+}
+
+.stack-image {
+    width: 100%;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+.stack-image:hover {
+    transform: scale(1.05);
+}
+
+/*seccion estudios*/
+.box-studies {
+    background-color: rgba(0, 0, 0, 0.15);
+    border-radius: 30px;
+    padding: 3rem;
+    text-align: justify;
+    margin: 1rem;
+}
 .name {
     font-size: 15px;
     font-weight: 800;
@@ -199,7 +201,8 @@ h5 {
     font-size: 15px;
     font-weight: 400;
     color: #545454;
-    text-shadow: 0px 0px 18px #545454;
+    text-shadow: 0px 0px 8px rgb(92, 92, 92);
+    margin-top: 1rem;
 }
 .info-2 {
     display: flex;
@@ -220,30 +223,113 @@ h5 {
     text-decoration: underline;
 }
 
-/*section hobbies*/
-.carousel-item img {
-    width: 450px;
-    height: 450px;
-    border-radius: 50%;
-    object-fit: cover;
-    display: block;
-    margin: 0 auto;
-    border: 1.5px solid #545454;
-    box-shadow: 0 0 6px #545454;
-}
-
-.carousel-caption {
-    height: 25rem;
-}
-
-/*section stack*/
-.stack-image {
+/*seccion certificados*/
+.box-cert {
+    background-color: rgba(0, 0, 0, 0.15);
+    border-radius: 30px;
+    text-align: center;
     width: 100%;
+    margin: 1rem;
+    padding: 3rem;
 }
-.box-stack {
+.box-content-cert {
     display: flex;
     justify-content: center;
+    align-items: center;
 }
+
+/*seccion proyectos*/
+.box-projects {
+    background-color: rgba(0, 0, 0, 0.15);
+    border-radius: 30px;
+    text-align: justify;
+    margin: 5rem;
+    padding: 3rem;
+}
+
+.content-projects {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+}
+.contenedor-card {
+    margin: auto;
+    padding: 1rem;
+    position: relative;
+    display: inline-block;
+}
+
+.contenedor-card:hover .box-content-projects {
+    filter: brightness(20%);
+}
+.contenedor-card .box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.contenedor-card .box a {
+    margin-bottom: 10px;
+}
+
+.contenedor-card .box-btn {
+    background-color: #ffbd59;
+    color: #545454;
+    height: 40px;
+    width: 100px;
+    line-height: 40px;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 15px;
+    border-radius: 10px;
+    border-style: none;
+    cursor: pointer;
+    box-shadow: 0px 0px 5px #545454;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    text-align: center;
+    margin: 10px;
+}
+
+.box {
+    width: 250px;
+}
+
+.box-content-projects {
+    width: 100%;
+    height: 250px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s;
+    border: 1px solid var(--color-tercero);
+}
+
+.box-btn {
+    margin-top: 1rem;
+}
+.box-btn:hover {
+    border-color: #ffbd59;
+    box-shadow: 0px 0px 8px #ffbd59;
+}
+
+.btn-skills {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 10px;
+    width: 280px;
+}
+.btn-skills button {
+    background-color: #545454;
+    color: #ffbd59;
+    border-style: none;
+    border-radius: 5px;
+    width: 60px;
+    margin: 2px;
+}
+
 /*footer*/
 .footer {
     display: flex;
@@ -253,125 +339,66 @@ h5 {
     font-weight: 600;
     color: #ffbd59;
     letter-spacing: 1px;
+    margin-top: 3rem;
 }
 
-/*Form*/
-.title-form {
-    font-family: "Bebas Neue", sans-serif;
-    font-size: 50px;
-    font-weight: 500;
-    color: #ffbd59;
-    text-shadow: 0px 0px 6px #ffbd59;
-    text-align: center;
-    margin: 1.5rem 0;
-}
-
-form {
-    width: 50%;
-    padding: 2rem;
-}
-.form-btn {
-    background: #ffddf2;
-    border-style: none;
-    border-radius: 10px;
-    width: 100px;
-    height: 40px;
-    color: #545454;
-}
-
-.box-form {
-    width: 50%;
-    margin: 3rem auto;
-    text-align: center;
-    background-color: rgba(0, 0, 0, 0.15);
-    border-radius: 30px;
-    border: 1px solid #ff66c4;
-    box-shadow: 0px 0px 20px #ffbd59;
-}
-
-/*responsive*/
+/*RESPONSIVE*/
 @media screen and (min-width: 996px) and (max-width: 1080px) {
-    /*section perfil*/
-    .image {
-        width: 280px;
+    /*seccion general*/
+    .first-section {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 5px;
+        padding: 1rem;
     }
-    .title-name,
+    /*seccion perfil*/
+    .box-perfil {
+        margin-top: 1rem;
+    }
+
+    .names-perfil h1 {
+        font-size: 100px;
+        text-align: start;
+        width: 100%;
+        padding: 2rem;
+    }
+
+    .title-name {
+        height: 130px;
+    }
     .title-last-name {
-        font-size: 150px;
+        border-right: 0.5rem solid #ffbd59;
+        line-height: 0.5;
+        height: 90px;
     }
     .under-title {
-        font-size: 25px;
+        font-size: 16px;
+        letter-spacing: 4px;
+        margin-top: 1rem;
     }
-    .btn-links {
-        width: 100%;
+
+    /*seccion proyectos*/
+    .box-projects {
+        margin: 5rem;
+    }
+    .box-content-projects {
+        width: 350px;
+        height: 190px;
+        box-sizing: content-box;
     }
 }
 
 @media screen and (min-width: 768px) and (max-width: 996px) {
-    /*section navbar*/
-    .logo-text {
-        font-size: 25px;
-        width: 250px;
+    /*seccion general*/
+    .first-section {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 10px;
+        padding: 0;
+        margin: 0;
     }
-    .like-text {
-        font-family: "Montserrat", sans-serif;
-        font-size: 12px;
-        font-weight: 600;
-        color: #ffddf2;
-        transition: border-color 0.3s, box-shadow 0.3s;
-        margin-left: 2rem;
-        background-color: transparent;
-        border: none;
-    }
-    .not-like-text {
-        font-size: 10px;
-    }
-
-    /*section perfil*/
-    .image {
-        width: 240px;
-    }
-    .title-name,
-    .title-last-name {
-        font-size: 120px;
-    }
-    .under-title {
-        font-size: 18px;
-    }
-    .btn-links {
-        width: 100%;
-    }
-
-    /*box section*/
-    .box-container {
-        width: 100%;
-        margin: 1rem auto;
-    }
-
-    /*section hobbies*/
-    .carousel-item img {
-        width: 320px;
-        height: 320px;
-    }
-}
-@media screen and (min-width: 320px) and (max-width: 768px) {
-    /*navbar*/
-    .logo-text {
-        font-size: 25px;
-        width: 100px;
-    }
-    .like-text {
-        font-family: "Montserrat", sans-serif;
-        font-size: 12px;
-        font-weight: 600;
-        color: #ffddf2;
-        transition: border-color 0.3s, box-shadow 0.3s;
-        margin-left: 2rem;
-        background-color: transparent;
-        border: none;
-    }
-    .not-like-text {
-        font-size: 10px;
+    .title {
+        text-align: center;
     }
 
     /*header*/
@@ -382,59 +409,197 @@ form {
         margin-top: 1rem;
     }
 
-    .title-name,
-    .title-last-name {
-        font-size: 90px;
+    .names-perfil h1 {
+        font-size: 85px;
+        text-align: start;
+        width: 100%;
+        padding: 2rem;
     }
 
+    .title-name {
+        height: 110px;
+    }
+    .title-last-name {
+        border-right: 0.5rem solid #ffbd59;
+        line-height: 0.5;
+        height: 90px;
+    }
+    .under-title {
+        font-size: 14px;
+        letter-spacing: 4px;
+        margin-top: 1rem;
+    }
     .image {
         width: 280px;
         margin-bottom: 2rem;
     }
 
-    .under-title {
-        font-size: 15px;
-        font-weight: 400;
-        text-shadow: 0px 1.5px 2px #272727;
-        letter-spacing: 3px;
-    }
-
     .btn-links {
         width: 100%;
-
-        justify-content: space-evenly;
-        align-items: center;
-
-        margin: auto;
-        padding: 0.5rem;
+        padding: 1rem;
     }
 
-    /*box section*/
-    .box-container {
+    /*seccion sobre mi*/
+    .box-about {
+        margin: 1rem auto;
+        width: 90%;
+    }
+
+    /*seccion stack*/
+    .box-stack {
+        margin: 1rem auto;
+        width: 90%;
+    }
+
+    /*seccion estudios*/
+    .name {
+        text-align: start;
+    }
+    .box-studies {
+        margin: 1rem auto;
+        width: 90%;
+    }
+
+    /*seccion hobbies*/
+    .box-hobbies {
+        margin: 0.5rem auto;
+        width: 90%;
+    }
+    /*seccion certificados*/
+    .box-cert {
+        margin: 0rem auto;
+        width: 90%;
+        padding: 1rem;
+    }
+    .box-cert img {
+        width: 90%;
+        height: 100%;
+    }
+
+    /*seccion proyectos*/
+    .box-projects {
+        margin: 1rem auto;
+        width: 90%;
+        padding: 1rem;
+    }
+
+    .content-projects {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .box-content-projects {
         width: 100%;
-        padding: 4rem 1rem;
+        height: 100%;
+        box-sizing: content-box;
     }
-    .box-text {
-        margin: 3rem 1rem;
-        padding: 2rem;
+}
+
+@media screen and (min-width: 280px) and (max-width: 768px) {
+    /*seccion general*/
+    .first-section {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 10px;
+        padding: 0;
+        margin: 0;
     }
+
     .title {
         text-align: center;
     }
 
-    /*carousel*/
-    .carousel-item img {
-        width: 220px;
-        height: 220px;
+    /*header*/
+    .box-perfil {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        margin-top: 1rem;
     }
-    /*section studies*/
+
+    .names-perfil h1 {
+        font-size: 85px;
+        text-align: start;
+        width: 100%;
+        padding: 2rem;
+    }
+
+    .title-name {
+        height: 110px;
+    }
+    .title-last-name {
+        border-right: 0.5rem solid #ffbd59;
+        line-height: 0.5;
+        height: 90px;
+    }
+    .under-title {
+        font-size: 14px;
+        letter-spacing: 4px;
+        margin-top: 1rem;
+    }
+    .image {
+        width: 280px;
+        margin-bottom: 2rem;
+    }
+
+    .btn-links {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    /*seccion sobre mi*/
+    .box-about {
+        margin: 1rem auto;
+        width: 90%;
+    }
+
+    /*seccion stack*/
+    .box-stack {
+        margin: 1rem auto;
+        width: 90%;
+    }
+
+    /*seccion estudios*/
     .name {
         text-align: start;
     }
-
-    /*form*/
-    .box-form {
+    .box-studies {
+        margin: 1rem auto;
         width: 90%;
-        padding: 2rem;
+    }
+
+    /*seccion hobbies*/
+    .box-hobbies {
+        margin: 0.5rem auto;
+        width: 90%;
+    }
+
+    /*seccion certificados*/
+    .box-cert {
+        margin: 0rem auto;
+        width: 90%;
+        padding: 1rem;
+    }
+    .box-cert img {
+        width: 90%;
+        height: 100%;
+    }
+
+    /*seccion proyectos*/
+    .box-projects {
+        margin: 1rem auto;
+        width: 90%;
+        padding: 1rem;
+    }
+
+    .content-projects {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .box-content-projects {
+        width: 100%;
+        height: 170px;
+        box-sizing: content-box;
     }
 }
