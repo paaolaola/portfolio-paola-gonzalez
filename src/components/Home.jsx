@@ -117,7 +117,28 @@ const Home = () => {
                 skill14: "Netlify",
             },
         },
-
+        {
+            id: 4,
+            name: "Selector Pokemon",
+            github: "https://github.com/paaolaola/desafio-3-react-II-paola-gonzalez",
+            url: "https://main--dapper-paletas-4e3401.netlify.app/",
+            image: "./img/proyectos/Proyecto6.png",
+            skills: {
+                skill1: "JavaScript",
+                skill2: "React JS",
+                skill3: "React Hooks",
+                skill4: "API REST",
+                skill5: "Context API",
+                skill6: "Vite",
+                skill8: "CSS",
+                skill9: "HTML",
+                skill10: "Terminal",
+                skill11: "Media Queries",
+                skill12: "Git",
+                skill13: "GitHub",
+                skill14: "Netlify",
+            },
+        },
         {
             id: 5,
             name: "Feriados en Chile",
@@ -190,7 +211,7 @@ const Home = () => {
                                 </a>
 
                                 <a
-                                    href="https://drive.google.com/file/d/1hH5dV_oMF6M0u97pH7OVKOy5KFPsxMs-/view?usp=sharing"
+                                    href="https://drive.google.com/file/d/1rGHMc2fpVu2yU-XaJSFwTYCdXJH1mwKa/view?usp=drive_link"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="section-btn-cv"
