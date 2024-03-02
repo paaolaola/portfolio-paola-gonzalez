@@ -23,6 +23,123 @@ const Home = () => {
         }));
     };
 
+    const proyectos = [
+        {
+            id: 1,
+            name: "Proyecto final",
+            github: "https://github.com/paaolaola/proyecto-final-gary-chesi-pao",
+            url: "https://magenta-pika-e54801.netlify.app",
+            image: "./img/proyectos/Proyecto5.png",
+            skills: {
+                skill1: "JavaScript",
+                skill2: "React JS",
+                skill3: "React Hooks",
+                skill4: "Context API",
+                skill5: "JSON",
+                skill6: "Vite",
+                skill7: "SCSS",
+                skill8: "CSS Flexbox",
+                skill9: "CSS Grid",
+                skill10: "CSS",
+                skill11: "HTML",
+                skill12: "Terminal",
+                skill13: "Bootstrap",
+                skill14: "Media Queries",
+                skill15: "Git",
+                skill16: "GitHub",
+            },
+        },
+        {
+            id: 2,
+            name: "Pizzeria mamma mia",
+            github: "https://github.com/paaolaola/prueba-react-2-paola-gonzalez",
+            url: "https://6577caf4ca1cbb7ce5df7dd4--superlative-wisp-3ea1f8.netlify.app/",
+            image: "./img/proyectos/Proyecto3.png",
+
+            skills: {
+                skill1: "JavaScript",
+                skill2: "React JS",
+                skill3: "React Hooks",
+                skill4: "JSON",
+                skill5: "Vite",
+                skill6: "CSS Flexbox",
+                skill7: "CSS Grid",
+                skill8: "CSS",
+                skill9: "HTML",
+                skill10: "Terminal",
+                skill11: "Media Queries",
+                skill12: "Git",
+                skill13: "GitHub",
+                skill14: "Netlify",
+            },
+        },
+
+        {
+            id: 3,
+            name: "Proyecto grid",
+            github: "https://github.com/paaolaola/proyecto-grid-responsive",
+            url: "https://paaolaola.github.io/proyecto-grid-responsive/",
+            image: "./img/proyectos/Proyecto4.png",
+            skills: {
+                skill1: "Vite",
+                skill2: "CSS Flexbox",
+                skill3: "CSS Grid",
+                skill4: "CSS",
+                skill5: "HTML",
+                skill6: "Terminal",
+                skill7: "Media Queries",
+                skill8: "Git",
+                skill9: "GitHub",
+                skill10: "GitHub Pages",
+            },
+        },
+
+        {
+            id: 4,
+            name: "Plantas galeria de fotos",
+            github: "https://github.com/paaolaola/desafio-2-react-II-paola-gonzalez",
+            url: "https://singular-horse-6a9d66.netlify.app/",
+            image: "./img/proyectos/Proyecto2.png",
+            skills: {
+                skill1: "JavaScript",
+                skill2: "React JS",
+                skill3: "React Hooks",
+                skill4: "API REST",
+                skill5: "JSON",
+                skill6: "Vite",
+                skill7: "CSS Flexbox",
+                skill8: "CSS",
+                skill9: "HTML",
+                skill10: "Terminal",
+                skill11: "Media Queries",
+                skill12: "Git",
+                skill13: "GitHub",
+                skill14: "Netlify",
+            },
+        },
+
+        {
+            id: 5,
+            name: "Feriados en Chile",
+            github: "https://github.com/paaolaola/prueba-react-1-paola-gonzalez",
+            url: "https://unique-biscuit-c647be.netlify.app/",
+            image: "./img/proyectos/Proyecto1.png",
+            skills: {
+                skill1: "JavaScript",
+                skill2: "API REST",
+                skill3: "JSON",
+                skill4: "Vite",
+                skill5: "CSS",
+                skill6: "HTML",
+                skill7: "Terminal",
+                skill8: "Bootstrap",
+                skill9: "Media Queries",
+                skill10: "Git",
+                skill11: "GitHub",
+            },
+        },
+    ];
+
     return (
         <>
             <header className="box-perfil">
@@ -46,12 +163,19 @@ const Home = () => {
                             <h1 className="title">SOBRE MI</h1>
                             <p className="text">
                                 Soy Desarrolladora Frontend y Fotógrafa con conocimientos en la ejecución de proyectos bajo la metodología ágil y la
-                                implementación de buenas prácticas. <br /> Me apasiona crear cosas visualmente atractivas y llevar a cabo proyectos innovadores.
-                                Me destaco profesionalmente por mi habilidad para trabajar en equipo, capacidad de aprendizaje y resolución de problemas, además
-                                del relacionamiento con clientes y conocimiento de la metodología SCRUM.
-                                <br /> Actualmente estoy en busca de nuevos desafíos profesionales que me permitan seguir creciendo en el sector TI. Te invito a
-                                conocerme y que revises mis redes y currículum (disponible para descarga).
+                                implementación de buenas prácticas.{" "}
                             </p>
+                            <p className="text">
+                                Me apasiona crear cosas visualmente atractivas y llevar a cabo proyectos innovadores. Me destaco profesionalmente por mi
+                                habilidad para trabajar en equipo, capacidad de aprendizaje y resolución de problemas, además del relacionamiento con clientes y
+                                conocimiento de la metodología SCRUM.
+                            </p>
+                            <p className="text">
+                                {" "}
+                                Actualmente estoy en busca de nuevos desafíos profesionales que me permitan seguir creciendo en el sector TI. Te invito a
+                                conocerme y que revises mis redes y currículum.
+                            </p>
+
                             <div className="btn-links">
                                 <a href="https://www.linkedin.com/in/paola-gonzalez-guzman/" target="_blank" rel="noopener noreferrer">
                                     <LinkedInIcon sx={{ fontSize: 40, color: "#ffbd59" }} />
@@ -111,7 +235,7 @@ const Home = () => {
                                 {showMore.javascript ? (
                                     <>
                                         <p className="info">
-                                            Contenidos del curso: Sintaxis, Control de flujos, Iteraciones, Funciones, Objetos y Arrays, DOM y Eventos, Storage
+                                            Contenidos del Curso: Sintaxis, Control de flujos, Iteraciones, Funciones, Objetos y Arrays, DOM y Eventos, Storage
                                             y JSON, Ajax y Fetch, Frameworks y Node JS.
                                         </p>
                                         <button className="btn-more" onClick={() => toggleShowMore("javascript")}>
@@ -134,9 +258,9 @@ const Home = () => {
                                 {showMore.react ? (
                                     <>
                                         <p className="info">
-                                            Contenido del Bootcamp: React Hooks · Netifly · GitHub Pages · Tailwind CSS · JSON · HTML · CSS Flexbox · Git ·
-                                            Media Queries · VSCode · CSS · JavaScript · SCSS · Terminal · CSS Inline · Vite · React.js · CSS Grid · Context API
-                                            · Bootstrap · GitHub · API REST{" "}
+                                            Conocimientos adquiridos por el Bootcamp: React Hooks, Netifly, GitHub Pages, Tailwind CSS, JSON, HTML, CSS Flexbox,
+                                            Git, Media Queries, VSCode, CSS, JavaScript, SCSS, Terminal, CSS Inline, Vite, React.js, CSS Grid, Context API,
+                                            Bootstrap, GitHub y API REST{" "}
                                         </p>
 
                                         <button className="btn-more" onClick={() => toggleShowMore("react")}>
@@ -221,160 +345,33 @@ const Home = () => {
                         </section>
                     </div>
                 </div>
+
                 <div>
                     <section className="box-projects">
                         <h1 className="title">PROYECTOS</h1>
+
                         <div className="content-projects">
-                            <div className="contenedor-card">
-                                <img className="box-content-projects" src="./img/proyectos/Proyecto-5.png" alt="Proyecto-5" />
-                                <div className="box">
-                                    <div className="btn-sites">
-                                        <a href=" https://github.com/paaolaola/proyecto-final-gary-chesi-pao" target="_blank" rel="noopener noreferrer">
-                                            <button className="box-btn">Ver GitHub</button>
-                                        </a>
-                                        <a href="https://magenta-pika-e54801.netlify.app" target="_blank" rel="noopener noreferrer">
-                                            <button className="box-btn">Ver sitio</button>
-                                        </a>
-                                    </div>
-                                    <div className="btn-skills">
-                                        <button>JavaScript</button>
-                                        <button>React JS</button>
-                                        <button>React Hooks </button>
-                                        <button>Context API </button>
-                                        <button>JSON</button>
-                                        <button>Vite</button>
-                                        <button>SCSS</button>
-                                        <button>CSS Flexbox</button>
-                                        <button>CSS Grid</button>
-                                        <button>CSS</button>
-                                        <button>HTML</button>
-                                        <button>Terminal</button>
-                                        <button>Bootstrap</button>
-                                        <button>Media Queries</button>
-                                        <button>Git</button>
-                                        <button>GitHub</button>
-                                    </div>
-                                </div>
-                            </div>
+                            {proyectos.map((proyecto) => (
+                                <div key={proyecto.id} className="contenedor-card">
+                                    <img className="box-content-projects" src={proyecto.image} alt={proyecto.name} />
+                                    <div className="box">
+                                        <div className="btn-sites">
+                                            <a href={proyecto.github} target="_blank" rel="noopener noreferrer">
+                                                <button className="box-btn">Ver GitHub</button>
+                                            </a>
+                                            <a href={proyecto.url} target="_blank" rel="noopener noreferrer">
+                                                <button className="box-btn">Ver sitio</button>
+                                            </a>
+                                        </div>
 
-                            <div className="contenedor-card">
-                                <img className="box-content-projects" src="./img/proyectos/Proyecto-3.png" alt="Proyecto-3" />
-                                <div className="box">
-                                    <div className="btn-sites">
-                                        <a href="https://github.com/paaolaola/prueba-react-2-paola-gonzalez" target="_blank" rel="noopener noreferrer">
-                                            <button className="box-btn">Ver GitHub</button>
-                                        </a>
-                                        <a
-                                            href="https://6577caf4ca1cbb7ce5df7dd4--superlative-wisp-3ea1f8.netlify.app/"
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                        >
-                                            <button className="box-btn">Ver sitio</button>
-                                        </a>
-                                    </div>
-                                    <div className="btn-skills">
-                                        <button>JavaScript</button>
-                                        <button>React JS</button>
-                                        <button>React Hooks </button>
-                                        <button>JSON</button>
-                                        <button>Vite</button>
-                                        <button>CSS Flexbox</button>
-                                        <button>CSS Grid</button>
-                                        <button>CSS</button>
-                                        <button>HTML</button>
-                                        <button>Terminal</button>
-                                        <button>Media Queries</button>
-                                        <button>Git</button>
-                                        <button>GitHub</button>
-                                        <button>Netifly</button>
+                                        <div className="btn-skills">
+                                            {Object.values(proyecto.skills).map((skill, index) => (
+                                                <button key={index}>{skill}</button>
+                                            ))}
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-
-                            <div className="contenedor-card">
-                                <img className="box-content-projects" src="./img/proyectos/Proyecto-4.png" alt="Proyecto-4" />
-                                <div className="box">
-                                    <div className="btn-sites">
-                                        <a href="https://github.com/paaolaola/proyecto-grid-responsive" target="_blank" rel="noopener noreferrer">
-                                            <button className="box-btn">Ver GitHub</button>
-                                        </a>
-                                        <a href="https://paaolaola.github.io/proyecto-grid-responsive/" target="_blank" rel="noopener noreferrer">
-                                            <button className="box-btn">Ver sitio</button>
-                                        </a>
-                                    </div>
-                                    <div className="btn-skills">
-                                        <button>Vite</button>
-                                        <button>CSS Flexbox</button>
-                                        <button>CSS Grid</button>
-                                        <button>CSS</button>
-                                        <button>HTML</button>
-                                        <button>Terminal</button>
-                                        <button>Media Queries</button>
-                                        <button>Git</button>
-                                        <button>GitHub</button>
-                                        <button>GitHub Pages</button>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div className="contenedor-card">
-                                <img className="box-content-projects" src="./img/proyectos/Proyecto-2.png" alt="Proyecto-2" />
-                                <div className="box">
-                                    <div className="btn-sites">
-                                        <a href="https://github.com/paaolaola/desafio-2-react-II-paola-gonzalez" target="_blank" rel="noopener noreferrer">
-                                            <button className="box-btn">Ver GitHub</button>
-                                        </a>
-                                        <a href="https://singular-horse-6a9d66.netlify.app/" target="_blank" rel="noopener noreferrer">
-                                            <button className="box-btn">Ver sitio</button>
-                                        </a>
-                                    </div>
-                                    <div className="btn-skills">
-                                        <button>JavaScript</button>
-                                        <button>React JS</button>
-                                        <button>React Hooks </button>
-                                        <button>Context API </button>
-                                        <button>API REST </button>
-                                        <button>Vite</button>
-                                        <button>CSS Flexbox</button>
-                                        <button>CSS</button>
-                                        <button>HTML</button>
-                                        <button>Terminal</button>
-                                        <button>Media Queries</button>
-                                        <button>Git</button>
-                                        <button>GitHub</button>
-                                        <button>Netifly</button>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div className="contenedor-card">
-                                <img className="box-content-projects" src="./img/proyectos/Proyecto-1.png" alt="Proyecto-1" />{" "}
-                                <div className="box">
-                                    <div className="btn-sites">
-                                        <a href="https://github.com/paaolaola/prueba-react-1-paola-gonzalez" target="_blank" rel="noopener noreferrer">
-                                            {" "}
-                                            <button className="box-btn">Ver GitHub</button>
-                                        </a>
-                                        <a href="https://unique-biscuit-c647be.netlify.app/" target="_blank" rel="noopener noreferrer">
-                                            {" "}
-                                            <button className="box-btn">Ver sitio</button>
-                                        </a>{" "}
-                                    </div>
-                                    <div className="btn-skills">
-                                        <button>JavaScript</button>
-                                        <button>API REST</button>
-                                        <button>JSON</button>
-                                        <button>Vite</button>
-                                        <button>CSS</button>
-                                        <button>HTML</button>
-                                        <button>Terminal</button>
-                                        <button>Bootstrap</button>
-                                        <button>Media Queries</button>
-                                        <button>Git</button>
-                                        <button>GitHub</button>
-                                    </div>
-                                </div>
-                            </div>
+                            ))}
                         </div>
                     </section>
                 </div>

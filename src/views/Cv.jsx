@@ -3,11 +3,11 @@ import React from "react";
 
 const Cv = () => {
     const handleDownloadClick = () => {
-        window.open("https://drive.google.com/file/d/1hH5dV_oMF6M0u97pH7OVKOy5KFPsxMs-/view?usp=sharing", "_blank");
+        window.open("https://drive.google.com/file/d/1rGHMc2fpVu2yU-XaJSFwTYCdXJH1mwKa/view?usp=drive_link", "_blank");
     };
 
     const handleDownloadClickPdf = () => {
-        window.open("https://docs.google.com/document/d/1ewZOhkw-ZR5JH_BD3d0JdYzKtslPdb00XsyqJM7l9xo/edit?usp=sharing", "_blank");
+        window.open("https://drive.google.com/file/d/1fRDcjaI1pjp0PfE24TYV5BQ6dhZpTzbU/view?usp=drive_link", "_blank");
     };
 
     return (
