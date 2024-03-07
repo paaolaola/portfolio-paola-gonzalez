@@ -15,8 +15,8 @@ const Proyectos = () => {
 
     return (
         <>
-            <h2 className="title-404">{proyecto.name}</h2>
             <div className="box-proyects">
+                <h2 className="title-404">{proyecto.name}</h2>
                 <div>
                     <h4 className="projects-title">Demo</h4>
                     <div className="projects-video"></div>
