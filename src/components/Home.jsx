@@ -1,13 +1,26 @@
-import React from "react";
+import { useState, useContext } from "react";
+import { ProjectContext } from "../context/ProjectContext";
+import { useNavigate } from "react-router-dom";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import GoogleIcon from "@mui/icons-material/Google";
 import CaruselHobbies from "./CaruselHobbies";
 import CaruselCert from "./CaruselCert";
 import "../assets/css/Home.css";
-import { useState } from "react";
 
 const Home = () => {
+    const { proyectos } = useContext(ProjectContext);
+
+    //seccion proyectos, boton ver mas
+    const navigate = useNavigate();
+    const handleClick = (name) => {
+        // Convertir el nombre del proyecto a minúsculas y eliminar caracteres especiales
+
+        const path = `/proyectos/${name}`;
+        navigate(path);
+    };
+
+    //sección estudios
     const [showMore, setShowMore] = useState({
         javascript: false,
         react: false,
@@ -22,144 +35,6 @@ const Home = () => {
             [id]: !prevState[id],
         }));
     };
-
-    const proyectos = [
-        {
-            id: 1,
-            name: "Proyecto final",
-            github: "https://github.com/paaolaola/proyecto-final-gary-chesi-pao",
-            url: "https://magenta-pika-e54801.netlify.app",
-            image: "./img/proyectos/Proyecto5.png",
-            skills: {
-                skill1: "JavaScript",
-                skill2: "React JS",
-                skill3: "React Hooks",
-                skill4: "Context API",
-                skill5: "JSON",
-                skill6: "Vite",
-                skill7: "SCSS",
-                skill8: "CSS Flexbox",
-                skill9: "CSS Grid",
-                skill10: "CSS",
-                skill11: "HTML",
-                skill12: "Terminal",
-                skill13: "Bootstrap",
-                skill14: "Media Queries",
-                skill15: "Git",
-                skill16: "GitHub",
-            },
-        },
-        {
-            id: 2,
-            name: "Pizzeria mamma mia",
-            github: "https://github.com/paaolaola/prueba-react-2-paola-gonzalez",
-            url: "https://6577caf4ca1cbb7ce5df7dd4--superlative-wisp-3ea1f8.netlify.app/",
-            image: "./img/proyectos/Proyecto3.png",
-
-            skills: {
-                skill1: "JavaScript",
-                skill2: "React JS",
-                skill3: "React Hooks",
-                skill4: "JSON",
-                skill5: "Vite",
-                skill6: "CSS Flexbox",
-                skill7: "CSS Grid",
-                skill8: "CSS",
-                skill9: "HTML",
-                skill10: "Terminal",
-                skill11: "Media Queries",
-                skill12: "Git",
-                skill13: "GitHub",
-                skill14: "Netlify",
-            },
-        },
-
-        {
-            id: 3,
-            name: "Proyecto grid",
-            github: "https://github.com/paaolaola/proyecto-grid-responsive",
-            url: "https://paaolaola.github.io/proyecto-grid-responsive/",
-            image: "./img/proyectos/Proyecto4.png",
-            skills: {
-                skill1: "Vite",
-                skill2: "CSS Flexbox",
-                skill3: "CSS Grid",
-                skill4: "CSS",
-                skill5: "HTML",
-                skill6: "Terminal",
-                skill7: "Media Queries",
-                skill8: "Git",
-                skill9: "GitHub",
-                skill10: "GitHub Pages",
-            },
-        },
-
-        {
-            id: 4,
-            name: "Plantas galeria de fotos",
-            github: "https://github.com/paaolaola/desafio-2-react-II-paola-gonzalez",
-            url: "https://singular-horse-6a9d66.netlify.app/",
-            image: "./img/proyectos/Proyecto2.png",
-            skills: {
-                skill1: "JavaScript",
-                skill2: "React JS",
-                skill3: "React Hooks",
-                skill4: "API REST",
-                skill5: "JSON",
-                skill6: "Vite",
-                skill7: "CSS Flexbox",
-                skill8: "CSS",
-                skill9: "HTML",
-                skill10: "Terminal",
-                skill11: "Media Queries",
-                skill12: "Git",
-                skill13: "GitHub",
-                skill14: "Netlify",
-            },
-        },
-        {
-            id: 4,
-            name: "Selector Pokemon",
-            github: "https://github.com/paaolaola/desafio-3-react-II-paola-gonzalez",
-            url: "https://main--dapper-paletas-4e3401.netlify.app/",
-            image: "./img/proyectos/Proyecto6.png",
-            skills: {
-                skill1: "JavaScript",
-                skill2: "React JS",
-                skill3: "React Hooks",
-                skill4: "API REST",
-                skill5: "Context API",
-                skill6: "Vite",
-                skill8: "CSS",
-                skill9: "HTML",
-                skill10: "Terminal",
-                skill11: "Media Queries",
-                skill12: "Git",
-                skill13: "GitHub",
-                skill14: "Netlify",
-            },
-        },
-        {
-            id: 5,
-            name: "Feriados en Chile",
-            github: "https://github.com/paaolaola/prueba-react-1-paola-gonzalez",
-            url: "https://unique-biscuit-c647be.netlify.app/",
-            image: "./img/proyectos/Proyecto1.png",
-            skills: {
-                skill1: "JavaScript",
-                skill2: "API REST",
-                skill3: "JSON",
-                skill4: "Vite",
-                skill5: "CSS",
-                skill6: "HTML",
-                skill7: "Terminal",
-                skill8: "Bootstrap",
-                skill9: "Media Queries",
-                skill10: "Git",
-                skill11: "GitHub",
-            },
-        },
-    ];
 
     return (
         <>
@@ -376,19 +251,20 @@ const Home = () => {
                                 <div key={proyecto.id} className="contenedor-card">
                                     <img className="box-content-projects" src={proyecto.image} alt={proyecto.name} />
                                     <div className="box">
-                                        <div className="btn-sites">
+                                        <div>
+                                            <h5 className="proyect-name">{proyecto.name}</h5>
+                                        </div>
+                                        <div className="btn-sites-projects">
                                             <a href={proyecto.github} target="_blank" rel="noopener noreferrer">
                                                 <button className="box-btn">Ver GitHub</button>
                                             </a>
                                             <a href={proyecto.url} target="_blank" rel="noopener noreferrer">
                                                 <button className="box-btn">Ver sitio</button>
                                             </a>
-                                        </div>
 
-                                        <div className="btn-skills">
-                                            {Object.values(proyecto.skills).map((skill, index) => (
-                                                <button key={index}>{skill}</button>
-                                            ))}
+                                            <button onClick={() => handleClick(proyecto.name)} className="box-btn">
+                                                Ver más
+                                            </button>
                                         </div>
                                     </div>
                                 </div>

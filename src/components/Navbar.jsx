@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "../assets/css/Navbar.css";
 import PropTypes from "prop-types";
 import AppBar from "@mui/material/AppBar";
@@ -13,7 +13,6 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import FavoriteIcon from "@mui/icons-material/Favorite";
-import { useState } from "react";
 import { Link } from "react-router-dom";
 import { animateScroll as scroll } from "react-scroll";
 
@@ -24,18 +23,29 @@ const navItems = ["contacto"];
 
 function DrawerAppBar(props) {
     const { window } = props;
-    const [mobileOpen, setMobileOpen] = React.useState(false);
+    const [mobileOpen, setMobileOpen] = useState(false);
+    const [liked, setLiked] = useState(false);
 
     const handleDrawerToggle = () => {
         setMobileOpen((prevState) => !prevState);
     };
 
-    const [liked, setLiked] = useState(false);
-
     const handleLikeClick = () => {
         setLiked(!liked);
     };
+    useEffect(() => {
+        // Al cargar el componente, verifica si hay un like guardado en el localStorage
+        const likeGuardado = localStorage.getItem("like");
 
+        if (likeGuardado === "true") {
+            setLiked(true);
+        }
+    }, []);
+
+    useEffect(() => {
+        // Cuando el estado de liked cambia, actualiza el localStorage
+        localStorage.setItem("like", liked.toString());
+    }, [liked]);
     const scrollToTop = () => {
         scroll.scrollToTop();
     };
@@ -57,6 +67,7 @@ function DrawerAppBar(props) {
                         fontWeight: "600",
                         "&:hover": { textShadow: "0 0 10px #ffbd59" },
                     }}
+                    onClick={scrollToTop}
                 >
                     {" "}
                     PG .
@@ -155,7 +166,9 @@ function DrawerAppBar(props) {
                         }}
                     >
                         <Link to="/" style={{ textDecoration: "none" }}>
-                            <div className="logo-text">PG .</div>
+                            <div onClick={scrollToTop} className="logo-text">
+                                PG .
+                            </div>
                         </Link>
                     </Typography>
                     <button onClick={handleLikeClick} className={liked ? "not-like-text " : "like-text"}>
