@@ -14,8 +14,6 @@ const Home = () => {
     //seccion proyectos, boton ver mas
     const navigate = useNavigate();
     const handleClick = (name) => {
-        // Convertir el nombre del proyecto a minúsculas y eliminar caracteres especiales
-
         const path = `/proyectos/${name}`;
         navigate(path);
     };
