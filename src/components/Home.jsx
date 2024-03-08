@@ -56,13 +56,13 @@ const Home = () => {
                         <section className="box-about">
                             <h1 className="title">SOBRE MI</h1>
                             <p className="text">
-                                Soy Desarrolladora Frontend y Fotógrafa con conocimientos en la ejecución de proyectos bajo la metodología ágil y la
+                                Soy Fotógrafa y Desarrolladora Frontend con conocimientos en la ejecución de proyectos bajo la metodología ágil y la
                                 implementación de buenas prácticas.{" "}
                             </p>
                             <p className="text">
-                                Me apasiona crear cosas visualmente atractivas y llevar a cabo proyectos innovadores. Me destaco profesionalmente por mi
-                                habilidad para trabajar en equipo, capacidad de aprendizaje y resolución de problemas, además del relacionamiento con clientes y
-                                conocimiento de la metodología SCRUM.
+                                Me apasiona el hecho de crear cosas visualmente atractivas y llevar a cabo proyectos innovadores. Me destaco profesionalmente
+                                por mi habilidad para trabajar en equipo, capacidad de aprendizaje y resolución de problemas, además del relacionamiento con
+                                clientes y conocimiento de la metodología SCRUM.
                             </p>
                             <p className="text">
                                 {" "}
@@ -108,9 +108,13 @@ const Home = () => {
                         <section className="box-hobbies">
                             <h1 className="title">HOBBIES</h1>
                             <p className="text">
-                                Me gustan las actividades al aire libre como trekking en cerros, acampar, los conciertos de música. También visitar exposiciones
-                                de arte. La fotografía análoga es un pasatiempo y a la vez es parte de mi trabajo autoral, así como también crear fotomontajes
-                                digitales de temática onírica.
+                                Me gusta participar en actividades al aire libre, como hacer trekking en las montañas, acampar y asistir a conciertos de música.
+                                Además, disfruto visitando exposiciones de arte para inspirarme. En mi tiempo libre, me dedico a la fotografía análoga y también
+                                me apasiona crear fotomontajes digitales de temática onírica.{" "}
+                            </p>
+                            <p className="text">
+                                Estas actividades son parte importante de mi vida y me permiten desarrollar habilidades creativas y artísticas en torno al
+                                diseño que se complementan con mi experiencia como Front End.
                             </p>
                             <div className="carusel">
                                 <CaruselHobbies />

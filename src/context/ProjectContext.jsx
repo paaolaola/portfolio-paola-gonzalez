@@ -10,6 +10,7 @@ const ProjectProvider = ({ children }) => {
             github: "https://github.com/paaolaola/proyecto-final-gary-chesi-pao",
             url: "https://magenta-pika-e54801.netlify.app",
             image: "../img/proyectos/P1/0.png",
+            video: "https://www.youtube.com/embed/YZ90kQ-aUiw?si=KsRUzyR0l-gkm1Pc",
             images: {
                 image1: "../img/proyectos/P1/0.png",
                 image2: "../img/proyectos/P1/1.png",
@@ -44,6 +45,7 @@ const ProjectProvider = ({ children }) => {
             github: "https://github.com/paaolaola/prueba-react-2-paola-gonzalez",
             url: "https://6577caf4ca1cbb7ce5df7dd4--superlative-wisp-3ea1f8.netlify.app/",
             image: "../img/proyectos/P2/1.png",
+            video: "",
             images: {
                 image1: "../img/proyectos/P2/0.png",
                 image2: "../img/proyectos/P2/1.png",
@@ -77,6 +79,7 @@ const ProjectProvider = ({ children }) => {
             github: "https://github.com/paaolaola/proyecto-grid-responsive",
             url: "https://paaolaola.github.io/proyecto-grid-responsive/",
             image: "../img/proyectos/P3/0.png",
+            video: "https://www.youtube.com/embed/tFS_ooepzco?si=LJ6diyXFGijcoyWT",
             images: {
                 image1: "../img/proyectos/P3/0.png",
                 image2: "../img/proyectos/P3/1.png",
@@ -103,6 +106,7 @@ const ProjectProvider = ({ children }) => {
             github: "https://github.com/paaolaola/desafio-2-react-II-paola-gonzalez",
             url: "https://singular-horse-6a9d66.netlify.app/",
             image: "../img/proyectos/P4/0.png",
+            video: "",
             images: {
                 image1: "../img/proyectos/P4/0.png",
                 image2: "../img/proyectos/P4/1.png",
@@ -133,6 +137,7 @@ const ProjectProvider = ({ children }) => {
             github: "https://github.com/paaolaola/desafio-3-react-II-paola-gonzalez",
             url: "https://main--dapper-paletas-4e3401.netlify.app/",
             image: "../img/proyectos/P5/0.png",
+            video: "https://www.youtube.com/embed/y-6blCVfBIQ?si=SBcR9_iapCwkfAH0",
             images: {
                 image1: "../img/proyectos/P5/0.png",
                 image2: "../img/proyectos/P5/1.png",
@@ -161,6 +166,7 @@ const ProjectProvider = ({ children }) => {
             github: "https://github.com/paaolaola/prueba-react-1-paola-gonzalez",
             url: "https://unique-biscuit-c647be.netlify.app/",
             image: "../img/proyectos/P6/1.png",
+            video: "https://www.youtube.com/embed/XGRUurgplsE?si=vsfARtEQFD0B6Da0",
             images: {
                 image1: "../img/proyectos/P6/0.png",
                 image2: "../img/proyectos/P6/1.png",
@@ -187,6 +193,7 @@ const ProjectProvider = ({ children }) => {
             github: "https://github.com/paaolaola/prueba-js-paola-gonzalez",
             url: "https://paaolaola.github.io/prueba-js-paola-gonzalez/",
             image: "../img/proyectos/P7/1.png",
+            video: "https://www.youtube.com/embed/9OA8nM-veTw?si=oYMelfDZoiOCg1Ji",
             images: {
                 image1: "../img/proyectos/P7/0.png",
                 image2: "../img/proyectos/P7/1.png",
