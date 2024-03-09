@@ -24,8 +24,6 @@ const Proyectos = () => {
                     {proyecto.video ? (
                         <iframe
                             className="iframe-video"
-                            // width="500"
-                            // height="315"
                             src={proyecto.video}
                             frameBorder="0"
                             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"

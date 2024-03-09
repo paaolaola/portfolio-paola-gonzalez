@@ -34,7 +34,6 @@ function DrawerAppBar(props) {
         setLiked(!liked);
     };
     useEffect(() => {
-        // Al cargar el componente, verifica si hay un like guardado en el localStorage
         const likeGuardado = localStorage.getItem("like");
 
         if (likeGuardado === "true") {
@@ -43,7 +42,6 @@ function DrawerAppBar(props) {
     }, []);
 
     useEffect(() => {
-        // Cuando el estado de liked cambia, actualiza el localStorage
         localStorage.setItem("like", liked.toString());
     }, [liked]);
 

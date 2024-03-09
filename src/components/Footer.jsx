@@ -5,11 +5,15 @@ import ContentCopyIcon from "@mui/icons-material/ContentCopy";
 
 const Footer = () => {
     const defaultEmail = "paolagonzalez.contacto@gmail.com";
-    const [email, setEmail] = useState(defaultEmail);
+    const [email] = useState(defaultEmail);
+    const [copied, setCopied] = useState(false);
 
     const handleCopy = () => {
         navigator.clipboard.writeText(email);
-        alert("Correo copiado al portapapeles");
+        setCopied(true);
+        setTimeout(() => {
+            setCopied(false);
+        }, 1500);
     };
 
     const handleEmailBtn = () => {
@@ -18,14 +22,13 @@ const Footer = () => {
 
     return (
         <>
+            {copied && <span className="copied-message"> Correo copiado ✔️</span>}
             <div className="footer">
                 <div>
-                    <input
-                        className="input-footer"
-                        type="email"
-                        value={email}
-                        readOnly // Añadimos readOnly para bloquear la edición
-                    />
+                    <input className="input-footer" type="email" value={email} readOnly />
+                </div>
+
+                <div>
                     <button className="btn-footer" onClick={handleCopy}>
                         <ContentCopyIcon />
                     </button>
@@ -33,10 +36,9 @@ const Footer = () => {
                         <SendIcon />
                     </button>
                 </div>
-
-                <div>
-                    <p className="text-footer">HECHO CON 💛 PAOLA GONZÁLEZ. 2024</p>
-                </div>
+            </div>
+            <div>
+                <p className="text-footer">HECHO CON 💛 PAOLA GONZÁLEZ. 2024</p>
             </div>
         </>
     );

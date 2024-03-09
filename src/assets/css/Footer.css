@@ -1,7 +1,7 @@
 /*footer*/
 .footer {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     font-family: "Bebas Neue", sans-serif;
@@ -14,15 +14,16 @@
 .input-footer {
     font-size: 14px;
     background-color: transparent;
-
     border-style: none;
-    border: 1.5px solid #ffbd59;
+    border: 2px solid #ffbd59;
     border-radius: 8px;
     text-align: center;
     width: 300px;
     height: 40px;
-    color: #5170ff;
+    color: #545454;
     font-family: "Montserrat", sans-serif;
+    margin: 0 5px;
+    box-shadow: 0px 0px 6px #ffbd59;
 }
 .btn-footer {
     background-color: transparent;
@@ -32,7 +33,7 @@
     line-height: 40px;
     font-size: 15px;
     border-radius: 10px;
-    border: 1.5px solid #ffbd59;
+    border: 2px solid #ffbd59;
     cursor: pointer;
     transition: border-color 0.3s, box-shadow 0.3s;
     text-align: center;
@@ -52,14 +53,24 @@
     color: #ffbd59;
     letter-spacing: 1px;
     margin: 1rem 0 3rem 0;
+    border-color: #ff66c4;
+    text-shadow: 0px 0px 10px #d67eee;
+}
+.copied-message {
+    display: flex;
+    justify-content: center;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: #ffbd59;
+    padding-top: 3rem;
 }
 /*RESPONSIVE*/
 @media screen and (min-width: 280px) and (max-width: 768px) {
-    .input-footer {
-        width: 100%;
-    }
     .footer {
         width: 100%;
         text-align: center;
+        display: flex;
+        flex-direction: column;
     }
 }

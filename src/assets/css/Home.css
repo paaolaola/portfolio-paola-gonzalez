@@ -157,7 +157,7 @@
     text-align: justify;
 }
 
-/*seccion stack*/
+/*seccion skills*/
 .box-stack {
     display: flex;
     flex-direction: column;
@@ -445,7 +445,7 @@
         width: 90%;
     }
 
-    /*seccion stack*/
+    /*seccion skills*/
     .box-stack {
         margin: 1rem auto;
         width: 90%;
@@ -559,7 +559,7 @@
         width: 80px;
     }
 
-    /*seccion stack*/
+    /*seccion skills*/
     .box-stack {
         margin: 1rem auto;
         width: 90%;
