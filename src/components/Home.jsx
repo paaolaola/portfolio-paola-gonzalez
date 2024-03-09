@@ -56,14 +56,11 @@ const Home = () => {
                     <div>
                         <section className="box-about">
                             <h1 className="title">Sobre Mi</h1>
+                            <p className="text">Soy una profesional con experiencia en Fotografía que ha dado un giro hacia el mundo tecnológico.</p>
                             <p className="text">
-                                Soy Fotógrafa y Desarrolladora Frontend con conocimientos en la ejecución de proyectos bajo la metodología ágil y la
-                                implementación de buenas prácticas.{" "}
-                            </p>
-                            <p className="text">
-                                Me apasiona el hecho de crear cosas visualmente atractivas y llevar a cabo proyectos innovadores. Me destaco profesionalmente
-                                por mi habilidad para trabajar en equipo, capacidad de aprendizaje y resolución de problemas, además del relacionamiento con
-                                clientes y conocimiento de la metodología SCRUM.
+                                Me apasiona crear cosas visualmente atractivas y llevar a cabo proyectos innovadores. Me destaco por mi habilidad para trabajar
+                                en equipo, capacidad de aprendizaje y resolución de problemas, además del relacionamiento con clientes y conocimiento de
+                                metodologías ágiles.
                             </p>
                             <p className="text">
                                 {" "}
@@ -85,7 +82,7 @@ const Home = () => {
                                 </a>
 
                                 <a
-                                    href="https://drive.google.com/file/d/1fRDcjaI1pjp0PfE24TYV5BQ6dhZpTzbU/view?usp=drive_link"
+                                    href="https://drive.google.com/file/d/1q7Kg1eD3Law2PmX8Ijld6nzkaeuFBbpm/view?usp=drive_link"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                 >

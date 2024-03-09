@@ -4,11 +4,11 @@ import { Link } from "react-router-dom";
 
 const Cv = () => {
     const handleDownloadClick = () => {
-        window.open("https://drive.google.com/file/d/1rGHMc2fpVu2yU-XaJSFwTYCdXJH1mwKa/view?usp=drive_link", "_blank");
+        window.open("https://drive.google.com/file/d/1pCNTRqXQdr-6ms53zUbEpalykj3Pr3gD/view?usp=sharing", "_blank");
     };
 
     const handleDownloadClickPdf = () => {
-        window.open("https://drive.google.com/file/d/1fRDcjaI1pjp0PfE24TYV5BQ6dhZpTzbU/view?usp=drive_link", "_blank");
+        window.open("https://drive.google.com/file/d/1q7Kg1eD3Law2PmX8Ijld6nzkaeuFBbpm/view?usp=drive_link", "_blank");
     };
 
     return (
