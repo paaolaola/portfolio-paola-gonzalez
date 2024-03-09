@@ -6,6 +6,7 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import GoogleIcon from "@mui/icons-material/Google";
 import CaruselHobbies from "./CaruselHobbies";
 import CaruselCert from "./CaruselCert";
+import Footer from "./Footer";
 import "../assets/css/Home.css";
 
 const Home = () => {
@@ -54,7 +55,7 @@ const Home = () => {
                 <div className="first-section">
                     <div>
                         <section className="box-about">
-                            <h1 className="title">SOBRE MI</h1>
+                            <h1 className="title">Sobre Mi</h1>
                             <p className="text">
                                 Soy Fotógrafa y Desarrolladora Frontend con conocimientos en la ejecución de proyectos bajo la metodología ágil y la
                                 implementación de buenas prácticas.{" "}
@@ -84,37 +85,36 @@ const Home = () => {
                                 </a>
 
                                 <a
-                                    href="https://drive.google.com/file/d/1rGHMc2fpVu2yU-XaJSFwTYCdXJH1mwKa/view?usp=drive_link"
+                                    href="https://drive.google.com/file/d/1fRDcjaI1pjp0PfE24TYV5BQ6dhZpTzbU/view?usp=drive_link"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="section-btn-cv"
                                 >
-                                    Descargar CV
+                                    <button className="section-btn-cv">Descargar CV</button>
                                 </a>
                             </div>
                         </section>
                         <section className="box-stack ">
-                            <h1 className="title">STACK</h1>
+                            <h1 className="title">Skills</h1>
                             <div>
                                 <img className="stack-image" src="./img/stack/stack.png" alt="stack"></img>
                             </div>
                         </section>
                         <section className="box-cert">
-                            <h1 className="title">CERTIFICADOS</h1>
+                            <h1 className="title">Certificados</h1>
                             <CaruselCert />
                         </section>
                     </div>
                     <div>
                         <section className="box-hobbies">
-                            <h1 className="title">HOBBIES</h1>
+                            <h1 className="title">Hobbies</h1>
                             <p className="text">
-                                Me gusta participar en actividades al aire libre, como hacer trekking en las montañas, acampar y asistir a conciertos de música.
-                                Además, disfruto visitando exposiciones de arte para inspirarme. En mi tiempo libre, me dedico a la fotografía análoga y también
-                                me apasiona crear fotomontajes digitales de temática onírica.{" "}
+                                Me gusta participar en actividades al aire libre, como viajar, hacer trekking, acampar o asistir a conciertos de música. Además
+                                disfruto mucho visitando exposiciones de arte para inspirarme. En mi tiempo libre me dedico a la fotografía análoga y también a
+                                crear fotomontajes digitales de temática onírica.{" "}
                             </p>
                             <p className="text">
-                                Estas actividades son parte importante de mi vida y me permiten desarrollar habilidades creativas y artísticas en torno al
-                                diseño que se complementan con mi experiencia como Front End.
+                                Estas aficiones son parte importante en mi vida y me han dado espacio para desarrollar habilidades creativas y visuales
+                                relacionadas directamente con el diseño y que complementan mi experiencia como Front End.
                             </p>
                             <div className="carusel">
                                 <CaruselHobbies />
@@ -122,7 +122,7 @@ const Home = () => {
                         </section>
 
                         <section className="box-studies">
-                            <h1 className="title">ESTUDIOS</h1>
+                            <h1 className="title">Estudios</h1>
 
                             <div>
                                 <h3 className="name">JAVASCRIPT</h3>
@@ -246,7 +246,7 @@ const Home = () => {
 
                 <div>
                     <section className="box-projects">
-                        <h1 className="title">PROYECTOS</h1>
+                        <h1 className="title">Proyectos</h1>
 
                         <div className="content-projects">
                             {proyectos.map((proyecto) => (
@@ -258,10 +258,10 @@ const Home = () => {
                                         </div>
                                         <div className="btn-sites-projects">
                                             <a href={proyecto.github} target="_blank" rel="noopener noreferrer">
-                                                <button className="box-btn">Ver GitHub</button>
+                                                <button className="box-btn">GitHub</button>
                                             </a>
                                             <a href={proyecto.url} target="_blank" rel="noopener noreferrer">
-                                                <button className="box-btn">Ver sitio</button>
+                                                <button className="box-btn">Live Preview</button>
                                             </a>
 
                                             <button onClick={() => handleClick(proyecto.name)} className="box-btn">
@@ -276,7 +276,7 @@ const Home = () => {
                 </div>
 
                 <div>
-                    <p className="footer">HECHO CON 💛 PAOLA GONZÁLEZ. 2024</p>
+                    <Footer />
                 </div>
             </div>
         </>

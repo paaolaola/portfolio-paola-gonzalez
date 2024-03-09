@@ -1,5 +1,6 @@
 import "../assets/css/Cv.css";
-import React from "react";
+import Footer from "../components/Footer";
+import { Link } from "react-router-dom";
 
 const Cv = () => {
     const handleDownloadClick = () => {
@@ -11,20 +12,30 @@ const Cv = () => {
     };
 
     return (
-        <div className="box-content-cv">
-            <div className="box-cv">
-                <img className="img-cv" src="./img/cv/cv.png" alt="foto de cv" />
-                <button className="btn-cv" onClick={handleDownloadClick}>
-                    Descarga CV
-                </button>
+        <>
+            <div className="box-content-cv">
+                <div className="box-cv">
+                    <img className="img-cv" src="./img/cv/cv.png" alt="foto de cv" />
+                    <button className="btn-cv" onClick={handleDownloadClick}>
+                        Descarga CV
+                    </button>
+                </div>
+                <div className="box-cv">
+                    <img className="img-cv" src="./img/cv/cv-2.png" alt="foto de cv" />
+                    <button className="btn-cv" onClick={handleDownloadClickPdf}>
+                        Descarga PARA ATS
+                    </button>
+                </div>
             </div>
-            <div className="box-cv">
-                <img className="img-cv" src="./img/cv/cv-2.png" alt="foto de cv" />
-                <button className="btn-cv" onClick={handleDownloadClickPdf}>
-                    Descarga PARA ATS
-                </button>
+            <div className="btn-home">
+                <Link to="/">
+                    <button className="btn-404">Volver al menu principal</button>
+                </Link>
             </div>
-        </div>
+            <div>
+                <Footer />
+            </div>
+        </>
     );
 };
 

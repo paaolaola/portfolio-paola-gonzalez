@@ -215,16 +215,23 @@
 }
 
 .btn-more {
+    font-family: "Bebas Neue", sans-serif;
     font-size: 13px;
     font-weight: 400;
-    background-color: transparent;
     border-style: none;
+    border-radius: 8px;
+    background-color: #ffbd59;
     color: #545454;
-    text-decoration: underline;
+
+    height: 25px;
+    width: 60px;
+    cursor: pointer;
+    box-shadow: 0px 0px 5px #545454;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    text-align: center;
 }
 
 .btn-more:hover {
-    color: #fd81ce;
     text-shadow: 0 0 10px #ff66c4;
     text-decoration: underline;
 }
@@ -333,18 +340,6 @@
     color: #ffbd59;
     border-color: #d67eee;
     text-shadow: 0px 0px 10px #ff66c4;
-}
-
-/*footer*/
-.footer {
-    display: flex;
-    justify-content: center;
-    font-family: "Bebas Neue", sans-serif;
-    font-size: 18px;
-    font-weight: 600;
-    color: #ffbd59;
-    letter-spacing: 1px;
-    margin-top: 3rem;
 }
 
 /*RESPONSIVE*/
@@ -556,6 +551,12 @@
     .box-about {
         margin: 1rem auto;
         width: 90%;
+    }
+    .section-btn-cv {
+        background-color: #ffbd59;
+        color: #545454;
+        height: 40px;
+        width: 80px;
     }
 
     /*seccion stack*/

@@ -35,7 +35,7 @@ const Proyectos = () => {
                         <p className="name">Video no encontrado</p>
                     )}
                 </div>
-                <h4 className="projects-title">Herramientas</h4>
+                <h4 className="projects-title">Skills</h4>
                 <div className="btn-skills">
                     {Object.values(proyecto.skills).map((skill, index) => (
                         <button key={index}>{skill}</button>
@@ -45,14 +45,14 @@ const Proyectos = () => {
                 <p className="projects-text">{proyecto.info}</p>
                 <div className="btn-sites-projects">
                     <a href={proyecto.github} target="_blank" rel="noopener noreferrer">
-                        <button className="box-btn">Ver GitHub</button>
+                        <button className="box-btn">GitHub</button>
                     </a>
                     <a href={proyecto.url} target="_blank" rel="noopener noreferrer">
-                        <button className="box-btn">Ver sitio</button>
+                        <button className="box-btn">Live Preview</button>
                     </a>
                 </div>
 
-                <h4 className="projects-title">Vistas de la App Web</h4>
+                <h4 className="projects-title">Views</h4>
                 <div className="projects-views">
                     {Object.values(proyecto.images).map((image, index) => (
                         <img key={index} className="projects-image" src={image} alt={proyecto.name} />

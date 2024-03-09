@@ -16,8 +16,8 @@ import FavoriteIcon from "@mui/icons-material/Favorite";
 import { Link } from "react-router-dom";
 import { animateScroll as scroll } from "react-scroll";
 
-const drawerWidth = 90;
-const drawerHeight = 150;
+const drawerWidth = { width: "100%" };
+const drawerHeight = { height: "50px" };
 const drawerColor = "linear-gradient( #ff66c4, #cb6ce6, #5170ff)";
 const navItems = ["contacto"];
 
@@ -46,12 +46,13 @@ function DrawerAppBar(props) {
         // Cuando el estado de liked cambia, actualiza el localStorage
         localStorage.setItem("like", liked.toString());
     }, [liked]);
+
     const scrollToTop = () => {
         scroll.scrollToTop();
     };
 
     const drawer = (
-        <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
+        <Box onClick={handleDrawerToggle} sx={{ display: "flex", justifyContent: "space-between" }}>
             <Link to="/" style={{ textDecoration: "none" }}>
                 <Typography
                     variant="h6"
@@ -66,6 +67,7 @@ function DrawerAppBar(props) {
                         },
                         fontWeight: "600",
                         "&:hover": { textShadow: "0 0 10px #ffbd59" },
+                        marginLeft: "20px",
                     }}
                     onClick={scrollToTop}
                 >
@@ -73,7 +75,6 @@ function DrawerAppBar(props) {
                     PG .
                 </Typography>
             </Link>
-
             <Divider />
             <List>
                 <Link to="/" style={{ textDecoration: "none" }}>
@@ -92,6 +93,7 @@ function DrawerAppBar(props) {
                                 lg: "14px",
                             },
                             textAlign: "center",
+                            marginRight: "10px",
                         }}
                     >
                         Inicio
@@ -103,7 +105,6 @@ function DrawerAppBar(props) {
                         sx={{
                             color: "#ffbd59",
                             fontFamily: "Montserrat",
-
                             fontWeight: "600",
                             "&:hover": { textShadow: "0 0 10px #ffbd59" },
                             fontSize: {
@@ -113,6 +114,7 @@ function DrawerAppBar(props) {
                                 lg: "14px",
                             },
                             textAlign: "center",
+                            marginRight: "10px",
                         }}
                     >
                         CV
@@ -133,6 +135,7 @@ function DrawerAppBar(props) {
                                 lg: "14px",
                             },
                             textAlign: "center",
+                            marginRight: "30px",
                         }}
                     >
                         Contacto
