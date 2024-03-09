@@ -22,7 +22,7 @@
     border-radius: 30px;
     text-align: justify;
     margin: 1rem 6rem;
-    min-height: 100vh;
+    min-height: calc(100vh - 6rem); /* Establecer una altura mínima relativa a la altura de la ventana del navegador */
     padding: 3rem;
 }
 .projects-text {
@@ -91,6 +91,7 @@
         margin: 3rem;
     }
 }
+
 @media screen and (min-width: 768px) and (max-width: 996px) {
     .box-proyects {
         margin: 3rem;

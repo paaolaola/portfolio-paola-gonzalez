@@ -1,13 +1,21 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import { ProjectContext } from "../context/ProjectContext";
 import "../assets/css/Proyectos.css";
+import { animateScroll as scroll } from "react-scroll";
 
 const Proyectos = () => {
     const { name } = useParams();
     const { proyectos } = useContext(ProjectContext);
 
     const proyecto = proyectos.find((proyecto) => proyecto.name === name);
+
+    useEffect(() => {
+        scroll.scrollToTop({
+            duration: 500,
+            smooth: "easeInOutQuad",
+        });
+    }, []);
 
     if (!proyecto) {
         return <p className="title-404">Proyecto no encontrado</p>;
