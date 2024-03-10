@@ -58,14 +58,14 @@ const Home = () => {
                             <h1 className="title">Sobre Mi</h1>
                             <p className="text">Soy una profesional con experiencia en Fotografía que ha dado un giro hacia el mundo tecnológico.</p>
                             <p className="text">
-                                Me apasiona crear cosas visualmente atractivas y llevar a cabo proyectos innovadores. Me destaco por mi habilidad para trabajar
-                                en equipo, capacidad de aprendizaje y resolución de problemas, además del relacionamiento con clientes y conocimiento de
-                                metodologías ágiles.
+                                Me apasiona crear cosas visualmente atractivas y llevar a cabo proyectos innovadores que tengan un impacto positivo a nivel de
+                                usuario. Me destaco por mi habilidad para trabajar en equipo, capacidad de aprendizaje y resolución de problemas, además del
+                                relacionamiento con clientes y conocimiento de metodologías ágiles.
                             </p>
                             <p className="text">
                                 {" "}
                                 Actualmente estoy en busca de nuevos desafíos profesionales que me permitan seguir creciendo en el sector TI. Te invito a
-                                conocerme y que revises mis redes y currículum.
+                                conocerme y que revises mi portfolio y currículum.
                             </p>
 
                             <div className="btn-links">
