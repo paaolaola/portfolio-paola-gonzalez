@@ -82,7 +82,7 @@ const Home = () => {
                                 </a>
 
                                 <a
-                                    href="https://drive.google.com/file/d/1q7Kg1eD3Law2PmX8Ijld6nzkaeuFBbpm/view?usp=drive_link"
+                                    href="https://drive.google.com/file/d/1Afz8CZ1oW51xx2UedA3j_eTQ_oOzbQbH/view?usp=sharing"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                 >

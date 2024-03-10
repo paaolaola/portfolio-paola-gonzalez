@@ -5,6 +5,11 @@ function CaruselCert() {
     return (
         <Carousel>
             <Carousel.Item>
+                <a href="https://www.udemy.com/certificate/UC-11fd511e-48fd-44b8-9863-bcfd8f6d3c8e/" target="_blank" rel="noopener noreferrer">
+                    <img className="box-content-img" src="./img/certificaciones/certificacion-6.png" alt="certificado Udemy" />
+                </a>
+            </Carousel.Item>
+            <Carousel.Item>
                 <a href="https://cursos.desafiolatam.com/certificates/0jsrdhqq4s" target="_blank" rel="noopener noreferrer">
                     <img className="box-content-img" src="./img/certificaciones/certificacion-5.png" alt="certificado ADL" />
                 </a>
