@@ -55,7 +55,7 @@
 }
 
 .image {
-    width: 380px;
+    width: 310px;
     border-radius: 50%;
     border: 1.5px solid #545454;
     box-shadow: 0 0 20px #545454;
@@ -63,9 +63,18 @@
 
 .image-perfil {
     display: flex;
+    flex-direction: column;
     align-items: center;
 }
 
+.mui-links {
+    padding-top: 2rem;
+}
+
+.mui-links a {
+    padding-top: 3rem;
+    margin: 10px;
+}
 /*seccion general*/
 .box-container {
     text-align: justify;
@@ -351,6 +360,7 @@
         grid-gap: 5px;
         padding: 1rem;
     }
+
     /*seccion perfil*/
     .box-perfil {
         margin-top: 1rem;
@@ -400,7 +410,9 @@
     .title {
         text-align: center;
     }
-
+    .mui-links {
+        padding: 0.5rem 0 2rem 0;
+    }
     /*header*/
     .box-perfil {
         display: flex;
@@ -508,7 +520,9 @@
     .title {
         text-align: center;
     }
-
+    .mui-links {
+        padding: 0.5rem 0 2rem 0;
+    }
     /*header*/
     .box-perfil {
         display: flex;

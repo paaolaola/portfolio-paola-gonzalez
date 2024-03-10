@@ -1,6 +1,7 @@
 import { useState, useContext } from "react";
 import { ProjectContext } from "../context/ProjectContext";
 import { useNavigate } from "react-router-dom";
+import InsertLinkIcon from "@mui/icons-material/InsertLink";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import GoogleIcon from "@mui/icons-material/Google";
@@ -39,7 +40,23 @@ const Home = () => {
         <>
             <header className="box-perfil">
                 <div className="image-perfil">
-                    <img className="image" src="./img/perfil/fotoperfil.jpg" alt="foto de perfil de paola"></img>
+                    <div>
+                        <img className="image" src="./img/perfil/fotoperfil.jpg" alt="foto de perfil de paola"></img>{" "}
+                    </div>
+                    <div className="mui-links">
+                        <a href="https://paolagonzalez.netlify.app/" target="_blank" rel="noopener noreferrer">
+                            <InsertLinkIcon sx={{ fontSize: 40, color: "#ffbd59", transform: "rotate(-45deg)" }} />
+                        </a>
+                        <a href="https://github.com/paaolaola" target="_blank" rel="noopener noreferrer">
+                            <GitHubIcon sx={{ fontSize: 40, color: "#ffbd59" }} />
+                        </a>
+                        <a href="https://www.linkedin.com/in/paola-gonzalez-guzman/" target="_blank" rel="noopener noreferrer">
+                            <LinkedInIcon sx={{ fontSize: 40, color: "#ffbd59" }} />
+                        </a>
+                        <a href="mailto:paolagonzalez.contacto@gmail.com" target="_blank" rel="noopener noreferrer">
+                            <GoogleIcon sx={{ fontSize: 40, color: "#ffbd59" }} />
+                        </a>
+                    </div>
                 </div>
 
                 <div className="names-perfil">
