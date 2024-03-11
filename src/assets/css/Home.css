@@ -109,7 +109,7 @@
 
 /*seccion sobre mi*/
 .box-about {
-    background-color: rgba(0, 0, 0, 0.15);
+    /* background-color: rgba(0, 0, 0, 0.15); */
     border-radius: 30px;
     text-align: justify;
     width: 100%;
@@ -159,7 +159,7 @@
 
 /*seccion hobbies*/
 .box-hobbies {
-    background-color: rgba(0, 0, 0, 0.15);
+    /* background-color: rgba(0, 0, 0, 0.15); */
     border-radius: 30px;
     margin: 1rem;
     padding: 3rem;
@@ -170,7 +170,7 @@
 .box-stack {
     display: flex;
     flex-direction: column;
-    background-color: rgba(0, 0, 0, 0.15);
+    /* background-color: rgba(0, 0, 0, 0.15); */
     border-radius: 30px;
     width: 100%;
     margin: 1rem;
@@ -190,7 +190,7 @@
 
 /*seccion estudios*/
 .box-studies {
-    background-color: rgba(0, 0, 0, 0.15);
+    /* background-color: rgba(0, 0, 0, 0.15); */
     border-radius: 30px;
     padding: 3rem;
     text-align: justify;
@@ -247,7 +247,7 @@
 
 /*seccion certificados*/
 .box-cert {
-    background-color: rgba(0, 0, 0, 0.15);
+    /* background-color: rgba(0, 0, 0, 0.15); */
     border-radius: 30px;
     text-align: center;
     width: 100%;
@@ -262,7 +262,7 @@
 
 /*seccion proyectos*/
 .box-projects {
-    background-color: rgba(0, 0, 0, 0.15);
+    /* background-color: rgba(0, 0, 0, 0.15); */
     border-radius: 30px;
     text-align: justify;
     margin: 0 6rem;

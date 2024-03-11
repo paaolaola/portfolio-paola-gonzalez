@@ -13,6 +13,7 @@
 }
 .input-footer {
     font-size: 14px;
+    font-family: "Montserrat", sans-serif;
     background-color: transparent;
     border-style: none;
     border: 2px solid #ffbd59;
@@ -20,8 +21,7 @@
     text-align: center;
     width: 300px;
     height: 40px;
-    color: #545454;
-    font-family: "Montserrat", sans-serif;
+    color: #ffbd59;
     margin: 0 5px;
     box-shadow: 0px 0px 6px #ffbd59;
 }
