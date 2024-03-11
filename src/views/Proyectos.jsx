@@ -3,6 +3,7 @@ import { useParams, Link } from "react-router-dom";
 import { ProjectContext } from "../context/ProjectContext";
 import "../assets/css/Proyectos.css";
 import { animateScroll as scroll } from "react-scroll";
+import Footer from "../components/Footer";
 
 const Proyectos = () => {
     const { name } = useParams();
@@ -69,6 +70,9 @@ const Proyectos = () => {
                         <button className="btn-404">Volver al menu principal</button>
                     </Link>
                 </div>
+            </div>
+            <div>
+                <Footer />
             </div>
         </>
     );

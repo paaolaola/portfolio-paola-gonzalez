@@ -121,20 +121,20 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.2);
     cursor: pointer;
     width: 100%;
     margin: 3rem 0 1rem 0;
     padding: 1rem 3rem;
-    border-radius: 20px;
-    border: 1px solid #ff66c4;
-    box-shadow: 0px 0px 30px #fd81ce;
+    border-radius: 50px;
+    border: 0.5px solid #ff66c4;
+    box-shadow: 0px 0px 5px #ffbd59;
     transition: border-color 0.3s, box-shadow 0.3s;
+    background-color: rgba(0, 0, 0, 0.1);
 }
 
 .btn-links:hover {
     border-color: #ffbd59;
-    box-shadow: 0px 0px 8px #ffbd59;
+    box-shadow: 0px 0px 15px #ffbd59;
 }
 
 .section-btn-cv {
@@ -148,7 +148,7 @@
     border-radius: 10px;
     border-style: none;
     cursor: pointer;
-    box-shadow: 0px 0px 5px #545454;
+    box-shadow: 0px 0px 2px #545454;
     transition: border-color 0.3s, box-shadow 0.3s;
     text-align: center;
 }
@@ -168,9 +168,9 @@
 
 /*seccion skills*/
 .box-stack {
+    /* background-color: rgba(0, 0, 0, 0.15); */
     display: flex;
     flex-direction: column;
-    /* background-color: rgba(0, 0, 0, 0.15); */
     border-radius: 30px;
     width: 100%;
     margin: 1rem;
@@ -231,7 +231,6 @@
     border-radius: 8px;
     background-color: #ffbd59;
     color: #545454;
-
     height: 25px;
     width: 60px;
     cursor: pointer;
@@ -314,9 +313,9 @@
 }
 
 .box {
-    width: 100%;
+    /*agregar background-color:*/
     display: flex;
-    flex-direction: column;
+    width: 100%;
 }
 
 .box-content-projects {

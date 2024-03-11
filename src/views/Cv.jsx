@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const Cv = () => {
     const handleDownloadClick = () => {
-        window.open("https://drive.google.com/file/d/1sOYkdxyaOU1LWz_ug6x3ulhgoRkpyusL/view?usp=drive_link", "_blank");
+        window.open("https://drive.google.com/file/d/1fs_gD2Uq7VnXU_fM5TW-uHil1oswg4DS/view?usp=drive_link", "_blank");
     };
 
     const handleDownloadClickPdf = () => {

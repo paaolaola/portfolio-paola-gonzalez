@@ -18,12 +18,12 @@
     margin: 5px;
 }
 .box-proyects {
-    background-color: rgba(0, 0, 0, 0.15);
+    /* background-color: rgba(0, 0, 0, 0.15); */
     border-radius: 30px;
     text-align: justify;
-    margin: 1rem 6rem;
+    margin: 1rem 6rem 3rem 6rem;
     min-height: calc(100vh - 6rem); /* Establecer una altura mínima relativa a la altura de la ventana del navegador */
-    padding: 3rem;
+    padding: 3rem 3rem 1rem 3rem;
 }
 .projects-text {
     font-size: 15px;
@@ -74,7 +74,7 @@
     border-radius: 10px;
     border-style: none;
     cursor: pointer;
-    box-shadow: 0px 0px 5px #545454;
+    box-shadow: 0px 0px 2px #545454;
     transition: border-color 0.3s, box-shadow 0.3s;
     text-align: center;
     margin: 0 10px 1rem 0;
@@ -82,7 +82,7 @@
 
 .btn-home {
     text-align: center;
-    margin-top: 2rem;
+    margin: 3rem 0 5rem 0;
 }
 
 /*RESPONSIVE*/

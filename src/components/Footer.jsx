@@ -30,10 +30,10 @@ const Footer = () => {
 
                 <div>
                     <button className="btn-footer" onClick={handleCopy}>
-                        <ContentCopyIcon />
+                        <ContentCopyIcon sx={{ fontSize: 20 }} />
                     </button>
                     <button className="btn-footer" onClick={handleEmailBtn}>
-                        <SendIcon />
+                        <SendIcon sx={{ fontSize: 20 }} />
                     </button>
                 </div>
             </div>

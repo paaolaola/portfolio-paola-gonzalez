@@ -12,28 +12,27 @@
     margin-top: 2rem;
 }
 .input-footer {
-    font-size: 14px;
+    font-size: 12px;
     font-family: "Montserrat", sans-serif;
-    background-color: transparent;
+    background-color: #ffbd59;
     border-style: none;
-    border: 2px solid #ffbd59;
+    border: 1.5px solid #ffbd59;
     border-radius: 8px;
     text-align: center;
-    width: 300px;
-    height: 40px;
-    color: #ffbd59;
-    margin: 0 5px;
-    box-shadow: 0px 0px 6px #ffbd59;
+    width: 250px;
+    height: 30px;
+    color: #5170ff;
+    margin: 0 2px;
+    /* box-shadow: 0px 0px 6px #ffbd59; */
 }
 .btn-footer {
-    background-color: transparent;
-    color: #ffbd59;
-    height: 40px;
+    background-color: #ffbd59;
+    color: #5170ff;
+    height: 30px;
     width: 50px;
-    line-height: 40px;
-    font-size: 15px;
+    line-height: 10px;
     border-radius: 10px;
-    border: 2px solid #ffbd59;
+    border: 1.5px solid #ffbd59;
     cursor: pointer;
     transition: border-color 0.3s, box-shadow 0.3s;
     text-align: center;

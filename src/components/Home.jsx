@@ -1,7 +1,7 @@
 import { useState, useContext } from "react";
 import { ProjectContext } from "../context/ProjectContext";
 import { useNavigate } from "react-router-dom";
-import InsertLinkIcon from "@mui/icons-material/InsertLink";
+import DescriptionIcon from "@mui/icons-material/Description";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import GoogleIcon from "@mui/icons-material/Google";
@@ -44,9 +44,6 @@ const Home = () => {
                         <img className="image" src="./img/perfil/fotoperfil.jpg" alt="foto de perfil de paola"></img>{" "}
                     </div>
                     <div className="mui-links">
-                        <a href="https://paolagonzalez.netlify.app/" target="_blank" rel="noopener noreferrer">
-                            <InsertLinkIcon sx={{ fontSize: 40, color: "#ffbd59", transform: "rotate(-45deg)" }} />
-                        </a>
                         <a href="https://github.com/paaolaola" target="_blank" rel="noopener noreferrer">
                             <GitHubIcon sx={{ fontSize: 40, color: "#ffbd59" }} />
                         </a>
@@ -55,6 +52,9 @@ const Home = () => {
                         </a>
                         <a href="mailto:paolagonzalez.contacto@gmail.com" target="_blank" rel="noopener noreferrer">
                             <GoogleIcon sx={{ fontSize: 40, color: "#ffbd59" }} />
+                        </a>
+                        <a href="https://drive.google.com/file/d/1Afz8CZ1oW51xx2UedA3j_eTQ_oOzbQbH/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+                            <DescriptionIcon sx={{ fontSize: 40, color: "#ffbd59" /*transform: "rotate(-45deg)"*/ }} />
                         </a>
                     </div>
                 </div>
@@ -86,12 +86,11 @@ const Home = () => {
                             </p>
 
                             <div className="btn-links">
-                                <a href="https://www.linkedin.com/in/paola-gonzalez-guzman/" target="_blank" rel="noopener noreferrer">
-                                    <LinkedInIcon sx={{ fontSize: 40, color: "#ffbd59" }} />
-                                </a>
-
                                 <a href="https://github.com/paaolaola" target="_blank" rel="noopener noreferrer">
                                     <GitHubIcon sx={{ fontSize: 40, color: "#ffbd59" }} />
+                                </a>
+                                <a href="https://www.linkedin.com/in/paola-gonzalez-guzman/" target="_blank" rel="noopener noreferrer">
+                                    <LinkedInIcon sx={{ fontSize: 40, color: "#ffbd59" }} />
                                 </a>
 
                                 <a href="mailto:paolagonzalez.contacto@gmail.com" target="_blank" rel="noopener noreferrer">
@@ -103,7 +102,9 @@ const Home = () => {
                                     target="_blank"
                                     rel="noopener noreferrer"
                                 >
-                                    <button className="section-btn-cv">Descargar CV</button>
+                                    <button className="section-btn-cv">
+                                        Descargar CV <DescriptionIcon sx={{ fontSize: 15, color: "#545454" }} />
+                                    </button>
                                 </a>
                             </div>
                         </section>
