@@ -22,7 +22,7 @@ const Footer = () => {
 
     return (
         <>
-            {copied && <span className="copied-message"> Correo copiado ✔️</span>}
+            {copied && <span className="copied-message"> Correo copiado</span>}
             <div className="footer">
                 <div>
                     <input className="input-footer" type="email" value={email} readOnly />
