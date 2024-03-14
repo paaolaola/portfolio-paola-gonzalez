@@ -18,7 +18,7 @@ import { animateScroll as scroll } from "react-scroll";
 
 const drawerWidth = { width: "100%" };
 const drawerHeight = { height: "50px" };
-const drawerColor = "linear-gradient( #ff66c4, #cb6ce6, #5170ff)";
+const drawerColor = "linear-gradient(to top, #ff66c4, #cb6ce6, #5170ff)";
 const navItems = ["contacto"];
 
 function DrawerAppBar(props) {

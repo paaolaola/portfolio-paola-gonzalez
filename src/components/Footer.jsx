@@ -14,9 +14,8 @@ const Footer = () => {
         navigator.clipboard.writeText(email);
 
         const toastStyle = {
-            background: "linear-gradient(to top, #ff66c4, #cb6ce6, #5170ff)", // Gradiente de fondo personalizado
+            background: "linear-gradient(to top, #ff66c4, #cb6ce6, #5170ff)",
             color: "#ffbd59",
-            // Color de texto personalizado
         };
         toast.warn("Correo copiado!", {
             transition: Zoom,
