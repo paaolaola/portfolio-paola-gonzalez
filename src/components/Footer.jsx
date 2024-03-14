@@ -2,18 +2,29 @@ import React, { useState } from "react";
 import "../assets/css/Footer.css";
 import SendIcon from "@mui/icons-material/Send";
 import ContentCopyIcon from "@mui/icons-material/ContentCopy";
+import { ToastContainer, Zoom, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import RocketIcon from "@mui/icons-material/Rocket";
 
 const Footer = () => {
     const defaultEmail = "paolagonzalez.contacto@gmail.com";
     const [email] = useState(defaultEmail);
-    const [copied, setCopied] = useState(false);
 
-    const handleCopy = () => {
+    const handleCopyBtn = () => {
         navigator.clipboard.writeText(email);
-        setCopied(true);
-        setTimeout(() => {
-            setCopied(false);
-        }, 1500);
+
+        const toastStyle = {
+            background: "linear-gradient(to top, #ff66c4, #cb6ce6, #5170ff)", // Gradiente de fondo personalizado
+            color: "#ffbd59",
+            // Color de texto personalizado
+        };
+        toast.warn("Correo copiado!", {
+            transition: Zoom,
+            position: "bottom-center",
+            style: toastStyle,
+            icon: <RocketIcon />,
+            autoClose: 1000,
+        });
     };
 
     const handleEmailBtn = () => {
@@ -22,14 +33,14 @@ const Footer = () => {
 
     return (
         <>
-            {copied && <span className="copied-message"> Correo copiado</span>}
+            <ToastContainer icon={false} />
             <div className="footer">
                 <div>
                     <input className="input-footer" type="email" value={email} readOnly />
                 </div>
 
                 <div>
-                    <button className="btn-footer" onClick={handleCopy}>
+                    <button className="btn-footer" onClick={handleCopyBtn}>
                         <ContentCopyIcon sx={{ fontSize: 20 }} />
                     </button>
                     <button className="btn-footer" onClick={handleEmailBtn}>
