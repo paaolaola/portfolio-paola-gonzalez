@@ -54,7 +54,7 @@ const Home = () => {
                             <GoogleIcon sx={{ fontSize: 40, color: "#ffbd59" }} />
                         </a>
                         <a href="https://drive.google.com/file/d/1Afz8CZ1oW51xx2UedA3j_eTQ_oOzbQbH/view?usp=sharing" target="_blank" rel="noopener noreferrer">
-                            <DescriptionIcon sx={{ fontSize: 40, color: "#ffbd59" /*transform: "rotate(-45deg)"*/ }} />
+                            <DescriptionIcon sx={{ fontSize: 40, color: "#ffbd59" }} />
                         </a>
                     </div>
                 </div>
