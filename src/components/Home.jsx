@@ -11,7 +11,7 @@ import Footer from "./Footer";
 import "../assets/css/Home.css";
 
 const Home = () => {
-    const { proyectos } = useContext(ProjectContext);
+    const { proyectos, studiesRef, projectsRef, aboutRef } = useContext(ProjectContext);
 
     //seccion proyectos, boton ver mas
     const navigate = useNavigate();
@@ -71,7 +71,7 @@ const Home = () => {
             <div className="box-container">
                 <div className="first-section">
                     <div>
-                        <section className="box-about">
+                        <section ref={aboutRef} className="box-about">
                             <h1 className="title">Sobre Mi</h1>
                             <p className="text">Soy una profesional con experiencia en Fotografía que ha dado un giro hacia el mundo tecnológico.</p>
                             <p className="text">
@@ -121,7 +121,7 @@ const Home = () => {
             </div>
 
             <div>
-                <section className="box-projects">
+                <section ref={projectsRef} className="box-projects">
                     <h1 className="title">Proyectos</h1>
 
                     <div className="content-projects">
@@ -153,7 +153,7 @@ const Home = () => {
             <div className="box-container">
                 <div className="first-section">
                     <div>
-                        <section className="box-cert">
+                        <section ref={studiesRef} className="box-cert">
                             <h1 className="title">Certificados</h1>
                             <CaruselCert />
                         </section>

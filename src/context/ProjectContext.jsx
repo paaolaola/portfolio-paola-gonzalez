@@ -1,7 +1,12 @@
-import { createContext } from "react";
+import { createContext, useRef } from "react";
 export const ProjectContext = createContext();
 
 const ProjectProvider = ({ children }) => {
+    //constantes del scroll
+    const aboutRef = useRef(null);
+    const projectsRef = useRef(null);
+    const studiesRef = useRef(null);
+
     //array de todos los proyectos
     const proyectos = [
         {
@@ -215,7 +220,7 @@ const ProjectProvider = ({ children }) => {
         },
     ];
 
-    return <ProjectContext.Provider value={{ proyectos }}>{children}</ProjectContext.Provider>;
+    return <ProjectContext.Provider value={{ proyectos, studiesRef, projectsRef, aboutRef }}>{children}</ProjectContext.Provider>;
 };
 
 export default ProjectProvider;

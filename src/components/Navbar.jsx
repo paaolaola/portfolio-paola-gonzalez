@@ -1,4 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
+import { useLocation, Link } from "react-router-dom";
+import { ProjectContext } from "../context/ProjectContext";
 import "../assets/css/Navbar.css";
 import PropTypes from "prop-types";
 import AppBar from "@mui/material/AppBar";
@@ -13,7 +15,6 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import FavoriteIcon from "@mui/icons-material/Favorite";
-import { Link } from "react-router-dom";
 import { animateScroll as scroll } from "react-scroll";
 
 const drawerWidth = { width: "100%" };
@@ -22,6 +23,29 @@ const drawerColor = "linear-gradient(to top, #ff66c4, #cb6ce6, #5170ff)";
 const navItems = ["contacto"];
 
 function DrawerAppBar(props) {
+    //context para scroll del home
+    const { aboutRef, projectsRef, studiesRef } = useContext(ProjectContext);
+
+    // nuevo estados para la condicion de la navbar
+    const location = useLocation();
+    const [showNavItem, setShowNavItem] = useState(true);
+
+    // useEffect para eliminar los componentes de la navbar al estar en cv y contacto
+    useEffect(() => {
+        if (location.pathname === "/curriculum" || location.pathname === "/contacto") {
+            setShowNavItem(false);
+        } else {
+            setShowNavItem(true);
+        }
+    }, [location.pathname]);
+
+    // scroll de las secciones del home
+    const scrollToRef = (ref) => {
+        if (ref && ref.current) {
+            ref.current.scrollIntoView({ behavior: "smooth" });
+        }
+    };
+    //estados para la funcion del like corazon
     const { window } = props;
     const [mobileOpen, setMobileOpen] = useState(false);
     const [liked, setLiked] = useState(false);
@@ -29,7 +53,7 @@ function DrawerAppBar(props) {
     const handleDrawerToggle = () => {
         setMobileOpen((prevState) => !prevState);
     };
-
+    //condicion para el like del corazón
     const handleLikeClick = () => {
         setLiked(!liked);
     };
@@ -45,10 +69,12 @@ function DrawerAppBar(props) {
         localStorage.setItem("like", liked.toString());
     }, [liked]);
 
+    //scroll top del inicio
     const scrollToTop = () => {
         scroll.scrollToTop();
     };
 
+    //logica de la navbar mobile
     const drawer = (
         <Box onClick={handleDrawerToggle} sx={{ display: "flex", justifyContent: "space-between" }}>
             <Link to="/" style={{ textDecoration: "none" }}>
@@ -85,8 +111,8 @@ function DrawerAppBar(props) {
                             fontWeight: "600",
                             "&:hover": { textShadow: "0 0 10px #ffbd59" },
                             fontSize: {
-                                xs: "11px",
-                                sm: "11px",
+                                xs: "9px",
+                                sm: "10px",
                                 md: "14px",
                                 lg: "14px",
                             },
@@ -98,6 +124,67 @@ function DrawerAppBar(props) {
                     </Button>
                 </Link>
 
+                {showNavItem && (
+                    <>
+                        <Button
+                            sx={{
+                                color: "#ffbd59",
+                                fontFamily: "Montserrat",
+                                fontWeight: "600",
+                                "&:hover": { textShadow: "0 0 10px #ffbd59" },
+                                fontSize: {
+                                    xs: "9px",
+                                    sm: "10px",
+                                    md: "12px",
+                                    lg: "12px",
+                                },
+                                textAlign: "center",
+                            }}
+                            onClick={() => scrollToRef(aboutRef)}
+                        >
+                            SOBRE MI
+                        </Button>
+
+                        <Button
+                            sx={{
+                                color: "#ffbd59",
+                                fontFamily: "Montserrat",
+                                fontWeight: "600",
+                                "&:hover": { textShadow: "0 0 10px #ffbd59" },
+                                fontSize: {
+                                    xs: "9px",
+                                    sm: "10px",
+                                    md: "12px",
+                                    lg: "12px",
+                                },
+                                textAlign: "center",
+                            }}
+                            onClick={() => scrollToRef(projectsRef)}
+                        >
+                            PROYECTOS
+                        </Button>
+
+                        <Button
+                            sx={{
+                                color: "#ffbd59",
+                                fontFamily: "Montserrat",
+                                fontWeight: "600",
+                                "&:hover": { textShadow: "0 0 10px #ffbd59" },
+                                fontSize: {
+                                    xs: "9px",
+                                    sm: "10px",
+                                    md: "12px",
+                                    lg: "12px",
+                                },
+                                textAlign: "center",
+                            }}
+                            onClick={() => scrollToRef(studiesRef)}
+                        >
+                            ESTUDIOS
+                        </Button>
+                    </>
+                )}
+
                 <Link to="/curriculum" style={{ textDecoration: "none" }}>
                     <Button
                         sx={{
@@ -106,8 +193,8 @@ function DrawerAppBar(props) {
                             fontWeight: "600",
                             "&:hover": { textShadow: "0 0 10px #ffbd59" },
                             fontSize: {
-                                xs: "11px",
-                                sm: "11px",
+                                xs: "9px",
+                                sm: "10px",
                                 md: "14px",
                                 lg: "14px",
                             },
@@ -127,8 +214,8 @@ function DrawerAppBar(props) {
                             fontWeight: "600",
                             "&:hover": { textShadow: "0 0 10px #ffbd59" },
                             fontSize: {
-                                xs: "11px",
-                                sm: "11px",
+                                xs: "9px",
+                                sm: "10px",
                                 md: "14px",
                                 lg: "14px",
                             },
@@ -143,6 +230,7 @@ function DrawerAppBar(props) {
         </Box>
     );
 
+    //logica de la desktop navbar
     const container = window !== undefined ? () => window().document.body : undefined;
 
     return (
@@ -190,8 +278,8 @@ function DrawerAppBar(props) {
                                     fontSize: {
                                         xs: "9px",
                                         sm: "10px",
-                                        md: "14px",
-                                        lg: "14px",
+                                        md: "12px",
+                                        lg: "12px",
                                     },
                                 }}
                             >
@@ -199,82 +287,79 @@ function DrawerAppBar(props) {
                             </Button>
                         </Link>
 
-                        <Link to="/curriculum" style={{ textDecoration: "none" }}>
-                            <Button
-                                sx={{
-                                    color: "#ffbd59",
-                                    fontFamily: "Montserrat",
+                        {showNavItem && (
+                            <>
+                                <Button
+                                    sx={{
+                                        color: "#ffbd59",
+                                        fontFamily: "Montserrat",
+                                        fontWeight: "600",
+                                        "&:hover": { textShadow: "0 0 10px #ffbd59" },
+                                        fontSize: {
+                                            xs: "9px",
+                                            sm: "10px",
+                                            md: "12px",
+                                            lg: "12px",
+                                        },
+                                        textAlign: "center",
+                                    }}
+                                    onClick={() => scrollToRef(aboutRef)}
+                                >
+                                    SOBRE MI
+                                </Button>
 
-                                    fontWeight: "600",
-                                    "&:hover": { textShadow: "0 0 10px #ffbd59" },
-                                    fontSize: {
-                                        xs: "11px",
-                                        sm: "11px",
-                                        md: "14px",
-                                        lg: "14px",
-                                    },
-                                    textAlign: "center",
-                                }}
-                            >
-                                SOBRE MI
-                            </Button>
-                        </Link>
+                                <Button
+                                    sx={{
+                                        color: "#ffbd59",
+                                        fontFamily: "Montserrat",
+                                        fontWeight: "600",
+                                        "&:hover": { textShadow: "0 0 10px #ffbd59" },
+                                        fontSize: {
+                                            xs: "9px",
+                                            sm: "10px",
+                                            md: "12px",
+                                            lg: "12px",
+                                        },
+                                        textAlign: "center",
+                                    }}
+                                    onClick={() => scrollToRef(projectsRef)}
+                                >
+                                    PROYECTOS
+                                </Button>
 
-                        <Link to="/curriculum" style={{ textDecoration: "none" }}>
-                            <Button
-                                sx={{
-                                    color: "#ffbd59",
-                                    fontFamily: "Montserrat",
-
-                                    fontWeight: "600",
-                                    "&:hover": { textShadow: "0 0 10px #ffbd59" },
-                                    fontSize: {
-                                        xs: "11px",
-                                        sm: "11px",
-                                        md: "14px",
-                                        lg: "14px",
-                                    },
-                                    textAlign: "center",
-                                }}
-                            >
-                                PROYECTOS
-                            </Button>
-                        </Link>
-
-                        <Link to="/curriculum" style={{ textDecoration: "none" }}>
-                            <Button
-                                sx={{
-                                    color: "#ffbd59",
-                                    fontFamily: "Montserrat",
-
-                                    fontWeight: "600",
-                                    "&:hover": { textShadow: "0 0 10px #ffbd59" },
-                                    fontSize: {
-                                        xs: "11px",
-                                        sm: "11px",
-                                        md: "14px",
-                                        lg: "14px",
-                                    },
-                                    textAlign: "center",
-                                }}
-                            >
-                                ESTUDIOS
-                            </Button>
-                        </Link>
+                                <Button
+                                    sx={{
+                                        color: "#ffbd59",
+                                        fontFamily: "Montserrat",
+                                        fontWeight: "600",
+                                        "&:hover": { textShadow: "0 0 10px #ffbd59" },
+                                        fontSize: {
+                                            xs: "9px",
+                                            sm: "10px",
+                                            md: "12px",
+                                            lg: "12px",
+                                        },
+                                        textAlign: "center",
+                                    }}
+                                    onClick={() => scrollToRef(studiesRef)}
+                                >
+                                    ESTUDIOS
+                                </Button>
+                            </>
+                        )}
 
                         <Link to="/curriculum" style={{ textDecoration: "none" }}>
                             <Button
                                 sx={{
                                     color: "#ffbd59",
                                     fontFamily: "Montserrat",
-
                                     fontWeight: "600",
                                     "&:hover": { textShadow: "0 0 10px #ffbd59" },
                                     fontSize: {
-                                        xs: "11px",
-                                        sm: "11px",
-                                        md: "14px",
-                                        lg: "14px",
+                                        xs: "9px",
+                                        sm: "10px",
+                                        md: "12px",
+                                        lg: "12px",
                                     },
                                     textAlign: "center",
                                 }}
@@ -292,8 +377,8 @@ function DrawerAppBar(props) {
                                         fontSize: {
                                             xs: "9px",
                                             sm: "10px",
-                                            md: "14px",
-                                            lg: "14px",
+                                            md: "12px",
+                                            lg: "12px",
                                         },
                                         fontWeight: "800",
                                         "&:hover": { textShadow: "0 0 10px #ffbd59" },
