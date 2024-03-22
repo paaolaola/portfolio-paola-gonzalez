@@ -63,7 +63,7 @@ function DrawerAppBar(props) {
                             md: "14px",
                             lg: "14px",
                         },
-                        fontWeight: "600",
+                        fontWeight: "400",
                         "&:hover": { textShadow: "0 0 10px #ffbd59" },
                         marginLeft: "20px",
                     }}
@@ -198,6 +198,70 @@ function DrawerAppBar(props) {
                                 Inicio
                             </Button>
                         </Link>
+
+                        <Link to="/curriculum" style={{ textDecoration: "none" }}>
+                            <Button
+                                sx={{
+                                    color: "#ffbd59",
+                                    fontFamily: "Montserrat",
+
+                                    fontWeight: "600",
+                                    "&:hover": { textShadow: "0 0 10px #ffbd59" },
+                                    fontSize: {
+                                        xs: "11px",
+                                        sm: "11px",
+                                        md: "14px",
+                                        lg: "14px",
+                                    },
+                                    textAlign: "center",
+                                }}
+                            >
+                                SOBRE MI
+                            </Button>
+                        </Link>
+
+                        <Link to="/curriculum" style={{ textDecoration: "none" }}>
+                            <Button
+                                sx={{
+                                    color: "#ffbd59",
+                                    fontFamily: "Montserrat",
+
+                                    fontWeight: "600",
+                                    "&:hover": { textShadow: "0 0 10px #ffbd59" },
+                                    fontSize: {
+                                        xs: "11px",
+                                        sm: "11px",
+                                        md: "14px",
+                                        lg: "14px",
+                                    },
+                                    textAlign: "center",
+                                }}
+                            >
+                                PROYECTOS
+                            </Button>
+                        </Link>
+
+                        <Link to="/curriculum" style={{ textDecoration: "none" }}>
+                            <Button
+                                sx={{
+                                    color: "#ffbd59",
+                                    fontFamily: "Montserrat",
+
+                                    fontWeight: "600",
+                                    "&:hover": { textShadow: "0 0 10px #ffbd59" },
+                                    fontSize: {
+                                        xs: "11px",
+                                        sm: "11px",
+                                        md: "14px",
+                                        lg: "14px",
+                                    },
+                                    textAlign: "center",
+                                }}
+                            >
+                                ESTUDIOS
+                            </Button>
+                        </Link>
+
                         <Link to="/curriculum" style={{ textDecoration: "none" }}>
                             <Button
                                 sx={{

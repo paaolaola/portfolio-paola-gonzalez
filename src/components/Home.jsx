@@ -281,7 +281,7 @@ const Home = () => {
             </div>
             <div>
                 <section className="box-hobbies">
-                    <h1 className="title">Más sobre mí</h1>
+                    <h1 className="title">Mas sobre mi</h1>
                     <div className="hobbies-container">
                         <div className="text-hobbies">
                             <p>

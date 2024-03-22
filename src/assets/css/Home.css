@@ -582,6 +582,7 @@
     .box-about {
         margin: 1rem auto;
         width: 90%;
+        padding: 3rem 1rem;
     }
     .section-btn-cv {
         background-color: #ffbd59;
@@ -595,6 +596,7 @@
     .box-stack {
         margin: 1rem auto;
         width: 90%;
+        padding: 3rem 1rem;
     }
 
     /*seccion estudios*/
@@ -604,12 +606,14 @@
     .box-studies {
         margin: 1rem auto;
         width: 90%;
+        padding: 3rem 1rem;
     }
 
     /*seccion hobbies*/
     .box-hobbies {
         margin: 0.5rem auto;
         width: 90%;
+        padding: 3rem 1rem;
     }
 
     .hobbies-container {
