@@ -67,7 +67,7 @@ const Proyectos = () => {
                 </div>
                 <div className="btn-home">
                     <Link to="/">
-                        <button className="btn-404">Volver al menu principal</button>
+                        <button className="btn-404">Volver</button>
                     </Link>
                 </div>
             </div>

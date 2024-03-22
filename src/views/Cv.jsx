@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const Cv = () => {
     const handleDownloadClick = () => {
-        window.open("https://drive.google.com/file/d/1fs_gD2Uq7VnXU_fM5TW-uHil1oswg4DS/view?usp=drive_link", "_blank");
+        window.open("https://drive.google.com/file/d/1eN46dGLbsMJtHt27Q849PzbZ7VBOhJs1/view?usp=drive_link", "_blank");
     };
 
     const handleDownloadClickPdf = () => {
@@ -13,6 +13,7 @@ const Cv = () => {
 
     return (
         <>
+            <h1 className="title-form">Currículum </h1>
             <div className="box-content-cv">
                 <div className="box-cv">
                     <img className="img-cv" src="./img/cv/cv.png" alt="foto de cv" />
@@ -29,7 +30,7 @@ const Cv = () => {
             </div>
             <div className="btn-home">
                 <Link to="/">
-                    <button className="btn-404">Volver al menu principal</button>
+                    <button className="btn-404">Volver</button>
                 </Link>
             </div>
             <div>

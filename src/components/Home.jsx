@@ -108,84 +108,104 @@ const Home = () => {
                                 </a>
                             </div>
                         </section>
-                        <section className="box-stack ">
+                    </div>
+                    <div>
+                        <section className="box-stack">
                             <h1 className="title">Skills</h1>
                             <div>
                                 <img className="stack-image" src="./img/stack/stack.png" alt="stack"></img>
                             </div>
                         </section>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <section className="box-projects">
+                    <h1 className="title">Proyectos</h1>
+
+                    <div className="content-projects">
+                        {proyectos.map((proyecto) => (
+                            <div key={proyecto.id} className="contenedor-card">
+                                <img className="box-content-projects" src={proyecto.image} alt={proyecto.name} />
+                                <div className="box">
+                                    <div>
+                                        <h5 className="proyect-name">{proyecto.name}</h5>
+                                    </div>
+                                    <div className="btn-sites-projects">
+                                        <a href={proyecto.github} target="_blank" rel="noopener noreferrer">
+                                            <button className="box-btn">GitHub</button>
+                                        </a>
+                                        <a href={proyecto.url} target="_blank" rel="noopener noreferrer">
+                                            <button className="box-btn">Live Preview</button>
+                                        </a>
+
+                                        <button onClick={() => handleClick(proyecto.name)} className="box-btn">
+                                            Ver más
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </section>
+            </div>
+            <div className="box-container">
+                <div className="first-section">
+                    <div>
                         <section className="box-cert">
                             <h1 className="title">Certificados</h1>
                             <CaruselCert />
                         </section>
                     </div>
-                    <div>
-                        <section className="box-hobbies">
-                            <h1 className="title">Hobbies</h1>
-                            <p className="text">
-                                Me gusta participar en actividades al aire libre, como viajar, hacer trekking, acampar o asistir a conciertos de música. Además
-                                disfruto mucho visitando exposiciones de arte para inspirarme. En mi tiempo libre me dedico a la fotografía análoga y también a
-                                crear fotomontajes digitales de temática onírica.{" "}
-                            </p>
-                            <p className="text">
-                                Estas aficiones son parte importante en mi vida y me han dado espacio para desarrollar habilidades creativas y visuales
-                                relacionadas directamente con el diseño y que complementan mi experiencia como Front End.
-                            </p>
-                            <div className="carusel">
-                                <CaruselHobbies />
-                            </div>
-                        </section>
 
+                    <div>
                         <section className="box-studies">
                             <h1 className="title">Estudios</h1>
 
-                            <div>
-                                <h3 className="name">JAVASCRIPT</h3>
-                                <div className="info-2">
-                                    <p className="date">Coderhouse (2024)</p>
-                                </div>
+                            <h3 className="name">JAVASCRIPT</h3>
+                            <div className="info-2">
+                                <p className="date">Coderhouse (2024)</p>
+                            </div>
 
-                                {showMore.javascript ? (
-                                    <>
-                                        <p className="info">
-                                            Contenidos del Curso: Sintaxis, Control de flujos, Iteraciones, Funciones, Objetos y Arrays, DOM y Eventos, Storage
-                                            y JSON, Ajax y Fetch, Frameworks y Node JS.
-                                        </p>
-                                        <button className="btn-more" onClick={() => toggleShowMore("javascript")}>
-                                            Menos info
-                                        </button>
-                                    </>
-                                ) : (
+                            {showMore.javascript ? (
+                                <>
+                                    <p className="info">
+                                        Contenidos del Curso: Sintaxis, Control de flujos, Iteraciones, Funciones, Objetos y Arrays, DOM y Eventos, Storage y
+                                        JSON, Ajax y Fetch, Frameworks y Node JS.
+                                    </p>
                                     <button className="btn-more" onClick={() => toggleShowMore("javascript")}>
-                                        Más info
+                                        Menos info
                                     </button>
-                                )}
+                                </>
+                            ) : (
+                                <button className="btn-more" onClick={() => toggleShowMore("javascript")}>
+                                    Más info
+                                </button>
+                            )}
+
+                            <h3 className="name">DESARROLLO FRONTEND REACT</h3>
+                            <div className="info-2">
+                                <p className="date">Desafío Latam (2023)</p>
                             </div>
 
-                            <div>
-                                <h3 className="name">DESARROLLO FRONTEND REACT</h3>
-                                <div className="info-2">
-                                    <p className="date">Desafío Latam (2023)</p>
-                                </div>
+                            {showMore.react ? (
+                                <>
+                                    <p className="info">
+                                        Conocimientos adquiridos por el Bootcamp: React Hooks, Netifly, GitHub Pages, Tailwind CSS, JSON, HTML, CSS Flexbox,
+                                        Git, Media Queries, VSCode, CSS, JavaScript, SCSS, Terminal, CSS Inline, Vite, React.js, CSS Grid, Context API,
+                                        Bootstrap, GitHub y API REST{" "}
+                                    </p>
 
-                                {showMore.react ? (
-                                    <>
-                                        <p className="info">
-                                            Conocimientos adquiridos por el Bootcamp: React Hooks, Netifly, GitHub Pages, Tailwind CSS, JSON, HTML, CSS Flexbox,
-                                            Git, Media Queries, VSCode, CSS, JavaScript, SCSS, Terminal, CSS Inline, Vite, React.js, CSS Grid, Context API,
-                                            Bootstrap, GitHub y API REST{" "}
-                                        </p>
-
-                                        <button className="btn-more" onClick={() => toggleShowMore("react")}>
-                                            Menos info
-                                        </button>
-                                    </>
-                                ) : (
                                     <button className="btn-more" onClick={() => toggleShowMore("react")}>
-                                        Más info
+                                        Menos info
                                     </button>
-                                )}
-                            </div>
+                                </>
+                            ) : (
+                                <button className="btn-more" onClick={() => toggleShowMore("react")}>
+                                    Más info
+                                </button>
+                            )}
 
                             <div>
                                 <h3 className="name">DIPLOMADO GESTIÓN CULTURAL</h3>
@@ -258,43 +278,32 @@ const Home = () => {
                         </section>
                     </div>
                 </div>
-
-                <div>
-                    <section className="box-projects">
-                        <h1 className="title">Proyectos</h1>
-
-                        <div className="content-projects">
-                            {proyectos.map((proyecto) => (
-                                <div key={proyecto.id} className="contenedor-card">
-                                    <img className="box-content-projects" src={proyecto.image} alt={proyecto.name} />
-                                    <div className="box">
-                                        <div>
-                                            <h5 className="proyect-name">{proyecto.name}</h5>
-                                        </div>
-                                        <div className="btn-sites-projects">
-                                            <a href={proyecto.github} target="_blank" rel="noopener noreferrer">
-                                                <button className="box-btn">GitHub</button>
-                                            </a>
-                                            <a href={proyecto.url} target="_blank" rel="noopener noreferrer">
-                                                <button className="box-btn">Live Preview</button>
-                                            </a>
-
-                                            <button onClick={() => handleClick(proyecto.name)} className="box-btn">
-                                                Ver más
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-                    </section>
-                </div>
-
-                <div>
-                    <Footer />
-                </div>
             </div>
+            <div>
+                <section className="box-hobbies">
+                    <h1 className="title">Más sobre mí</h1>
+                    <div className="hobbies-container">
+                        <div className="text-hobbies">
+                            <p>
+                                Me gusta participar en actividades al aire libre, como viajar, el trekking, acampar y los conciertos de música. Además disfruto
+                                mucho visitando exposiciones de arte para inspirarme.{" "}
+                            </p>
+                            <p>En mi tiempo libre me dedico a la fotografía análoga y también a crear fotomontajes digitales de temática onírica.</p>
+                            <p>
+                                Estas aficiones son parte importante en mi vida y me han dado espacio para desarrollar habilidades creativas y visuales
+                                relacionadas directamente con el diseño y que complementan mi experiencia como Front End.
+                            </p>
+                        </div>
+                        <div className="carusel">
+                            <CaruselHobbies />
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <Footer />
         </>
     );
 };
+
 export default Home;
