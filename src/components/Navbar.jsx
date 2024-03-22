@@ -71,7 +71,11 @@ function DrawerAppBar(props) {
 
     //scroll top del inicio
     const scrollToTop = () => {
-        scroll.scrollToTop();
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+            block: "start", // 'start' es más rápido, puedes probar 'center' o 'end' también
+        });
     };
 
     //logica de la navbar mobile
