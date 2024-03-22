@@ -95,7 +95,7 @@ function DrawerAppBar(props) {
                         },
                         fontWeight: "400",
                         "&:hover": { textShadow: "0 0 10px #ffbd59" },
-                        marginLeft: "20px",
+                        margin: "auto 0.5rem",
                     }}
                     onClick={scrollToTop}
                 >
@@ -105,29 +105,6 @@ function DrawerAppBar(props) {
             </Link>
             <Divider />
             <List>
-                <Link to="/" style={{ textDecoration: "none" }}>
-                    <Button
-                        onClick={scrollToTop}
-                        sx={{
-                            color: "#ffbd59",
-                            fontFamily: "Montserrat",
-
-                            fontWeight: "600",
-                            "&:hover": { textShadow: "0 0 10px #ffbd59" },
-                            fontSize: {
-                                xs: "9px",
-                                sm: "10px",
-                                md: "14px",
-                                lg: "14px",
-                            },
-                            textAlign: "center",
-                            marginRight: "10px",
-                        }}
-                    >
-                        Inicio
-                    </Button>
-                </Link>
-
                 {showNavItem && (
                     <>
                         <Button
@@ -143,6 +120,8 @@ function DrawerAppBar(props) {
                                     lg: "12px",
                                 },
                                 textAlign: "center",
+                                margin: "1px",
+                                padding: "0",
                             }}
                             onClick={() => scrollToRef(aboutRef)}
                         >
@@ -162,6 +141,8 @@ function DrawerAppBar(props) {
                                     lg: "12px",
                                 },
                                 textAlign: "center",
+                                margin: "1px",
+                                padding: "0",
                             }}
                             onClick={() => scrollToRef(projectsRef)}
                         >
@@ -181,6 +162,8 @@ function DrawerAppBar(props) {
                                     lg: "12px",
                                 },
                                 textAlign: "center",
+                                margin: "1px",
+                                padding: "0",
                             }}
                             onClick={() => scrollToRef(studiesRef)}
                         >
@@ -203,7 +186,8 @@ function DrawerAppBar(props) {
                                 lg: "14px",
                             },
                             textAlign: "center",
-                            marginRight: "10px",
+                            margin: "-20px",
+                            padding: "0",
                         }}
                     >
                         CV
@@ -224,7 +208,8 @@ function DrawerAppBar(props) {
                                 lg: "14px",
                             },
                             textAlign: "center",
-                            marginRight: "30px",
+                            margin: "1px",
+                            padding: "0",
                         }}
                     >
                         Contacto
