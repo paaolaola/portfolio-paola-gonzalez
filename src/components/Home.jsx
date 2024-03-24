@@ -153,14 +153,7 @@ const Home = () => {
             <div className="box-container">
                 <div className="first-section">
                     <div>
-                        <section ref={studiesRef} className="box-cert">
-                            <h1 className="title">Certificados</h1>
-                            <CaruselCert />
-                        </section>
-                    </div>
-
-                    <div>
-                        <section className="box-studies">
+                        <section ref={studiesRef} className="box-studies">
                             <h1 className="title">Estudios</h1>
 
                             <h3 className="name">JAVASCRIPT</h3>
@@ -261,7 +254,7 @@ const Home = () => {
                                 {showMore.fotografia ? (
                                     <>
                                         <p className="info">
-                                            Compuesto por ramos como: Fotografía Digital, Fotografía Análoga (Copiado Fino), Post Producción Digital,
+                                            cb6ce6 Compuesto por ramos como: Fotografía Digital, Fotografía Análoga (Copiado Fino), Post Producción Digital,
                                             Composición Visual, Filosofía e Historia del Arte, Expresión corporal, Moda, Publicidad, Técnicas de retrato y
                                             creación de Proyectos Fotográficos.
                                         </p>
@@ -275,6 +268,12 @@ const Home = () => {
                                     </button>
                                 )}
                             </div>
+                        </section>
+                    </div>
+                    <div>
+                        <section className="box-cert">
+                            <h1 className="title">Certificados</h1>
+                            <CaruselCert />
                         </section>
                     </div>
                 </div>

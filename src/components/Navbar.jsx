@@ -71,10 +71,10 @@ function DrawerAppBar(props) {
 
     //scroll top del inicio
     const scrollToTop = () => {
-        window.scrollTo({
+        scroll.scrollToTop({
             top: 0,
             behavior: "smooth",
-            block: "start", // 'start' es más rápido, puedes probar 'center' o 'end' también
+            block: "start",
         });
     };
 
@@ -88,14 +88,15 @@ function DrawerAppBar(props) {
                         color: "#ffbd59",
                         fontFamily: "Bebas Neue",
                         fontSize: {
-                            xs: "25px",
+                            xs: "30px",
                             sm: "10px",
                             md: "14px",
                             lg: "14px",
                         },
                         fontWeight: "400",
                         "&:hover": { textShadow: "0 0 10px #ffbd59" },
-                        margin: "auto 0.5rem",
+                        margin: "3px",
+                        paddingLeft: "1rem",
                     }}
                     onClick={scrollToTop}
                 >
@@ -115,13 +116,12 @@ function DrawerAppBar(props) {
                                 "&:hover": { textShadow: "0 0 10px #ffbd59" },
                                 fontSize: {
                                     xs: "9px",
-                                    sm: "10px",
-                                    md: "12px",
-                                    lg: "12px",
+                                    sm: "12px",
+                                    md: "14px",
+                                    lg: "14px",
                                 },
                                 textAlign: "center",
-                                margin: "1px",
-                                padding: "0",
+                                margin: "auto -0.2px",
                             }}
                             onClick={() => scrollToRef(aboutRef)}
                         >
@@ -136,13 +136,12 @@ function DrawerAppBar(props) {
                                 "&:hover": { textShadow: "0 0 10px #ffbd59" },
                                 fontSize: {
                                     xs: "9px",
-                                    sm: "10px",
-                                    md: "12px",
-                                    lg: "12px",
+                                    sm: "12px",
+                                    md: "14px",
+                                    lg: "14px",
                                 },
                                 textAlign: "center",
-                                margin: "1px",
-                                padding: "0",
+                                margin: "auto -0.2px",
                             }}
                             onClick={() => scrollToRef(projectsRef)}
                         >
@@ -157,13 +156,12 @@ function DrawerAppBar(props) {
                                 "&:hover": { textShadow: "0 0 10px #ffbd59" },
                                 fontSize: {
                                     xs: "9px",
-                                    sm: "10px",
-                                    md: "12px",
-                                    lg: "12px",
+                                    sm: "12px",
+                                    md: "14px",
+                                    lg: "14px",
                                 },
                                 textAlign: "center",
-                                margin: "1px",
-                                padding: "0",
+                                margin: "auto -0.2px",
                             }}
                             onClick={() => scrollToRef(studiesRef)}
                         >
@@ -181,13 +179,12 @@ function DrawerAppBar(props) {
                             "&:hover": { textShadow: "0 0 10px #ffbd59" },
                             fontSize: {
                                 xs: "9px",
-                                sm: "10px",
+                                sm: "12px",
                                 md: "14px",
                                 lg: "14px",
                             },
                             textAlign: "center",
-                            margin: "-20px",
-                            padding: "0",
+                            margin: "auto -15px",
                         }}
                     >
                         CV
@@ -203,13 +200,12 @@ function DrawerAppBar(props) {
                             "&:hover": { textShadow: "0 0 10px #ffbd59" },
                             fontSize: {
                                 xs: "9px",
-                                sm: "10px",
+                                sm: "12px",
                                 md: "14px",
                                 lg: "14px",
                             },
                             textAlign: "center",
-                            margin: "1px",
-                            padding: "0",
+                            margin: " -0.2px",
                         }}
                     >
                         Contacto
@@ -227,7 +223,13 @@ function DrawerAppBar(props) {
             <CssBaseline />
             <AppBar component="nav" sx={{ backgroundColor: "transparent", boxShadow: "none" }}>
                 <Toolbar>
-                    <IconButton onClick={handleDrawerToggle} color="inherit" aria-label="open drawer" edge="start" sx={{ display: { sm: "none" } }}>
+                    <IconButton
+                        onClick={handleDrawerToggle}
+                        color="inherit"
+                        aria-label="open drawer"
+                        edge="start"
+                        sx={{ display: { sm: "none" }, color: "#ffbd59" }}
+                    >
                         <MenuIcon />
                     </IconButton>
 
