@@ -121,7 +121,7 @@ function DrawerAppBar(props) {
                                     lg: "14px",
                                 },
                                 textAlign: "center",
-                                margin: "auto -0.2px",
+                                margin: "4px",
                             }}
                             onClick={() => scrollToRef(aboutRef)}
                         >
@@ -141,7 +141,7 @@ function DrawerAppBar(props) {
                                     lg: "14px",
                                 },
                                 textAlign: "center",
-                                margin: "auto -0.2px",
+                                margin: "1px",
                             }}
                             onClick={() => scrollToRef(projectsRef)}
                         >
@@ -161,7 +161,7 @@ function DrawerAppBar(props) {
                                     lg: "14px",
                                 },
                                 textAlign: "center",
-                                margin: "auto -0.2px",
+                                margin: "1px",
                             }}
                             onClick={() => scrollToRef(studiesRef)}
                         >
@@ -184,7 +184,7 @@ function DrawerAppBar(props) {
                                 lg: "14px",
                             },
                             textAlign: "center",
-                            margin: "auto -15px",
+                            margin: "-20px",
                         }}
                     >
                         CV
@@ -205,7 +205,7 @@ function DrawerAppBar(props) {
                                 lg: "14px",
                             },
                             textAlign: "center",
-                            margin: " -0.2px",
+                            margin: "1px",
                         }}
                     >
                         Contacto
