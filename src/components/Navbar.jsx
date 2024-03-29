@@ -14,8 +14,12 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
-import FavoriteIcon from "@mui/icons-material/Favorite";
+// import FavoriteIcon from "@mui/icons-material/Favorite";
 import { animateScroll as scroll } from "react-scroll";
+import DescriptionIcon from "@mui/icons-material/Description";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import GoogleIcon from "@mui/icons-material/Google";
 
 const drawerWidth = { width: "100%" };
 const drawerHeight = { height: "50px" };
@@ -228,6 +232,7 @@ function DrawerAppBar(props) {
                         {liked ? "Te gusta esta página!" : ""}
                         <FavoriteIcon sx={{ color: "tomato", width: "18px", margin: "5px" }} />
                     </button> */}
+
                     <IconButton
                         onClick={handleDrawerToggle}
                         color="inherit"
@@ -252,14 +257,40 @@ function DrawerAppBar(props) {
                         }}
                     >
                         {" "}
-                        <Link to="/" style={{ textDecoration: "none" }}>
-                            <div onClick={scrollToTop} className="logo-text">
-                                PG .
-                            </div>
+                        <Link to="/" style={{ textDecoration: "none" }} onClick={scrollToTop} className="logo-text">
+                            PG .
                         </Link>
+                        <div className="mui-links">
+                            <a href="https://github.com/paaolaola" target="_blank" rel="noopener noreferrer">
+                                <GitHubIcon sx={{ fontSize: 30, color: "#ffbd59", filter: "drop-shadow(0 0 15px #ffbd59)" }} />
+                            </a>
+                            <a href="https://www.linkedin.com/in/paola-gonzalez-guzman/" target="_blank" rel="noopener noreferrer">
+                                <LinkedInIcon sx={{ fontSize: 30, color: "#ffbd59", filter: "drop-shadow(0 0 15px #ffbd59)" }} />
+                            </a>
+                            <a href="mailto:paolagonzalez.contacto@gmail.com" target="_blank" rel="noopener noreferrer">
+                                <GoogleIcon sx={{ fontSize: 30, color: "#ffbd59", filter: "drop-shadow(0 0 15px #ffbd59)" }} />
+                            </a>
+                            <a
+                                href="https://drive.google.com/file/d/1Afz8CZ1oW51xx2UedA3j_eTQ_oOzbQbH/view?usp=sharing"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <DescriptionIcon sx={{ fontSize: 30, color: "#ffbd59", filter: "drop-shadow(0 0 15px #ffbd59)" }} />
+                            </a>
+                        </div>
                     </Typography>
 
-                    <Box sx={{ display: { xs: "none", sm: "block" }, marginLeft: "auto" }}>
+                    <Box
+                        sx={{
+                            display: { xs: "none", sm: "block" },
+                            marginTop: {
+                                xs: "-500px", // Valor para extra small (xs) devices
+                                sm: "-520px", // Valor para small (sm) devices
+                                md: "-350px", // Valor para medium (md) devices
+                                lg: "-480px", // Valor para large (lg) devices
+                            },
+                        }}
+                    >
                         <Link to="/" style={{ textDecoration: "none" }}>
                             <Button
                                 onClick={scrollToTop}

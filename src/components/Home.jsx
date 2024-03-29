@@ -40,23 +40,7 @@ const Home = () => {
         <>
             <header className="box-perfil">
                 <div className="image-perfil">
-                    <div>
-                        <img className="image" src="./img/perfil/fotoperfil.jpg" alt="foto de perfil de paola"></img>{" "}
-                    </div>
-                    <div className="mui-links">
-                        <a href="https://github.com/paaolaola" target="_blank" rel="noopener noreferrer">
-                            <GitHubIcon sx={{ fontSize: 40, color: "#ffbd59", filter: "drop-shadow(0 0 30px #ffbd59)" }} />
-                        </a>
-                        <a href="https://www.linkedin.com/in/paola-gonzalez-guzman/" target="_blank" rel="noopener noreferrer">
-                            <LinkedInIcon sx={{ fontSize: 40, color: "#ffbd59", filter: "drop-shadow(0 0 35px #ffbd59)" }} />
-                        </a>
-                        <a href="mailto:paolagonzalez.contacto@gmail.com" target="_blank" rel="noopener noreferrer">
-                            <GoogleIcon sx={{ fontSize: 40, color: "#ffbd59", filter: "drop-shadow(0 0 30px #ffbd59)" }} />
-                        </a>
-                        <a href="https://drive.google.com/file/d/1Afz8CZ1oW51xx2UedA3j_eTQ_oOzbQbH/view?usp=sharing" target="_blank" rel="noopener noreferrer">
-                            <DescriptionIcon sx={{ fontSize: 40, color: "#ffbd59", filter: "drop-shadow(0 0 35px #ffbd59)" }} />
-                        </a>
-                    </div>
+                    <img className="image" src="./img/perfil/fotoperfil.jpg" alt="foto de perfil de paola"></img>{" "}
                 </div>
 
                 <div className="names-perfil">

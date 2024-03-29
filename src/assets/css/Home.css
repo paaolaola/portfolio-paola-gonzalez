@@ -24,20 +24,8 @@
     height: 200px;
 }
 .title-last-name {
-    border-right: 0.8rem solid #ffbd59;
     line-height: 0.8;
     height: 125px;
-    animation: 1.5s forwards, blink-caret 0.75s step-end infinite 0.5s;
-}
-
-@keyframes blink-caret {
-    from,
-    to {
-        border-color: transparent;
-    }
-    50% {
-        border-color: #ffbd59;
-    }
 }
 
 .under-title {
@@ -47,11 +35,41 @@
     letter-spacing: 5px;
     text-align: center;
     color: #d486ea;
-    margin-top: 2rem;
+    margin-top: 1.5rem;
+    position: relative;
+    animation: float 3s infinite alternate;
+    transform-style: preserve-3d;
+}
+
+.under-title span {
+    display: inline-block;
+    transform-origin: bottom center;
+}
+@keyframes float {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+
+    100% {
+        transform: translate3d(0, -10px, 10px);
+        text-shadow: 5px 10px 6px #545454;
+    }
+}
+
+.under-title span:nth-child(1) {
+    animation-delay: 1s;
+}
+
+.under-title span:nth-child(2) {
+    animation-delay: 1s;
+}
+
+.under-title span:nth-child(3) {
+    animation-delay: 1.5s;
 }
 
 .image {
-    width: 310px;
+    width: 350px;
     border-radius: 50%;
     border: 0.5px solid #545454;
     box-shadow: 0 0 10px #545454;
@@ -113,12 +131,12 @@
 }
 
 .mui-links {
-    padding-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    margin: 4rem 0 0 1rem;
 }
-
 .mui-links a {
-    padding-top: 3rem;
-    margin: 10px;
+    margin-top: 3rem;
 }
 .menu-icon {
     filter: drop-shadow(0 0 5px #ffbd59);
@@ -392,14 +410,19 @@
         height: 130px;
     }
     .title-last-name {
-        border-right: 0.5rem solid #ffbd59;
         line-height: 0.5;
         height: 90px;
     }
+    .mui-links {
+        margin: 1rem 0 0 1rem;
+    }
+    .mui-links a {
+        margin-top: 2rem;
+    }
     .under-title {
-        font-size: 28px;
-        letter-spacing: 4px;
-        margin-top: 1rem;
+        font-size: 30px;
+        letter-spacing: 3px;
+        margin-top: 2rem;
     }
 
     /*seccion proyectos*/
@@ -437,24 +460,23 @@
     }
 
     .names-perfil h1 {
-        font-size: 85px;
+        font-size: 100px;
         text-align: start;
         width: 100%;
         padding: 2rem;
     }
 
     .title-name {
-        height: 110px;
+        height: 130px;
     }
     .title-last-name {
-        border-right: 0.5rem solid #ffbd59;
         line-height: 0.5;
         height: 90px;
     }
     .under-title {
-        font-size: 22px;
-        letter-spacing: 4px;
-        margin-top: 1rem;
+        font-size: 30px;
+        letter-spacing: 3px;
+        margin-top: 2rem;
     }
     .image {
         width: 280px;
@@ -547,24 +569,23 @@
     }
 
     .names-perfil h1 {
-        font-size: 85px;
+        font-size: 100px;
         text-align: start;
         width: 100%;
         padding: 2rem;
     }
 
     .title-name {
-        height: 120px;
+        height: 140px;
     }
     .title-last-name {
-        border-right: 0.4rem solid #ffbd59;
         line-height: 0.3;
         height: 70px;
     }
     .under-title {
-        font-size: 22px;
-        letter-spacing: 4px;
-        margin-top: 1rem;
+        font-size: 30px;
+        letter-spacing: 3px;
+        margin-top: 2rem;
     }
     .image {
         width: 280px;

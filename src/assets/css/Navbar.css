@@ -1,4 +1,7 @@
 /* menu navbar*/
+.box-nav {
+    margin-top: "-400px";
+}
 .menu-icon {
     filter: drop-shadow(0 0 5px #ffbd59);
 }
@@ -51,7 +54,6 @@ button.like-text {
 /*RESPONSIVE*/
 @media screen and (min-width: 768px) and (max-width: 996px) {
     .logo-text {
-        font-size: 25px;
         width: 100px;
     }
     .like-text {
@@ -70,7 +72,6 @@ button.like-text {
 }
 @media screen and (min-width: 280px) and (max-width: 768px) {
     .logo-text {
-        font-size: 25px;
         width: 100px;
     }
     .like-text {
