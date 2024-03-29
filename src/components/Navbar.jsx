@@ -48,26 +48,26 @@ function DrawerAppBar(props) {
     //estados para la funcion del like corazon
     const { window } = props;
     const [mobileOpen, setMobileOpen] = useState(false);
-    const [liked, setLiked] = useState(false);
+    // const [liked, setLiked] = useState(false);
 
     const handleDrawerToggle = () => {
         setMobileOpen((prevState) => !prevState);
     };
     //condicion para el like del corazón
-    const handleLikeClick = () => {
-        setLiked(!liked);
-    };
-    useEffect(() => {
-        const likeGuardado = localStorage.getItem("like");
+    // const handleLikeClick = () => {
+    //     setLiked(!liked);
+    // };
+    // useEffect(() => {
+    //     const likeGuardado = localStorage.getItem("like");
 
-        if (likeGuardado === "true") {
-            setLiked(true);
-        }
-    }, []);
+    //     if (likeGuardado === "true") {
+    //         setLiked(true);
+    //     }
+    // }, []);
 
-    useEffect(() => {
-        localStorage.setItem("like", liked.toString());
-    }, [liked]);
+    // useEffect(() => {
+    //     localStorage.setItem("like", liked.toString());
+    // }, [liked]);
 
     //scroll top del inicio
     const scrollToTop = () => {
@@ -221,16 +221,22 @@ function DrawerAppBar(props) {
     return (
         <Box sx={{ display: "flex" }}>
             <CssBaseline />
+
             <AppBar component="nav" sx={{ backgroundColor: "transparent", boxShadow: "none" }}>
                 <Toolbar>
+                    {/* <button onClick={handleLikeClick} className={liked ? "not-like-text " : "like-text"}>
+                        {liked ? "Te gusta esta página!" : ""}
+                        <FavoriteIcon sx={{ color: "tomato", width: "18px", margin: "5px" }} />
+                    </button> */}
                     <IconButton
                         onClick={handleDrawerToggle}
                         color="inherit"
                         aria-label="open drawer"
-                        edge="start"
-                        sx={{ display: { sm: "none" }, color: "#ffbd59" }}
+                        edge="end"
+                        sx={{ display: { sm: "none" }, color: "#ffbd59", marginLeft: "auto" }}
                     >
-                        <MenuIcon />
+                        {" "}
+                        <MenuIcon className="menu-icon" />
                     </IconButton>
 
                     <Typography
@@ -245,16 +251,13 @@ function DrawerAppBar(props) {
                             fontSize: "35px",
                         }}
                     >
+                        {" "}
                         <Link to="/" style={{ textDecoration: "none" }}>
                             <div onClick={scrollToTop} className="logo-text">
                                 PG .
                             </div>
                         </Link>
                     </Typography>
-                    <button onClick={handleLikeClick} className={liked ? "not-like-text " : "like-text"}>
-                        <FavoriteIcon sx={{ color: "tomato", width: "18px", marginRight: "10px" }} />
-                        {liked ? "Te gusta esta página!" : ""}
-                    </button>
 
                     <Box sx={{ display: { xs: "none", sm: "block" }, marginLeft: "auto" }}>
                         <Link to="/" style={{ textDecoration: "none" }}>
@@ -382,6 +385,7 @@ function DrawerAppBar(props) {
                     </Box>
                 </Toolbar>
             </AppBar>
+
             <nav>
                 <Drawer
                     container={container}
@@ -397,11 +401,13 @@ function DrawerAppBar(props) {
                     }}
                 >
                     {drawer}
-                </Drawer>
+                </Drawer>{" "}
             </nav>
+
             <Box component="main" sx={{ p: 3 }}>
                 <Toolbar />
-                <Typography></Typography>
+
+                <Typography> </Typography>
             </Box>
         </Box>
     );

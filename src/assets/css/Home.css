@@ -27,9 +27,6 @@
     border-right: 0.8rem solid #ffbd59;
     line-height: 0.8;
     height: 125px;
-}
-
-.title-last-name {
     animation: 1.5s forwards, blink-caret 0.75s step-end infinite 0.5s;
 }
 
@@ -42,15 +39,14 @@
         border-color: #ffbd59;
     }
 }
+
 .under-title {
     font-family: "Bebas Neue", sans-serif;
-    font-size: 55px;
+    font-size: 56px;
     font-weight: 400;
     letter-spacing: 5px;
     text-align: center;
     color: #d486ea;
-    border-color: #d67eee;
-    text-shadow: 1px 2px 2px #545454;
     margin-top: 2rem;
 }
 
@@ -124,7 +120,9 @@
     padding-top: 3rem;
     margin: 10px;
 }
-
+.menu-icon {
+    filter: drop-shadow(0 0 5px #ffbd59);
+}
 .btn-links {
     display: flex;
     justify-content: space-between;

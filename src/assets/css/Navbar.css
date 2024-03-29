@@ -1,4 +1,7 @@
 /* menu navbar*/
+.menu-icon {
+    filter: drop-shadow(0 0 5px #ffbd59);
+}
 .logo-text {
     display: flex;
     padding: 1rem;

@@ -45,16 +45,16 @@ const Home = () => {
                     </div>
                     <div className="mui-links">
                         <a href="https://github.com/paaolaola" target="_blank" rel="noopener noreferrer">
-                            <GitHubIcon sx={{ fontSize: 40, color: "#ffbd59" }} />
+                            <GitHubIcon sx={{ fontSize: 40, color: "#ffbd59", filter: "drop-shadow(0 0 30px #ffbd59)" }} />
                         </a>
                         <a href="https://www.linkedin.com/in/paola-gonzalez-guzman/" target="_blank" rel="noopener noreferrer">
-                            <LinkedInIcon sx={{ fontSize: 40, color: "#ffbd59" }} />
+                            <LinkedInIcon sx={{ fontSize: 40, color: "#ffbd59", filter: "drop-shadow(0 0 30px #ffbd59)" }} />
                         </a>
                         <a href="mailto:paolagonzalez.contacto@gmail.com" target="_blank" rel="noopener noreferrer">
-                            <GoogleIcon sx={{ fontSize: 40, color: "#ffbd59" }} />
+                            <GoogleIcon sx={{ fontSize: 40, color: "#ffbd59", filter: "drop-shadow(0 0 30px #ffbd59)" }} />
                         </a>
                         <a href="https://drive.google.com/file/d/1Afz8CZ1oW51xx2UedA3j_eTQ_oOzbQbH/view?usp=sharing" target="_blank" rel="noopener noreferrer">
-                            <DescriptionIcon sx={{ fontSize: 40, color: "#ffbd59" }} />
+                            <DescriptionIcon sx={{ fontSize: 40, color: "#ffbd59", filter: "drop-shadow(0 0 30px #ffbd59)" }} />
                         </a>
                     </div>
                 </div>
@@ -103,7 +103,7 @@ const Home = () => {
                                     rel="noopener noreferrer"
                                 >
                                     <button className="section-btn-cv">
-                                        Descargar CV <DescriptionIcon sx={{ fontSize: 15, color: "#545454" }} />
+                                        Descargar CV <DescriptionIcon sx={{ fontSize: 15, color: "#545454", "&:hover": { textShadow: "0 0 10px #ffbd59" } }} />
                                     </button>
                                 </a>
                             </div>
@@ -254,7 +254,7 @@ const Home = () => {
                                 {showMore.fotografia ? (
                                     <>
                                         <p className="info">
-                                            cb6ce6 Compuesto por ramos como: Fotografía Digital, Fotografía Análoga (Copiado Fino), Post Producción Digital,
+                                            Compuesto por ramos como: Fotografía Digital, Fotografía Análoga (Copiado Fino), Post Producción Digital,
                                             Composición Visual, Filosofía e Historia del Arte, Expresión corporal, Moda, Publicidad, Técnicas de retrato y
                                             creación de Proyectos Fotográficos.
                                         </p>
