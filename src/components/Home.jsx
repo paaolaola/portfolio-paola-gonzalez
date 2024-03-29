@@ -48,13 +48,13 @@ const Home = () => {
                             <GitHubIcon sx={{ fontSize: 40, color: "#ffbd59", filter: "drop-shadow(0 0 30px #ffbd59)" }} />
                         </a>
                         <a href="https://www.linkedin.com/in/paola-gonzalez-guzman/" target="_blank" rel="noopener noreferrer">
-                            <LinkedInIcon sx={{ fontSize: 40, color: "#ffbd59", filter: "drop-shadow(0 0 30px #ffbd59)" }} />
+                            <LinkedInIcon sx={{ fontSize: 40, color: "#ffbd59", filter: "drop-shadow(0 0 35px #ffbd59)" }} />
                         </a>
                         <a href="mailto:paolagonzalez.contacto@gmail.com" target="_blank" rel="noopener noreferrer">
                             <GoogleIcon sx={{ fontSize: 40, color: "#ffbd59", filter: "drop-shadow(0 0 30px #ffbd59)" }} />
                         </a>
                         <a href="https://drive.google.com/file/d/1Afz8CZ1oW51xx2UedA3j_eTQ_oOzbQbH/view?usp=sharing" target="_blank" rel="noopener noreferrer">
-                            <DescriptionIcon sx={{ fontSize: 40, color: "#ffbd59", filter: "drop-shadow(0 0 30px #ffbd59)" }} />
+                            <DescriptionIcon sx={{ fontSize: 40, color: "#ffbd59", filter: "drop-shadow(0 0 35px #ffbd59)" }} />
                         </a>
                     </div>
                 </div>
