@@ -23,7 +23,7 @@ import GoogleIcon from "@mui/icons-material/Google";
 
 const drawerWidth = { width: "100%" };
 const drawerHeight = { height: "50px" };
-const drawerColor = "linear-gradient(to top, #ff66c4, #cb6ce6, #5170ff)";
+const drawerColor = "linear-gradient(to top, #d486ea, #5170ff, #5170ff)";
 const navItems = ["contacto"];
 
 function DrawerAppBar(props) {
@@ -283,12 +283,10 @@ function DrawerAppBar(props) {
                     <Box
                         sx={{
                             display: { xs: "none", sm: "block" },
-                            marginTop: {
-                                xs: "-500px", // Valor para extra small (xs) devices
-                                sm: "-520px", // Valor para small (sm) devices
-                                md: "-350px", // Valor para medium (md) devices
-                                lg: "-480px", // Valor para large (lg) devices
-                            },
+                            position: "fixed",
+                            top: "25px",
+                            right: "10px",
+                            zIndex: 1000,
                         }}
                     >
                         <Link to="/" style={{ textDecoration: "none" }}>
