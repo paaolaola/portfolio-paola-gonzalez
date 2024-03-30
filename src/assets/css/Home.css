@@ -132,16 +132,17 @@
 
 .mui-links {
     display: flex;
+    position: fixed;
     flex-direction: column;
-    margin: 4rem 0 0 1rem;
-    width: 5%;
+    left: 0;
+    top: 200px;
+    padding-left: 40px;
 }
+
 .mui-links a {
-    margin-top: 3rem;
+    margin-top: 3.5rem;
 }
-.menu-icon {
-    filter: drop-shadow(0 0 5px #ffbd59);
-}
+
 .btn-links {
     display: flex;
     justify-content: space-between;
@@ -450,7 +451,7 @@
         text-align: center;
     }
     .mui-links {
-        padding: 0.5rem 0 2rem 0;
+        padding-left: 45px;
     }
     /*header*/
     .box-perfil {
@@ -558,9 +559,11 @@
     .title {
         text-align: center;
     }
+
     .mui-links {
-        padding: 0.5rem 0 2rem 0;
+        display: none;
     }
+
     /*header*/
     .box-perfil {
         display: flex;
