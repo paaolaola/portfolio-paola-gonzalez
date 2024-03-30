@@ -23,7 +23,7 @@
     text-align: justify;
     margin: 1rem 6rem 3rem 6rem;
     min-height: calc(100vh - 6rem); /* Establecer una altura mínima relativa a la altura de la ventana del navegador */
-    padding: 3rem 3rem 1rem 3rem;
+    padding: 0rem 3rem 1rem 3rem;
 }
 .projects-text {
     font-size: 15px;

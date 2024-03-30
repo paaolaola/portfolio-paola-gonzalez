@@ -1,6 +1,7 @@
 import "../assets/css/FormContact.css";
 import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
+import ArrowLeftIcon from "@mui/icons-material/ArrowLeft";
 
 function FormContact() {
     return (
@@ -15,7 +16,11 @@ function FormContact() {
             </div>{" "}
             <div className="btn-home">
                 <Link to="/">
-                    <button className="btn-404">Volver</button>
+                    <button className="btn-404">
+                        {" "}
+                        <ArrowLeftIcon />
+                        Volver
+                    </button>
                 </Link>
             </div>
             <div>

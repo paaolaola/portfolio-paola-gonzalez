@@ -1,6 +1,7 @@
 import "../assets/css/Cv.css";
 import Footer from "../components/Footer";
 import { Link } from "react-router-dom";
+import ArrowLeftIcon from "@mui/icons-material/ArrowLeft";
 
 const Cv = () => {
     const handleDownloadClick = () => {
@@ -30,7 +31,10 @@ const Cv = () => {
             </div>
             <div className="btn-home">
                 <Link to="/">
-                    <button className="btn-404">Volver</button>
+                    <button className="btn-404">
+                        <ArrowLeftIcon />
+                        Volver
+                    </button>
                 </Link>
             </div>
             <div>

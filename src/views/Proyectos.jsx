@@ -4,6 +4,7 @@ import { ProjectContext } from "../context/ProjectContext";
 import "../assets/css/Proyectos.css";
 import { animateScroll as scroll } from "react-scroll";
 import Footer from "../components/Footer";
+import ArrowLeftIcon from "@mui/icons-material/ArrowLeft";
 
 const Proyectos = () => {
     const { name } = useParams();
@@ -67,7 +68,10 @@ const Proyectos = () => {
                 </div>
                 <div className="btn-home">
                     <Link to="/">
-                        <button className="btn-404">Volver</button>
+                        <button className="btn-404">
+                            <ArrowLeftIcon />
+                            Volver
+                        </button>
                     </Link>
                 </div>
             </div>

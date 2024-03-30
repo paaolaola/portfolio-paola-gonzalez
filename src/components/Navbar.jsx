@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useContext } from "react";
-import { useLocation, Link } from "react-router-dom";
+import React, { useState, useContext } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import { ProjectContext } from "../context/ProjectContext";
 import "../assets/css/Navbar.css";
 import PropTypes from "prop-types";
@@ -14,12 +14,8 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
-// import FavoriteIcon from "@mui/icons-material/Favorite";
 import { animateScroll as scroll } from "react-scroll";
-import DescriptionIcon from "@mui/icons-material/Description";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import GitHubIcon from "@mui/icons-material/GitHub";
-import GoogleIcon from "@mui/icons-material/Google";
+// import FavoriteIcon from "@mui/icons-material/Favorite";
 
 const drawerWidth = { width: "100%" };
 const drawerHeight = { height: "50px" };
@@ -31,17 +27,8 @@ function DrawerAppBar(props) {
     const { aboutRef, projectsRef, studiesRef } = useContext(ProjectContext);
 
     // nuevo estados para la condicion de la navbar
-    const location = useLocation();
+    const navigate = useNavigate();
     const [showNavItem, setShowNavItem] = useState(true);
-
-    // useEffect para eliminar los componentes de la navbar al estar en cv y contacto
-    useEffect(() => {
-        if (location.pathname === "/curriculum" || location.pathname === "/contacto") {
-            setShowNavItem(false);
-        } else {
-            setShowNavItem(true);
-        }
-    }, [location.pathname]);
 
     // scroll de las secciones del home
     const scrollToRef = (ref) => {
@@ -49,9 +36,17 @@ function DrawerAppBar(props) {
             ref.current.scrollIntoView({ behavior: "smooth" });
         }
     };
-    //estados para la funcion del like corazon
+    //logica del cambio de ruta en curriculum y contacto
+    const handleNavClick = (path, ref) => {
+        navigate(path);
+        setTimeout(() => {
+            scrollToRef(ref);
+        }, 100);
+    };
+
     const { window } = props;
     const [mobileOpen, setMobileOpen] = useState(false);
+    //estados para la funcion del like corazon
     // const [liked, setLiked] = useState(false);
 
     const handleDrawerToggle = () => {
@@ -127,7 +122,7 @@ function DrawerAppBar(props) {
                                 textAlign: "center",
                                 margin: "4px",
                             }}
-                            onClick={() => scrollToRef(aboutRef)}
+                            onClick={() => handleNavClick("/", aboutRef)}
                         >
                             SOBRE MI
                         </Button>
@@ -147,7 +142,7 @@ function DrawerAppBar(props) {
                                 textAlign: "center",
                                 margin: "1px",
                             }}
-                            onClick={() => scrollToRef(projectsRef)}
+                            onClick={() => handleNavClick("/", projectsRef)}
                         >
                             PROYECTOS
                         </Button>
@@ -167,7 +162,7 @@ function DrawerAppBar(props) {
                                 textAlign: "center",
                                 margin: "1px",
                             }}
-                            onClick={() => scrollToRef(studiesRef)}
+                            onClick={() => handleNavClick("/", studiesRef)}
                         >
                             ESTUDIOS
                         </Button>
@@ -249,35 +244,18 @@ function DrawerAppBar(props) {
                         component="div"
                         sx={{
                             flexGrow: 1,
-                            display: { xs: "none", sm: "block" },
+                            display: { xs: "none", sm: "inline-block" },
                             color: "#ffbd59",
                             fontFamily: "Bebas Neue",
                             fontWeight: "800",
                             fontSize: "35px",
+                            width: "5%",
                         }}
                     >
                         {" "}
                         <Link to="/" style={{ textDecoration: "none" }} onClick={scrollToTop} className="logo-text">
                             PG .
                         </Link>
-                        <div className="mui-links">
-                            <a href="https://github.com/paaolaola" target="_blank" rel="noopener noreferrer">
-                                <GitHubIcon sx={{ fontSize: 30, color: "#ffbd59", filter: "drop-shadow(0 0 15px #ffbd59)" }} />
-                            </a>
-                            <a href="https://www.linkedin.com/in/paola-gonzalez-guzman/" target="_blank" rel="noopener noreferrer">
-                                <LinkedInIcon sx={{ fontSize: 30, color: "#ffbd59", filter: "drop-shadow(0 0 15px #ffbd59)" }} />
-                            </a>
-                            <a href="mailto:paolagonzalez.contacto@gmail.com" target="_blank" rel="noopener noreferrer">
-                                <GoogleIcon sx={{ fontSize: 30, color: "#ffbd59", filter: "drop-shadow(0 0 15px #ffbd59)" }} />
-                            </a>
-                            <a
-                                href="https://drive.google.com/file/d/1Afz8CZ1oW51xx2UedA3j_eTQ_oOzbQbH/view?usp=sharing"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                <DescriptionIcon sx={{ fontSize: 30, color: "#ffbd59", filter: "drop-shadow(0 0 15px #ffbd59)" }} />
-                            </a>
-                        </div>
                     </Typography>
 
                     <Box
@@ -326,7 +304,7 @@ function DrawerAppBar(props) {
                                         },
                                         textAlign: "center",
                                     }}
-                                    onClick={() => scrollToRef(aboutRef)}
+                                    onClick={() => handleNavClick("/", aboutRef)}
                                 >
                                     SOBRE MI
                                 </Button>
@@ -345,7 +323,7 @@ function DrawerAppBar(props) {
                                         },
                                         textAlign: "center",
                                     }}
-                                    onClick={() => scrollToRef(projectsRef)}
+                                    onClick={() => handleNavClick("/", projectsRef)}
                                 >
                                     PROYECTOS
                                 </Button>
@@ -364,7 +342,7 @@ function DrawerAppBar(props) {
                                         },
                                         textAlign: "center",
                                     }}
-                                    onClick={() => scrollToRef(studiesRef)}
+                                    onClick={() => handleNavClick("/", studiesRef)}
                                 >
                                     ESTUDIOS
                                 </Button>
