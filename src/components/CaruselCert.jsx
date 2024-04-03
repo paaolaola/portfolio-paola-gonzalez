@@ -5,8 +5,18 @@ function CaruselCert() {
     return (
         <Carousel>
             <Carousel.Item>
+                <a href="https://www.freecodecamp.org/certification/paaolaola/responsive-web-design" target="_blank" rel="noopener noreferrer">
+                    <img className="box-content-img" src="./img/certificaciones/certificacion-7.png" alt="FreeCodeCamp" />
+                </a>
+            </Carousel.Item>
+            <Carousel.Item>
                 <a href="https://www.udemy.com/certificate/UC-11fd511e-48fd-44b8-9863-bcfd8f6d3c8e/" target="_blank" rel="noopener noreferrer">
                     <img className="box-content-img" src="./img/certificaciones/certificacion-6.png" alt="certificado Udemy" />
+                </a>
+            </Carousel.Item>
+            <Carousel.Item>
+                <a href="https://www.scrumstudy.com/certification/verify?type=SFC&number=1014775" target="_blank" rel="noopener noreferrer">
+                    <img className="box-content-img" src="./img/certificaciones/certificacion-2.png" alt="certificado SCRUM" />
                 </a>
             </Carousel.Item>
             <Carousel.Item>
@@ -34,12 +44,6 @@ function CaruselCert() {
                     rel="noopener noreferrer"
                 >
                     <img className="box-content-img" src="./img/certificaciones/certificacion-1.png" alt="certificado ADL" />
-                </a>
-            </Carousel.Item>
-
-            <Carousel.Item>
-                <a href="https://www.scrumstudy.com/certification/verify?type=SFC&number=1014775" target="_blank" rel="noopener noreferrer">
-                    <img className="box-content-img" src="./img/certificaciones/certificacion-2.png" alt="certificado SCRUM" />
                 </a>
             </Carousel.Item>
 
