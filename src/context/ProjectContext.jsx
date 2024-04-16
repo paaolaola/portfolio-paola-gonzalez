@@ -13,7 +13,7 @@ const ProjectProvider = ({ children }) => {
             id: 1,
             name: "Clínica Dental RIE",
             github: "https://github.com/paaolaola/rie-project",
-            url: "https://paaolaola.github.io/rie-project/",
+            url: "https://rieclinicadental.netlify.app/",
             image: "../img/proyectos/P1/0.png",
             video: "https://www.youtube.com/embed/ZFIEnj8gANQ?si=IbLHyIxiEVMzSawt&amp;controls=0",
             images: {
