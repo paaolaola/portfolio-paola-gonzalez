@@ -5,6 +5,11 @@ function CaruselCert() {
     return (
         <Carousel>
             <Carousel.Item>
+                <a href="https://www.coderhouse.com/cl/certificados/661e3bf2b4649e3736fda015?lang=es" target="_blank" rel="noopener noreferrer">
+                    <img className="box-content-img" src="./img/certificaciones/certificacion-8.png" alt="Coderhouse" />
+                </a>
+            </Carousel.Item>
+            <Carousel.Item>
                 <a href="https://www.freecodecamp.org/certification/paaolaola/responsive-web-design" target="_blank" rel="noopener noreferrer">
                     <img className="box-content-img" src="./img/certificaciones/certificacion-7.png" alt="FreeCodeCamp" />
                 </a>
