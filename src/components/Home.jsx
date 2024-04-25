@@ -49,7 +49,7 @@ const Home = () => {
                     <a href="mailto:paolagonzalez.contacto@gmail.com" target="_blank" rel="noopener noreferrer">
                         <GoogleIcon sx={{ fontSize: 30, color: "#ffbd59", filter: "drop-shadow(0 0 15px #ffbd59)" }} />
                     </a>
-                    <a href="https://drive.google.com/file/d/1Afz8CZ1oW51xx2UedA3j_eTQ_oOzbQbH/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+                    <a href="https://drive.google.com/file/d/1ySLT5ILbf9TjbyHi1Y0gYXlbobbkASy1/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
                         <DescriptionIcon sx={{ fontSize: 30, color: "#ffbd59", filter: "drop-shadow(0 0 15px #ffbd59)" }} />
                     </a>
                 </div>
@@ -97,7 +97,7 @@ const Home = () => {
                                 </a>
 
                                 <a
-                                    href="https://drive.google.com/file/d/1Afz8CZ1oW51xx2UedA3j_eTQ_oOzbQbH/view?usp=sharing"
+                                    href="https://drive.google.com/file/d/1ySLT5ILbf9TjbyHi1Y0gYXlbobbkASy1/view?usp=drive_link"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                 >

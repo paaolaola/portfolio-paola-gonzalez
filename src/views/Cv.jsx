@@ -5,11 +5,11 @@ import ArrowLeftIcon from "@mui/icons-material/ArrowLeft";
 
 const Cv = () => {
     const handleDownloadClick = () => {
-        window.open("https://drive.google.com/file/d/1eN46dGLbsMJtHt27Q849PzbZ7VBOhJs1/view?usp=drive_link", "_blank");
+        window.open("https://drive.google.com/file/d/16rGx6egdhNYgrPZI_piRylShU592p9Ib/view?usp=sharing", "_blank");
     };
 
     const handleDownloadClickPdf = () => {
-        window.open("https://drive.google.com/file/d/1Afz8CZ1oW51xx2UedA3j_eTQ_oOzbQbH/view?usp=sharing", "_blank");
+        window.open("https://drive.google.com/file/d/1ySLT5ILbf9TjbyHi1Y0gYXlbobbkASy1/view?usp=drive_link", "_blank");
     };
 
     return (
@@ -17,7 +17,7 @@ const Cv = () => {
             <h1 className="title-form">Currículum </h1>
             <div className="box-content-cv">
                 <div className="box-cv">
-                    <img className="img-cv" src="./img/cv/cv.png" alt="foto de cv" />
+                    <img className="img-cv" src="./img/cv/cv-1.png" alt="foto de cv" />
                     <button className="btn-cv" onClick={handleDownloadClick}>
                         Descarga CV
                     </button>
