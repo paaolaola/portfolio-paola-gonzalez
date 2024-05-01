@@ -9,7 +9,7 @@ const Cv = () => {
     };
 
     const handleDownloadClickPdf = () => {
-        window.open("https://drive.google.com/file/d/1ySLT5ILbf9TjbyHi1Y0gYXlbobbkASy1/view?usp=drive_link", "_blank");
+        window.open("https://drive.google.com/file/d/1Lz9it9hxIl20itqPega0Tk821ZHMZQKH/view?usp=drive_link", "_blank");
     };
 
     return (
