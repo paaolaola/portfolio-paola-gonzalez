@@ -363,6 +363,7 @@ function DrawerAppBar(props) {
                                         lg: "12px",
                                     },
                                     textAlign: "center",
+                                    margin: "-15px",
                                 }}
                             >
                                 CV
