@@ -23,10 +23,13 @@ const Home = () => {
     //sección estudios
     const [showMore, setShowMore] = useState({
         javascript: false,
+        responsive: false,
+        next: false,
         react: false,
-        diplomado: false,
-        gestionProyectos: false,
-        fotografia: false,
+        kanban: false,
+        scrum: false,
+        figma: false,
+        git: false,
     });
 
     const toggleShowMore = (id) => {
@@ -49,7 +52,7 @@ const Home = () => {
                     <a href="mailto:paolagonzalez.contacto@gmail.com" target="_blank" rel="noopener noreferrer">
                         <GoogleIcon sx={{ fontSize: 30, color: "#ffbd59", filter: "drop-shadow(0 0 15px #ffbd59)" }} />
                     </a>
-                    <a href="https://drive.google.com/file/d/1Lz9it9hxIl20itqPega0Tk821ZHMZQKH/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
+                    <a href="https://drive.google.com/file/d/1QwBFIWGGQGgibayLczp69Q0_O9YjuXpW/view?usp=sharing" target="_blank" rel="noopener noreferrer">
                         <DescriptionIcon sx={{ fontSize: 30, color: "#ffbd59", filter: "drop-shadow(0 0 15px #ffbd59)" }} />
                     </a>
                 </div>
@@ -97,7 +100,7 @@ const Home = () => {
                                 </a>
 
                                 <a
-                                    href="https://drive.google.com/file/d/1Lz9it9hxIl20itqPega0Tk821ZHMZQKH/view?usp=drive_link"
+                                    href="https://drive.google.com/file/d/1QwBFIWGGQGgibayLczp69Q0_O9YjuXpW/view?usp=sharing"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                 >
@@ -155,6 +158,24 @@ const Home = () => {
                         <section ref={studiesRef} className="box-studies">
                             <h1 className="title">Estudios</h1>
 
+                            <h3 className="name">React + Next JS 14</h3>
+                            <div className="info-2">
+                                <p className="date">Udemy (2024)</p>
+                            </div>
+
+                            {showMore.next ? (
+                                <>
+                                    <p className="info">Uso de React y Next JS para crear SPA, SSG y SSR con Login, React Hooks, Context API & Firebase.</p>
+                                    <button className="btn-more" onClick={() => toggleShowMore("next")}>
+                                        Menos info
+                                    </button>
+                                </>
+                            ) : (
+                                <button className="btn-more" onClick={() => toggleShowMore("next")}>
+                                    Más info
+                                </button>
+                            )}
+
                             <h3 className="name">JAVASCRIPT</h3>
                             <div className="info-2">
                                 <p className="date">Coderhouse (2024)</p>
@@ -175,10 +196,111 @@ const Home = () => {
                                     Más info
                                 </button>
                             )}
-
-                            <h3 className="name">DESARROLLO FRONTEND REACT</h3>
+                            <h3 className="name">Responsive Web Design</h3>
                             <div className="info-2">
-                                <p className="date">Desafío Latam (2023)</p>
+                                <p className="date">FreeCodeCamp (2024)</p>
+                            </div>
+
+                            {showMore.responsive ? (
+                                <>
+                                    <p className="info">
+                                        Alrededor de 300 ejercicios que incluyen conceptos básicos de HTML y CSS. Variables de CSS y las mejores prácticas de
+                                        accesibilidad mediante la creación de cuestionarios. Además de creaciones web de diferentes tamaños de pantalla creando
+                                        una galería de fotos con Flexbox y un diseño de artículo de revista con CSS Grid.
+                                    </p>
+                                    <button className="btn-more" onClick={() => toggleShowMore("responsive")}>
+                                        Menos info
+                                    </button>
+                                </>
+                            ) : (
+                                <button className="btn-more" onClick={() => toggleShowMore("responsive")}>
+                                    Más info
+                                </button>
+                            )}
+                            <h3 className="name">Agile Kanban for Software Development Teams</h3>
+                            <div className="info-2">
+                                <p className="date">Udemy (2024)</p>
+                            </div>
+
+                            {showMore.kanban ? (
+                                <>
+                                    <p className="info">
+                                        Contenidos: Principios de Kanban, Diferencias entre Kanban y Extreme Programming, Tablero de Kanban, Definición de Done,
+                                        Stand-up diario, Reglas en Kanban.
+                                    </p>
+                                    <button className="btn-more" onClick={() => toggleShowMore("kanban")}>
+                                        Menos info
+                                    </button>
+                                </>
+                            ) : (
+                                <button className="btn-more" onClick={() => toggleShowMore("kanban")}>
+                                    Más info
+                                </button>
+                            )}
+
+                            <h3 className="name">Figma</h3>
+                            <div className="info-2">
+                                <p className="date">Desafío Latam (2024)</p>
+                            </div>
+
+                            {showMore.figma ? (
+                                <>
+                                    <p className="info">
+                                        Taller online de la academia que tiene por objetivo dar a conocer las funcionalidades básicas que permite Figma para la
+                                        creación de interfaces digitales. Contenidos: Prototipos de interfaces de usuario, Automatización de interfaces de
+                                        usuario, UI, Diseño de la interfaz de usuario, Diseño de experiencia de usuario (UX).
+                                    </p>
+                                    <button className="btn-more" onClick={() => toggleShowMore("figma")}>
+                                        Menos info
+                                    </button>
+                                </>
+                            ) : (
+                                <button className="btn-more" onClick={() => toggleShowMore("figma")}>
+                                    Más info
+                                </button>
+                            )}
+
+                            <h3 className="name">Bases de GIT, GitHub</h3>
+                            <div className="info-2">
+                                <p className="date">Desafío Latam (2024)</p>
+                            </div>
+
+                            {showMore.git ? (
+                                <>
+                                    <p className="info">Contenidos: Terminal, Git, GitHub, GitHub Pages y Trabajo Colaborativo.</p>
+                                    <button className="btn-more" onClick={() => toggleShowMore("git")}>
+                                        Menos info
+                                    </button>
+                                </>
+                            ) : (
+                                <button className="btn-more" onClick={() => toggleShowMore("git")}>
+                                    Más info
+                                </button>
+                            )}
+                            <h3 className="name">Scrum Fundamentals Certified</h3>
+                            <div className="info-2">
+                                <p className="date">ScrumStudy(2024)</p>
+                            </div>
+
+                            {showMore.scrum ? (
+                                <>
+                                    <p className="info">
+                                        Curso online que incluye examen de aprobación de 40 preguntas basadas en los conceptos claves sobre el marco Scrum,
+                                        vistos en la Guía SBOK®
+                                    </p>
+                                    <button className="btn-more" onClick={() => toggleShowMore("scrum")}>
+                                        Menos info
+                                    </button>
+                                </>
+                            ) : (
+                                <button className="btn-more" onClick={() => toggleShowMore("scrum")}>
+                                    Más info
+                                </button>
+                            )}
+
+                            <h3 className="name">DESARROLLO FRONT END REACT</h3>
+                            <div className="info-2">
+                                <p className="date">Desafío Latam (2024)</p>
                             </div>
 
                             {showMore.react ? (
@@ -198,75 +320,6 @@ const Home = () => {
                                     Más info
                                 </button>
                             )}
-
-                            <div>
-                                <h3 className="name">DIPLOMADO GESTIÓN CULTURAL</h3>
-                                <div className="info-2">
-                                    <p className="date">Universidad Alberto Hurtado (2016)</p>
-                                </div>
-                                {showMore.diplomado ? (
-                                    <>
-                                        <p className="info">
-                                            Como objetivo, la creación de proyectos culturales tanto en el sector público como en el privado.
-                                        </p>
-                                        <button className="btn-more" onClick={() => toggleShowMore("diplomado")}>
-                                            Menos info
-                                        </button>
-                                    </>
-                                ) : (
-                                    <button className="btn-more" onClick={() => toggleShowMore("diplomado")}>
-                                        Más info
-                                    </button>
-                                )}
-                            </div>
-
-                            <div>
-                                <h3 className="name">GESTIÓN PROYECTOS CULTURALES</h3>
-
-                                <div className="info-2">
-                                    <p className="date">Escuela Cultural Lumen (2014)</p>
-                                </div>
-                                {showMore.gestionProyectos ? (
-                                    <>
-                                        <p className="info">
-                                            Basado en los diseños, gestiones y evaluaciones de proyectos culturales, las estrategias de planificación y gestión
-                                            para proyectos individuales. Las alternativas de financiamiento, públicas y privadas existentes a nivel nacional en
-                                            los ámbitos de la cultura.
-                                        </p>
-                                        <button className="btn-more" onClick={() => toggleShowMore("gestionProyectos")}>
-                                            Menos info
-                                        </button>
-                                    </>
-                                ) : (
-                                    <button className="btn-more" onClick={() => toggleShowMore("gestionProyectos")}>
-                                        Más info
-                                    </button>
-                                )}
-                            </div>
-
-                            <div>
-                                <h3 className="name">FOTOGRAFÍA PROFESIONAL</h3>
-
-                                <div className="info-2">
-                                    <p className="date">Instituto Profesional Arcos (2010)</p>
-                                </div>
-                                {showMore.fotografia ? (
-                                    <>
-                                        <p className="info">
-                                            Compuesto por ramos como: Fotografía Digital, Fotografía Análoga (Copiado Fino), Post Producción Digital,
-                                            Composición Visual, Filosofía e Historia del Arte, Expresión corporal, Moda, Publicidad, Técnicas de retrato y
-                                            creación de Proyectos Fotográficos.
-                                        </p>
-                                        <button className="btn-more" onClick={() => toggleShowMore("fotografia")}>
-                                            Menos info
-                                        </button>
-                                    </>
-                                ) : (
-                                    <button className="btn-more" onClick={() => toggleShowMore("fotografia")}>
-                                        Más info
-                                    </button>
-                                )}
-                            </div>
                         </section>
                     </div>
                     <div>

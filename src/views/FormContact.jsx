@@ -1,9 +1,17 @@
 import "../assets/css/FormContact.css";
+import React, { useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
 import ArrowLeftIcon from "@mui/icons-material/ArrowLeft";
+import { animateScroll as scroll } from "react-scroll";
 
 function FormContact() {
+    useEffect(() => {
+        scroll.scrollToTop({
+            duration: 500,
+            smooth: "easeInOutQuad",
+        });
+    }, []);
     return (
         <>
             <h1 className="title-form">Contacto </h1>

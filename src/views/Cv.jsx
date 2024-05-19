@@ -1,16 +1,24 @@
 import "../assets/css/Cv.css";
+import React, { useEffect } from "react";
 import Footer from "../components/Footer";
 import { Link } from "react-router-dom";
 import ArrowLeftIcon from "@mui/icons-material/ArrowLeft";
+import { animateScroll as scroll } from "react-scroll";
 
 const Cv = () => {
     const handleDownloadClick = () => {
-        window.open("https://drive.google.com/file/d/16rGx6egdhNYgrPZI_piRylShU592p9Ib/view?usp=sharing", "_blank");
+        window.open("https://drive.google.com/file/d/1XYwHE7OOE8FZN9tsWXc6P0LwaJOqj9p5/view?usp=sharing", "_blank");
     };
 
     const handleDownloadClickPdf = () => {
-        window.open("https://drive.google.com/file/d/1Lz9it9hxIl20itqPega0Tk821ZHMZQKH/view?usp=drive_link", "_blank");
+        window.open("https://drive.google.com/file/d/1QwBFIWGGQGgibayLczp69Q0_O9YjuXpW/view?usp=sharing", "_blank");
     };
+    useEffect(() => {
+        scroll.scrollToTop({
+            duration: 500,
+            smooth: "easeInOutQuad",
+        });
+    }, []);
 
     return (
         <>
