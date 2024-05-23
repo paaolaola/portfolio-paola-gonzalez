@@ -16,8 +16,7 @@ h5 {
     object-fit: cover;
     display: block;
     margin: 0.4rem auto;
-    border: 0.5px solid #545454;
-    box-shadow: 0 0 10px #545454;
+    box-shadow: 0 0 6px #545454;
 }
 
 /*RESPONSIVE*/
