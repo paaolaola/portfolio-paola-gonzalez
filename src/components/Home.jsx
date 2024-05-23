@@ -8,6 +8,7 @@ import GoogleIcon from "@mui/icons-material/Google";
 import CaruselHobbies from "./CaruselHobbies";
 import CaruselCert from "./CaruselCert";
 import Footer from "./Footer";
+import RandomPokemon from "./RandomPokemon";
 import "../assets/css/Home.css";
 
 const Home = () => {
@@ -322,11 +323,15 @@ const Home = () => {
                             )}
                         </section>
                     </div>
+
                     <div>
                         <section className="box-cert">
                             <h1 className="title">Certificaciones</h1>
                             <CaruselCert />
                         </section>
+                        <div>
+                            <RandomPokemon />
+                        </div>
                     </div>
                 </div>
             </div>
