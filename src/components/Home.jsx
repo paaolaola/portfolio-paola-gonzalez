@@ -346,6 +346,9 @@ const Home = () => {
                 <section className="box-hobbies">
                     <h1 className="title">Mas sobre mi</h1>
                     <div className="hobbies-container">
+                        <div className="carusel">
+                            <CaruselHobbies />
+                        </div>
                         <div className="text-hobbies">
                             <p>
                                 Me gusta participar en actividades al aire libre, como viajar, el trekking, acampar y los conciertos de música. Además disfruto
@@ -356,9 +359,6 @@ const Home = () => {
                                 Estas aficiones son parte importante en mi vida y me han dado espacio para desarrollar habilidades creativas y visuales
                                 relacionadas directamente con el diseño y que complementan mi experiencia como Front End.
                             </p>
-                        </div>
-                        <div className="carusel">
-                            <CaruselHobbies />
                         </div>
                     </div>
                 </section>
