@@ -36,9 +36,9 @@ const RandomPokemon = () => {
             {pokemon && (
                 <>
                     <div className="box-pokemon">
-                        <div>
-                            <p className="title-pokemon">Pausa, un Random Pokemon para ti!</p>
-                            <button className="btn-pokemon" onClick={fetchRandomPokemon}>
+                        <div class="pokemon-items">
+                            <p class="title-pokemon">Pausa, un Random Pokemon para ti!</p>
+                            <button class="btn-pokemon" onClick={fetchRandomPokemon}>
                                 Genéralo
                             </button>
                         </div>
