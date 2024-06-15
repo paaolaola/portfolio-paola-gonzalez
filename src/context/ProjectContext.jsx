@@ -79,7 +79,7 @@ const ProjectProvider = ({ children }) => {
             id: 2,
             name: "Recetapp",
             github: "https://github.com/paaolaola/proyecto-final-gary-chesi-pao",
-            url: "https://magenta-pika-e54801.netlify.app",
+            url: "https://recetappweb.netlify.app/",
             image: "../img/proyectos/P2/0.png",
             video: "https://www.youtube.com/embed/YZ90kQ-aUiw?si=KsRUzyR0l-gkm1Pc",
             images: {
@@ -114,7 +114,7 @@ const ProjectProvider = ({ children }) => {
             id: 3,
             name: "Mamma Mía",
             github: "https://github.com/paaolaola/prueba-react-2-paola-gonzalez",
-            url: "https://6577caf4ca1cbb7ce5df7dd4--superlative-wisp-3ea1f8.netlify.app/",
+            url: "https://pizzeria-mammamia.netlify.app/",
             image: "../img/proyectos/P3/1.png",
             video: "",
             images: {
@@ -175,7 +175,7 @@ const ProjectProvider = ({ children }) => {
             id: 5,
             name: "Plants Gallery Photo",
             github: "https://github.com/paaolaola/desafio-2-react-II-paola-gonzalez",
-            url: "https://singular-horse-6a9d66.netlify.app/",
+            url: "https://plantsgalleryph.netlify.app/",
             image: "../img/proyectos/P5/0.png",
             video: "",
             images: {
@@ -206,7 +206,7 @@ const ProjectProvider = ({ children }) => {
             id: 6,
             name: "Selector Pokemon",
             github: "https://github.com/paaolaola/desafio-3-react-II-paola-gonzalez",
-            url: "https://main--dapper-paletas-4e3401.netlify.app/",
+            url: "https://pokemonselector.netlify.app/",
             image: "../img/proyectos/P6/0.png",
             video: "https://www.youtube.com/embed/y-6blCVfBIQ?si=SBcR9_iapCwkfAH0",
             images: {
@@ -235,7 +235,7 @@ const ProjectProvider = ({ children }) => {
             id: 7,
             name: "Feriados en Chile",
             github: "https://github.com/paaolaola/prueba-react-1-paola-gonzalez",
-            url: "https://unique-biscuit-c647be.netlify.app/",
+            url: "https://feriadoschile.netlify.app/",
             image: "../img/proyectos/P7/1.png",
             video: "https://www.youtube.com/embed/XGRUurgplsE?si=vsfARtEQFD0B6Da0",
             images: {
