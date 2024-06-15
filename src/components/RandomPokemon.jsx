@@ -2,10 +2,12 @@ import React, { useState, useEffect } from "react";
 import "../assets/css/RandomPokemon.css";
 
 const RandomPokemon = () => {
+    // Se inicializan los estados de pokemon, loading y error
     const [pokemon, setPokemon] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
 
+    // Se crea la función fetchRandomPokemon que se encarga de hacer la petición a la API de pokémon
     const fetchRandomPokemon = async () => {
         setLoading(true);
         setError(null);
@@ -23,7 +25,7 @@ const RandomPokemon = () => {
             setLoading(false);
         }
     };
-
+    // Se utiliza useEffect para que la función fetchRandomPokemon se ejecute una vez que el componente se haya montado
     useEffect(() => {
         fetchRandomPokemon();
     }, []);
@@ -32,13 +34,13 @@ const RandomPokemon = () => {
     if (error) return <p>{error}</p>;
 
     return (
-        <div className="container-pokemon">
+        <div>
             {pokemon && (
                 <>
                     <div className="box-pokemon">
-                        <div class="pokemon-items">
-                            <p class="title-pokemon">Pausa, un Random Pokemon para ti!</p>
-                            <button class="btn-pokemon" onClick={fetchRandomPokemon}>
+                        <div className="pokemon-items">
+                            <p className="title-pokemon">Pausa, un Random Pokemon para ti!</p>
+                            <button className="btn-pokemon" onClick={fetchRandomPokemon}>
                                 Genéralo
                             </button>
                         </div>

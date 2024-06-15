@@ -7,6 +7,7 @@ import NotFound from "../views/NotFound.jsx";
 import { Routes, Route } from "react-router-dom";
 
 const Router = () => {
+    //Rutas de la aplicación
     return (
         <>
             <Routes>

@@ -1,19 +1,20 @@
 /*pagina cv*/
 .img-cv {
-    width: 380px;
-    height: 540px;
-    margin: 0 0rem 2rem 0;
+    width: 240px;
+    height: 340px;
+    margin: 0 4rem;
     background-color: rgba(0, 0, 0, 0.15);
-    border-radius: 30px;
+    border-radius: 20px;
     cursor: pointer;
 }
 
 .box-content-cv {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     padding-top: 2rem;
 }
+
 .box-cv {
     display: flex;
     flex-direction: column;
@@ -54,16 +55,10 @@
 
 /*RESPONSIVE*/
 @media screen and (min-width: 768px) and (max-width: 996px) {
-    .img-cv {
-        margin: auto;
-        width: 90%;
-        height: 90%;
-    }
-
     .box-content-cv {
         display: flex;
-        flex-direction: column;
-        min-height: 100vh;
+        flex-direction: row;
+        min-height: 50vh;
     }
 
     .btn-cv {
@@ -72,16 +67,11 @@
 }
 
 @media screen and (min-width: 280px) and (max-width: 768px) {
-    .img-cv {
-        margin: auto;
-        width: 90%;
-        height: 90%;
-    }
-
     .box-content-cv {
         display: flex;
         flex-direction: column;
         min-height: 100vh;
+        padding-top: 0rem;
     }
 
     .btn-cv {

@@ -1,5 +1,7 @@
 import { useState, useContext } from "react";
 import { ProjectContext } from "../context/ProjectContext";
+import { StackContext } from "../context/StackContext";
+import { StudyContext } from "../context/StudyContext";
 import { useNavigate } from "react-router-dom";
 import DescriptionIcon from "@mui/icons-material/Description";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
@@ -12,31 +14,32 @@ import RandomPokemon from "./RandomPokemon";
 import "../assets/css/Home.css";
 
 const Home = () => {
+    //Contextos
     const { proyectos, studiesRef, projectsRef, aboutRef } = useContext(ProjectContext);
+    const { stacks } = useContext(StackContext);
+    const { studies } = useContext(StudyContext);
 
-    //seccion proyectos, boton ver mas
+    //Seccion proyectos
+    //Hook para navegar a la página de cada proyecto al hacer click en el botón "Ver más"
     const navigate = useNavigate();
     const handleClick = (name) => {
         const path = `/proyectos/${name}`;
         navigate(path);
     };
 
-    //sección estudios
-    const [showMore, setShowMore] = useState({
-        javascript: false,
-        responsive: false,
-        next: false,
-        react: false,
-        kanban: false,
-        scrum: false,
-        figma: false,
-        git: false,
+    //Sección estudios
+    //Inicializamos el estado de showMore en false para cada estudio y luego lo actualizamos con el método toggleShowMore al hacer click en el botón
+    const initialShowMore = {};
+    studies.forEach((study) => {
+        initialShowMore[study.state] = false;
     });
+    const [showMore, setShowMore] = useState(initialShowMore);
 
-    const toggleShowMore = (id) => {
+    //Función para cambiar el estado de showMore al hacer click en el botón
+    const toggleShowMore = (state) => {
         setShowMore((prevState) => ({
             ...prevState,
-            [id]: !prevState[id],
+            [state]: !prevState[state],
         }));
     };
 
@@ -121,8 +124,10 @@ const Home = () => {
                     <div>
                         <section className="box-stack">
                             <h1 className="title">Skills</h1>
-                            <div>
-                                <img className="stack-image" src="./img/stack/stack.png" alt="stack"></img>
+                            <div className="box-image-stack">
+                                {stacks.map(({ id, images, alt }) => (
+                                    <img key={id} className="stack-image" src={images} alt={alt} />
+                                ))}
                             </div>
                         </section>
                     </div>
@@ -134,22 +139,22 @@ const Home = () => {
                     <h1 className="title">Proyectos</h1>
 
                     <div className="content-projects">
-                        {proyectos.map((proyecto) => (
-                            <div key={proyecto.id} className="contenedor-card">
-                                <img className="box-content-projects" src={proyecto.image} alt={proyecto.name} />
+                        {proyectos.map(({ id, image, name, github, url }) => (
+                            <div key={id} className="contenedor-card">
+                                <img className="box-content-projects" src={image} alt={name} />
                                 <div className="box">
                                     <div>
-                                        <h5 className="proyect-name">{proyecto.name}</h5>
+                                        <h5 className="proyect-name">{name}</h5>
                                     </div>
                                     <div className="btn-sites-projects">
-                                        <a href={proyecto.github} target="_blank" rel="noopener noreferrer">
+                                        <a href={github} target="_blank" rel="noopener noreferrer">
                                             <button className="box-btn">GitHub</button>
                                         </a>
-                                        <a href={proyecto.url} target="_blank" rel="noopener noreferrer">
+                                        <a href={url} target="_blank" rel="noopener noreferrer">
                                             <button className="box-btn">Live Preview</button>
                                         </a>
 
-                                        <button onClick={() => handleClick(proyecto.name)} className="box-btn">
+                                        <button onClick={() => handleClick(name)} className="box-btn">
                                             Ver más
                                         </button>
                                     </div>
@@ -164,169 +169,28 @@ const Home = () => {
                     <div>
                         <section ref={studiesRef} className="box-studies">
                             <h1 className="title">Estudios</h1>
+                            {studies.map(({ id, name, place, info, state }) => (
+                                <div key={id}>
+                                    <h3 className="name">{name}</h3>
+                                    <div className="info-2">
+                                        <p className="date">{place}</p>
+                                    </div>
 
-                            <h3 className="name">React + Next JS 14</h3>
-                            <div className="info-2">
-                                <p className="date">Udemy (2024)</p>
-                            </div>
+                                    {showMore[state] ? (
+                                        <>
+                                            <p className="info">{info}</p>
 
-                            {showMore.next ? (
-                                <>
-                                    <p className="info">Uso de React y Next JS para crear SPA, SSG y SSR con Login, React Hooks, Context API & Firebase.</p>
-                                    <button className="btn-more" onClick={() => toggleShowMore("next")}>
-                                        Menos info
-                                    </button>
-                                </>
-                            ) : (
-                                <button className="btn-more" onClick={() => toggleShowMore("next")}>
-                                    Más info
-                                </button>
-                            )}
-
-                            <h3 className="name">JAVASCRIPT</h3>
-                            <div className="info-2">
-                                <p className="date">Coderhouse (2024)</p>
-                            </div>
-
-                            {showMore.javascript ? (
-                                <>
-                                    <p className="info">
-                                        Contenidos del Curso: Sintaxis, Control de flujos, Iteraciones, Funciones, Objetos y Arrays, DOM y Eventos, Storage y
-                                        JSON, Ajax y Fetch, Frameworks y Node JS.
-                                    </p>
-                                    <button className="btn-more" onClick={() => toggleShowMore("javascript")}>
-                                        Menos info
-                                    </button>
-                                </>
-                            ) : (
-                                <button className="btn-more" onClick={() => toggleShowMore("javascript")}>
-                                    Más info
-                                </button>
-                            )}
-                            <h3 className="name">Responsive Web Design</h3>
-                            <div className="info-2">
-                                <p className="date">FreeCodeCamp (2024)</p>
-                            </div>
-
-                            {showMore.responsive ? (
-                                <>
-                                    <p className="info">
-                                        Alrededor de 300 ejercicios que incluyen conceptos básicos de HTML y CSS. Variables de CSS y las mejores prácticas de
-                                        accesibilidad mediante la creación de cuestionarios. Además de creaciones web de diferentes tamaños de pantalla creando
-                                        una galería de fotos con Flexbox y un diseño de artículo de revista con CSS Grid.
-                                    </p>
-                                    <button className="btn-more" onClick={() => toggleShowMore("responsive")}>
-                                        Menos info
-                                    </button>
-                                </>
-                            ) : (
-                                <button className="btn-more" onClick={() => toggleShowMore("responsive")}>
-                                    Más info
-                                </button>
-                            )}
-                            <h3 className="name">Agile Kanban for Software Development Teams</h3>
-                            <div className="info-2">
-                                <p className="date">Udemy (2024)</p>
-                            </div>
-
-                            {showMore.kanban ? (
-                                <>
-                                    <p className="info">
-                                        Contenidos: Principios de Kanban, Diferencias entre Kanban y Extreme Programming, Tablero de Kanban, Definición de Done,
-                                        Stand-up diario, Reglas en Kanban.
-                                    </p>
-                                    <button className="btn-more" onClick={() => toggleShowMore("kanban")}>
-                                        Menos info
-                                    </button>
-                                </>
-                            ) : (
-                                <button className="btn-more" onClick={() => toggleShowMore("kanban")}>
-                                    Más info
-                                </button>
-                            )}
-
-                            <h3 className="name">Figma</h3>
-                            <div className="info-2">
-                                <p className="date">Desafío Latam (2024)</p>
-                            </div>
-
-                            {showMore.figma ? (
-                                <>
-                                    <p className="info">
-                                        Taller online de la academia que tiene por objetivo dar a conocer las funcionalidades básicas que permite Figma para la
-                                        creación de interfaces digitales. Contenidos: Prototipos de interfaces de usuario, Automatización de interfaces de
-                                        usuario, UI, Diseño de la interfaz de usuario, Diseño de experiencia de usuario (UX).
-                                    </p>
-                                    <button className="btn-more" onClick={() => toggleShowMore("figma")}>
-                                        Menos info
-                                    </button>
-                                </>
-                            ) : (
-                                <button className="btn-more" onClick={() => toggleShowMore("figma")}>
-                                    Más info
-                                </button>
-                            )}
-
-                            <h3 className="name">Bases de GIT, GitHub</h3>
-                            <div className="info-2">
-                                <p className="date">Desafío Latam (2024)</p>
-                            </div>
-
-                            {showMore.git ? (
-                                <>
-                                    <p className="info">Contenidos: Terminal, Git, GitHub, GitHub Pages y Trabajo Colaborativo.</p>
-                                    <button className="btn-more" onClick={() => toggleShowMore("git")}>
-                                        Menos info
-                                    </button>
-                                </>
-                            ) : (
-                                <button className="btn-more" onClick={() => toggleShowMore("git")}>
-                                    Más info
-                                </button>
-                            )}
-                            <h3 className="name">Scrum Fundamentals Certified</h3>
-                            <div className="info-2">
-                                <p className="date">ScrumStudy(2024)</p>
-                            </div>
-
-                            {showMore.scrum ? (
-                                <>
-                                    <p className="info">
-                                        Curso online que incluye examen de aprobación de 40 preguntas basadas en los conceptos claves sobre el marco Scrum,
-                                        vistos en la Guía SBOK®
-                                    </p>
-                                    <button className="btn-more" onClick={() => toggleShowMore("scrum")}>
-                                        Menos info
-                                    </button>
-                                </>
-                            ) : (
-                                <button className="btn-more" onClick={() => toggleShowMore("scrum")}>
-                                    Más info
-                                </button>
-                            )}
-
-                            <h3 className="name">DESARROLLO FRONT END REACT</h3>
-                            <div className="info-2">
-                                <p className="date">Desafío Latam (2024)</p>
-                            </div>
-
-                            {showMore.react ? (
-                                <>
-                                    <p className="info">
-                                        Conocimientos adquiridos por el Bootcamp: React Hooks, Netifly, GitHub Pages, Tailwind CSS, JSON, HTML, CSS Flexbox,
-                                        Git, Media Queries, VSCode, CSS, JavaScript, SCSS, Terminal, CSS Inline, Vite, React.js, CSS Grid, Context API,
-                                        Bootstrap, GitHub y API REST{" "}
-                                    </p>
-
-                                    <button className="btn-more" onClick={() => toggleShowMore("react")}>
-                                        Menos info
-                                    </button>
-                                </>
-                            ) : (
-                                <button className="btn-more" onClick={() => toggleShowMore("react")}>
-                                    Más info
-                                </button>
-                            )}
+                                            <button className="btn-more" onClick={() => toggleShowMore(state)}>
+                                                Menos info
+                                            </button>
+                                        </>
+                                    ) : (
+                                        <button className="btn-more" onClick={() => toggleShowMore(state)}>
+                                            Más info
+                                        </button>
+                                    )}
+                                </div>
+                            ))}
                         </section>
                     </div>
 

@@ -6,6 +6,7 @@ import ArrowLeftIcon from "@mui/icons-material/ArrowLeft";
 import { animateScroll as scroll } from "react-scroll";
 
 function FormContact() {
+    //Se utiliza useEffect para que el scroll se posicione en la parte superior de la página
     useEffect(() => {
         scroll.scrollToTop({
             duration: 500,

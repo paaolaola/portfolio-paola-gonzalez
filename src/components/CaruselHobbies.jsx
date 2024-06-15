@@ -1,44 +1,23 @@
 import Carousel from "react-bootstrap/Carousel";
 import "../assets/css/CaruselHobbies.css";
+import { HobbieContext } from "../context/HobbieContext";
+import { useContext } from "react";
 
 function CaruselHobbies() {
+    //Se consume el contexto de hobbies para mostrarlos en el carrusel
+    const { hobbies } = useContext(HobbieContext);
     return (
         <Carousel>
-            <Carousel.Item className="custom-carousel-item">
-                <img src="./img/fotos-hobbies/fotomontaje-1.jpg" alt="fotomontaje-1" />
-                <Carousel.Caption>
-                    {" "}
-                    <h5>"Serie de Luz"</h5>
-                    <p>Fotomontajes</p>
-                </Carousel.Caption>
-            </Carousel.Item>
-
-            <Carousel.Item className="custom-carousel-item">
-                <img src="./img/fotos-hobbies/fotomontaje-2.jpg" alt="fotomontaje-2" />
-                <Carousel.Caption>
-                    {" "}
-                    <h5>"Serie de Luz"</h5>
-                    <p>Fotomontajes</p>
-                </Carousel.Caption>
-            </Carousel.Item>
-
-            <Carousel.Item className="custom-carousel-item">
-                <img src="./img/fotos-hobbies/fotomontaje-3.jpg" alt="fotomontaje-3" />
-                <Carousel.Caption>
-                    {" "}
-                    <h5>"Serie de Luz"</h5>
-                    <p>Fotomontajes</p>
-                </Carousel.Caption>
-            </Carousel.Item>
-
-            <Carousel.Item className="custom-carousel-item">
-                <img src="./img/fotos-hobbies/fotomontaje-4.jpg" alt="fotomontaje-4" />
-                <Carousel.Caption>
-                    {" "}
-                    <h5>"Serie de Luz"</h5>
-                    <p>Fotomontajes</p>
-                </Carousel.Caption>
-            </Carousel.Item>
+            {hobbies.map(({ id, image, alt, title, description }) => (
+                <Carousel.Item key={id} className="custom-carousel-item">
+                    <img src={image} alt={alt} />
+                    <Carousel.Caption>
+                        {" "}
+                        <h5>{title}</h5>
+                        <p>{description}</p>
+                    </Carousel.Caption>
+                </Carousel.Item>
+            ))}
         </Carousel>
     );
 }

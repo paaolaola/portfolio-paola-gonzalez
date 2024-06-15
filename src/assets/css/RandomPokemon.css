@@ -2,11 +2,6 @@
     width: 300px;
 }
 
-.container-pokemon {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-}
 .pokemon-items {
     display: flex;
     flex-direction: column;
@@ -16,11 +11,9 @@
 
 .box-pokemon {
     display: flex;
-    width: 600px;
+    width: 100%;
     justify-content: space-evenly;
     align-items: center;
-    padding: 0 20px;
-    margin-top: 2rem;
 }
 
 .btn-pokemon {
@@ -93,8 +86,8 @@
     .box-pokemon {
         display: flex;
         flex-direction: column;
-        width: 100%;
-        padding: 2rem;
+
+        padding: 4rem 0;
     }
     .name-pokemon {
         font-size: 25px;

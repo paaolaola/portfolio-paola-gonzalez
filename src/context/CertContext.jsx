@@ -1,0 +1,91 @@
+import { createContext } from "react";
+export const CertContext = createContext();
+
+const CertProvider = ({ children }) => {
+    //Array de certificaciones actualizado
+    //Se puede agregar o quitar certificaciones de la lista para que se muestren en la sección de certificaciones
+    const certs = [
+        {
+            id: 1,
+            image: "./img/certificaciones/certificacion-8.png",
+            alt: "Coderhouse",
+            url: "https://www.coderhouse.com/cl/certificados/661e3bf2b4649e3736fda015?lang=es",
+        },
+        {
+            id: 2,
+            image: "./img/certificaciones/certificacion-7.png",
+            alt: "FreeCodeCamp",
+            url: "https://www.freecodecamp.org/certification/paaolaola/responsive-web-design",
+        },
+        {
+            id: 3,
+            image: "./img/certificaciones/certificacion-6.png",
+            alt: "Udemy",
+            url: "https://www.udemy.com/certificate/UC-11fd511e-48fd-44b8-9863-bcfd8f6d3c8e",
+        },
+        {
+            id: 4,
+            image: "./img/certificaciones/certificacion-2.png",
+            alt: "SCRUM",
+            url: "https://www.scrumstudy.com/certification/verify?type=SFC&number=1014775",
+        },
+        {
+            id: 5,
+            image: "./img/certificaciones/certificacion-5.png",
+            alt: "Certificado ADL",
+            url: "https://cursos.desafiolatam.com/certificates/0jsrdhqq4s",
+        },
+        {
+            id: 6,
+            image: "./img/certificaciones/certificacion-3.png",
+            alt: "Certificado ADL",
+            url: "https://cursos.desafiolatam.com/certificates/u4vd8ght4o",
+        },
+        {
+            id: 7,
+            image: "./img/certificaciones/certificacion-4.png",
+            alt: "Certificado ADL",
+            url: "./img/certificaciones/certificacion-4.png",
+        },
+        {
+            id: 8,
+            image: "./img/certificaciones/certificacion-1.png",
+            alt: "Certificado ADL",
+            url: "https://desafiosdev.s3.amazonaws.com/uploads/certification/image/28186/certificacion-aprobacion-de-carrera-nuevo-proyecto-final-g10-14400.png",
+        },
+        {
+            id: 9,
+            image: "./img/certificaciones/react II.png",
+            alt: "Certificado ADL",
+            url: "https://desafiosdev.s3.amazonaws.com/uploads/certification/image/27436/aprobacion-modulos-cursos-b-learning-react-ii-g10-14400.png",
+        },
+        {
+            id: 10,
+            image: "./img/certificaciones/react I.png",
+            alt: "Certificado ADL",
+            url: "https://desafiosdev.s3.amazonaws.com/uploads/certification/image/26512/aprobacion-modulos-cursos-b-learning-react-i-g10-14400.png",
+        },
+        {
+            id: 11,
+            image: "./img/certificaciones/javascript.png",
+            alt: "Certificado ADL",
+            url: "https://desafiosdev.s3.amazonaws.com/uploads/certification/image/25655/aprobacion-modulos-cursos-b-learning-javascript-para-la-web-g10-14400.png",
+        },
+        {
+            id: 12,
+            image: "./img/certificaciones/css.png",
+            alt: "Certificado ADL",
+            url: "https://desafiosdev.s3.amazonaws.com/uploads/certification/image/24192/aprobacion-modulos-cursos-b-learning-css-avanzado-g10-14400.png",
+        },
+        {
+            id: 13,
+            image: "./img/certificaciones/html.png",
+            alt: "Certificado ADL",
+            url: "https://desafiosdev.s3.amazonaws.com/uploads/certification/image/23547/aprobacion-modulos-cursos-b-learning-introduccion-al-desarrollo-web-g10-14400.png",
+        },
+    ];
+
+    return <CertContext.Provider value={{ certs }}>{children}</CertContext.Provider>;
+};
+
+export default CertProvider;

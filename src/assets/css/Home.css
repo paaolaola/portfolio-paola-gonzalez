@@ -180,6 +180,7 @@
     /* background-color: rgba(0, 0, 0, 0.15); */
     display: flex;
     flex-direction: column;
+    justify-content: center;
     border-radius: 30px;
     margin: 5rem 1rem 1rem 1rem;
     padding: 3rem;
@@ -187,10 +188,15 @@
 }
 
 .stack-image {
-    width: 100%;
+    width: 120px;
     overflow: hidden;
     cursor: pointer;
-    transition: transform 0.3s ease;
+    transition: transform 0.2s ease;
+    margin: 0.5rem;
+}
+
+.box-image-stack {
+    text-align: center;
 }
 .stack-image:hover {
     transform: scale(1.05);
@@ -400,6 +406,10 @@
         margin-top: 2rem;
     }
 
+    /*seccion skills*/
+    .stack-image {
+        width: 80px;
+    }
     /*seccion proyectos*/
     .box-projects {
         margin: 3rem;
@@ -593,6 +603,9 @@
         margin: 1rem auto;
         width: 90%;
         padding: 3rem 1rem 0 1rem;
+    }
+    .stack-image {
+        width: 80px;
     }
 
     /*seccion estudios*/

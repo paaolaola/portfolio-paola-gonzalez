@@ -6,13 +6,15 @@ import ArrowLeftIcon from "@mui/icons-material/ArrowLeft";
 import { animateScroll as scroll } from "react-scroll";
 
 const Cv = () => {
+    //Función para descargar el currículum
     const handleDownloadClick = () => {
         window.open("https://drive.google.com/file/d/1XYwHE7OOE8FZN9tsWXc6P0LwaJOqj9p5/view?usp=sharing", "_blank");
     };
-
+    //Función para descargar el currículum para ATS
     const handleDownloadClickPdf = () => {
         window.open("https://drive.google.com/file/d/1QwBFIWGGQGgibayLczp69Q0_O9YjuXpW/view?usp=sharing", "_blank");
     };
+    //Se utiliza useEffect para que el scroll se posicione en la parte superior de la página
     useEffect(() => {
         scroll.scrollToTop({
             duration: 500,
@@ -25,15 +27,15 @@ const Cv = () => {
             <h1 className="title-form">Currículum </h1>
             <div className="box-content-cv">
                 <div className="box-cv">
-                    <img className="img-cv" src="./img/cv/cv-1.png" alt="foto de cv" />
-                    <button className="btn-cv" onClick={handleDownloadClick}>
-                        Descarga CV
-                    </button>
-                </div>
-                <div className="box-cv">
                     <img className="img-cv" src="./img/cv/cv-2.png" alt="foto de cv" />
                     <button className="btn-cv" onClick={handleDownloadClickPdf}>
                         Descarga PARA ATS
+                    </button>
+                </div>
+                <div className="box-cv">
+                    <img className="img-cv" src="./img/cv/cv-1.png" alt="foto de cv" />
+                    <button className="btn-cv" onClick={handleDownloadClick}>
+                        Descarga CV
                     </button>
                 </div>
             </div>

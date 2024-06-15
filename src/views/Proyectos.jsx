@@ -7,11 +7,14 @@ import Footer from "../components/Footer";
 import ArrowLeftIcon from "@mui/icons-material/ArrowLeft";
 
 const Proyectos = () => {
+    //Se obtiene el nombre del proyecto de los parámetros de la URL
     const { name } = useParams();
     const { proyectos } = useContext(ProjectContext);
 
+    //Se busca el proyecto en el contexto de proyectos
     const proyecto = proyectos.find((proyecto) => proyecto.name === name);
 
+    //Se realiza un scroll hacia arriba al cargar la página
     useEffect(() => {
         scroll.scrollToTop({
             duration: 500,
@@ -19,6 +22,7 @@ const Proyectos = () => {
         });
     }, []);
 
+    //Si no se encuentra el proyecto se muestra un mensaje de error 404 y se redirige al home
     if (!proyecto) {
         return <p className="title-404">Proyecto no encontrado</p>;
     }

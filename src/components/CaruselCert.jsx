@@ -1,105 +1,23 @@
 import Carousel from "react-bootstrap/Carousel";
 import "../assets/css/CaruselCert.css";
+import { CertContext } from "../context/CertContext";
+import { useContext } from "react";
 
 function CaruselCert() {
+    //Se consume el contexto de certificaciones para mostrarlas en el carrusel
+    const { certs } = useContext(CertContext);
     return (
-        <Carousel>
-            <Carousel.Item>
-                <a href="https://www.coderhouse.com/cl/certificados/661e3bf2b4649e3736fda015?lang=es" target="_blank" rel="noopener noreferrer">
-                    <img className="box-content-img" src="./img/certificaciones/certificacion-8.png" alt="Coderhouse" />
-                </a>
-            </Carousel.Item>
-            <Carousel.Item>
-                <a href="https://www.freecodecamp.org/certification/paaolaola/responsive-web-design" target="_blank" rel="noopener noreferrer">
-                    <img className="box-content-img" src="./img/certificaciones/certificacion-7.png" alt="FreeCodeCamp" />
-                </a>
-            </Carousel.Item>
-            <Carousel.Item>
-                <a href="https://www.udemy.com/certificate/UC-11fd511e-48fd-44b8-9863-bcfd8f6d3c8e/" target="_blank" rel="noopener noreferrer">
-                    <img className="box-content-img" src="./img/certificaciones/certificacion-6.png" alt="certificado Udemy" />
-                </a>
-            </Carousel.Item>
-            <Carousel.Item>
-                <a href="https://www.scrumstudy.com/certification/verify?type=SFC&number=1014775" target="_blank" rel="noopener noreferrer">
-                    <img className="box-content-img" src="./img/certificaciones/certificacion-2.png" alt="certificado SCRUM" />
-                </a>
-            </Carousel.Item>
-            <Carousel.Item>
-                <a href="https://cursos.desafiolatam.com/certificates/0jsrdhqq4s" target="_blank" rel="noopener noreferrer">
-                    <img className="box-content-img" src="./img/certificaciones/certificacion-5.png" alt="certificado ADL" />
-                </a>
-            </Carousel.Item>
-
-            <Carousel.Item>
-                <a href="https://cursos.desafiolatam.com/certificates/u4vd8ght4o" target="_blank" rel="noopener noreferrer">
-                    <img className="box-content-img" src="./img/certificaciones/certificacion-3.png" alt="certificado ADL" />
-                </a>
-            </Carousel.Item>
-
-            <Carousel.Item>
-                <a href="https://cursos.desafiolatam.com/certificates/tg9mkmbxhv" target="_blank" rel="noopener noreferrer">
-                    <img className="box-content-img" src="./img/certificaciones/certificacion-4.png" alt="certificado ADL" />
-                </a>
-            </Carousel.Item>
-
-            <Carousel.Item>
-                <a
-                    href="https://desafiosdev.s3.amazonaws.com/uploads/certification/image/28186/certificacion-aprobacion-de-carrera-nuevo-proyecto-final-g10-14400.png"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    <img className="box-content-img" src="./img/certificaciones/certificacion-1.png" alt="certificado ADL" />
-                </a>
-            </Carousel.Item>
-
-            <Carousel.Item>
-                <a
-                    href="https://desafiosdev.s3.amazonaws.com/uploads/certification/image/27436/aprobacion-modulos-cursos-b-learning-react-ii-g10-14400.png"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    <img className="box-content-img" src="./img/certificaciones/react II.png" alt="certificado ADL" />
-                </a>
-            </Carousel.Item>
-
-            <Carousel.Item>
-                <a
-                    href="https://desafiosdev.s3.amazonaws.com/uploads/certification/image/26512/aprobacion-modulos-cursos-b-learning-react-i-g10-14400.png"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    <img className="box-content-img" src="./img/certificaciones/react I.png" alt="certificado ADL" />
-                </a>
-            </Carousel.Item>
-            <Carousel.Item>
-                <a
-                    href="https://desafiosdev.s3.amazonaws.com/uploads/certification/image/25655/aprobacion-modulos-cursos-b-learning-javascript-para-la-web-g10-14400.png"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    <img className="box-content-img" src="./img/certificaciones/javascript.png" alt="certificado ADL" />
-                </a>
-            </Carousel.Item>
-
-            <Carousel.Item>
-                <a
-                    href="https://desafiosdev.s3.amazonaws.com/uploads/certification/image/24192/aprobacion-modulos-cursos-b-learning-css-avanzado-g10-14400.png"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    <img className="box-content-img" src="./img/certificaciones/css.png" alt="certificado ADL" />
-                </a>
-            </Carousel.Item>
-            <Carousel.Item>
-                <a
-                    href="https://desafiosdev.s3.amazonaws.com/uploads/certification/image/23547/aprobacion-modulos-cursos-b-learning-introduccion-al-desarrollo-web-g10-14400.png"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    <img className="box-content-img" src="./img/certificaciones/html.png" alt="certificado ADL" />
-                </a>
-            </Carousel.Item>
-        </Carousel>
+        <>
+            <Carousel>
+                {certs.map(({ id, image, alt, url }) => (
+                    <Carousel.Item key={id}>
+                        <a href={url} target="_blank" rel="noopener noreferrer">
+                            <img className="box-content-img" src={image} alt={alt} />
+                        </a>
+                    </Carousel.Item>
+                ))}
+            </Carousel>
+        </>
     );
 }
 

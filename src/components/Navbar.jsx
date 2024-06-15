@@ -15,7 +15,7 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import { animateScroll as scroll } from "react-scroll";
-// import FavoriteIcon from "@mui/icons-material/Favorite";
+//import FavoriteIcon from "@mui/icons-material/Favorite";
 
 const drawerWidth = { width: "100%" };
 const drawerHeight = { height: "50px" };
@@ -23,20 +23,20 @@ const drawerColor = "linear-gradient(to top, #d486ea, #5170ff, #5170ff)";
 const navItems = ["contacto"];
 
 function DrawerAppBar(props) {
-    //context para scroll del home
+    //Context para scroll del home
     const { aboutRef, projectsRef, studiesRef } = useContext(ProjectContext);
 
-    // nuevo estados para la condicion de la navbar
+    // Nuevos estados para la condicion de la navbar
     const navigate = useNavigate();
     const [showNavItem, setShowNavItem] = useState(true);
 
-    // scroll de las secciones del home
+    // Scroll de las secciones del home
     const scrollToRef = (ref) => {
         if (ref && ref.current) {
             ref.current.scrollIntoView({ behavior: "smooth" });
         }
     };
-    //logica del cambio de ruta en curriculum y contacto
+    //Logica del cambio de ruta en curriculum y contacto
     const handleNavClick = (path, ref) => {
         navigate(path);
         setTimeout(() => {
@@ -46,13 +46,13 @@ function DrawerAppBar(props) {
 
     const { window } = props;
     const [mobileOpen, setMobileOpen] = useState(false);
-    //estados para la funcion del like corazon
-    // const [liked, setLiked] = useState(false);
+    //Estados para la funcion del like corazon
+    //const [liked, setLiked] = useState(false);
 
     const handleDrawerToggle = () => {
         setMobileOpen((prevState) => !prevState);
     };
-    //condicion para el like del corazón
+    //Condicion para el like del corazón
     // const handleLikeClick = () => {
     //     setLiked(!liked);
     // };
@@ -68,7 +68,7 @@ function DrawerAppBar(props) {
     //     localStorage.setItem("like", liked.toString());
     // }, [liked]);
 
-    //scroll top del inicio
+    //Scroll top para el boton de inicio
     const scrollToTop = () => {
         scroll.scrollToTop({
             top: 0,
@@ -77,7 +77,7 @@ function DrawerAppBar(props) {
         });
     };
 
-    //logica de la navbar mobile
+    //Logica de la navbar mobile
     const drawer = (
         <Box onClick={handleDrawerToggle} sx={{ display: "flex", justifyContent: "space-between" }}>
             <Link to="/" style={{ textDecoration: "none" }}>

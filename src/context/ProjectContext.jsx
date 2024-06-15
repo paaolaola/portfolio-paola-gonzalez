@@ -2,13 +2,48 @@ import { createContext, useRef } from "react";
 export const ProjectContext = createContext();
 
 const ProjectProvider = ({ children }) => {
-    //constantes del scroll
+    //Constantes para definir los scroll de las secciones de la página de inicio
     const aboutRef = useRef(null);
     const projectsRef = useRef(null);
     const studiesRef = useRef(null);
 
-    //array de todos los proyectos
+    //Array de los proyectos actualizados
+    //Se puede agregar o quitar proyectos de la lista para que se muestren en la sección de proyectos y en la página de proyectos
     const proyectos = [
+        {
+            id: 0,
+            name: "EDUNOVA",
+            github: "https://github.com/LuisVera1/c18-06-m-node-react",
+            url: "https://c18-06-m-node-react.vercel.app",
+            image: "../img/proyectos/P0/0.png",
+            video: "",
+            images: {
+                image1: "../img/proyectos/P0/0.png",
+                image2: "../img/proyectos/P0/1.png",
+                image3: "../img/proyectos/P0/2.png",
+                image4: "../img/proyectos/P0/3.png",
+                image5: "../img/proyectos/P0/4.png",
+                image6: "../img/proyectos/P0/5.png",
+                image7: "../img/proyectos/P0/6.png",
+                image8: "../img/proyectos/P0/7.png",
+            },
+            info: "Proyecto grupal realizado en los meses de simulación laboral en No Country, con la colaboración de Diseñadores UX/UI, Desarrolladores Frontend y Backend. Creación de MPV bajo la metodología Kanban. Edunova es una plataforma edTech pensada para una institución en particular que integra un sistema de matriculación online y fácil contacto con su área administrativa. En estos meses el proyecto se enfocó en el rol de administrador como usuario. En la parte frontend se usó React js, Next js, Typescript y Tailwind CSS y en la parte backend, Node, PostgreSQL, Prisma, Insomnia y JWT.",
+            skills: {
+                skill1: "React JS",
+                skill2: "Next JS",
+                skill3: "Typescript",
+                skill4: "Tailwind CSS",
+                skill10: "PrimeReact",
+                skill6: "Node JS",
+                skill7: "Prisma",
+                skill8: "Insomnia",
+                skill9: "PostgreSQL",
+                skill10: "JWT",
+                skill11: "FIGMA",
+                skill12: "GIT",
+                skill13: "GitHub",
+            },
+        },
         {
             id: 1,
             name: "Clínica Dental RIE",
@@ -42,7 +77,7 @@ const ProjectProvider = ({ children }) => {
         },
         {
             id: 2,
-            name: "App Web Recetapp",
+            name: "Recetapp",
             github: "https://github.com/paaolaola/proyecto-final-gary-chesi-pao",
             url: "https://magenta-pika-e54801.netlify.app",
             image: "../img/proyectos/P2/0.png",
@@ -77,7 +112,7 @@ const ProjectProvider = ({ children }) => {
         },
         {
             id: 3,
-            name: "App Web Pizzeria",
+            name: "Mamma Mía",
             github: "https://github.com/paaolaola/prueba-react-2-paola-gonzalez",
             url: "https://6577caf4ca1cbb7ce5df7dd4--superlative-wisp-3ea1f8.netlify.app/",
             image: "../img/proyectos/P3/1.png",
@@ -109,32 +144,32 @@ const ProjectProvider = ({ children }) => {
             },
         },
 
-        {
-            id: 4,
-            name: "CSS Grid y Responsive",
-            github: "https://github.com/paaolaola/proyecto-grid-responsive",
-            url: "https://paaolaola.github.io/proyecto-grid-responsive/",
-            image: "../img/proyectos/P4/0.png",
-            video: "https://www.youtube.com/embed/tFS_ooepzco?si=LJ6diyXFGijcoyWT",
-            images: {
-                image1: "../img/proyectos/P4/0.png",
-                image2: "../img/proyectos/P4/1.png",
-                image3: "../img/proyectos/P4/2.png",
-            },
-            info: "Proyecto básico enfocado en el manejo de CSS Grid, Flexbox y Media Queries. Diseño Responsivo",
-            skills: {
-                skill1: "Vite",
-                skill2: "CSS Flexbox",
-                skill3: "CSS Grid",
-                skill4: "CSS",
-                skill5: "HTML",
-                skill6: "Terminal",
-                skill7: "Media Queries",
-                skill8: "Git",
-                skill9: "GitHub",
-                skill10: "GitHub Pages",
-            },
-        },
+        // {
+        //     id: 4,
+        //     name: "CSS Grid y Responsive",
+        //     github: "https://github.com/paaolaola/proyecto-grid-responsive",
+        //     url: "https://paaolaola.github.io/proyecto-grid-responsive/",
+        //     image: "../img/proyectos/P4/0.png",
+        //     video: "https://www.youtube.com/embed/tFS_ooepzco?si=LJ6diyXFGijcoyWT",
+        //     images: {
+        //         image1: "../img/proyectos/P4/0.png",
+        //         image2: "../img/proyectos/P4/1.png",
+        //         image3: "../img/proyectos/P4/2.png",
+        //     },
+        //     info: "Proyecto básico enfocado en el manejo de CSS Grid, Flexbox y Media Queries. Diseño Responsivo",
+        //     skills: {
+        //         skill1: "Vite",
+        //         skill2: "CSS Flexbox",
+        //         skill3: "CSS Grid",
+        //         skill4: "CSS",
+        //         skill5: "HTML",
+        //         skill6: "Terminal",
+        //         skill7: "Media Queries",
+        //         skill8: "Git",
+        //         skill9: "GitHub",
+        //         skill10: "GitHub Pages",
+        //     },
+        // },
 
         {
             id: 5,
