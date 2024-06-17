@@ -8,11 +8,11 @@ import ArrowLeftIcon from "@mui/icons-material/ArrowLeft";
 
 const Proyectos = () => {
     //Se obtiene el nombre del proyecto de los parámetros de la URL
-    const { name } = useParams();
+    const { routename } = useParams();
     const { proyectos } = useContext(ProjectContext);
 
     //Se busca el proyecto en el contexto de proyectos
-    const proyecto = proyectos.find((proyecto) => proyecto.name === name);
+    const proyecto = proyectos.find((proyecto) => proyecto.routename === routename);
 
     //Se realiza un scroll hacia arriba al cargar la página
     useEffect(() => {

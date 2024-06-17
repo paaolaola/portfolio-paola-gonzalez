@@ -12,7 +12,8 @@ const ProjectProvider = ({ children }) => {
     const proyectos = [
         {
             id: 0,
-            name: "EDUNOVA",
+            name: "Edunova",
+            routename: "edunova",
             github: "https://github.com/LuisVera1/c18-06-m-node-react",
             url: "https://c18-06-m-node-react.vercel.app",
             image: "../img/proyectos/P0/0.png",
@@ -47,6 +48,7 @@ const ProjectProvider = ({ children }) => {
         {
             id: 1,
             name: "Clínica Dental RIE",
+            routename: "rie-clinica-dental",
             github: "https://github.com/paaolaola/rie-project",
             url: "https://rieclinicadental.netlify.app/",
             image: "../img/proyectos/P1/0.png",
@@ -78,6 +80,7 @@ const ProjectProvider = ({ children }) => {
         {
             id: 2,
             name: "Recetapp",
+            routename: "recetapp",
             github: "https://github.com/paaolaola/proyecto-final-gary-chesi-pao",
             url: "https://recetappweb.netlify.app/",
             image: "../img/proyectos/P2/0.png",
@@ -113,6 +116,7 @@ const ProjectProvider = ({ children }) => {
         {
             id: 3,
             name: "Mamma Mía",
+            routename: "mamma-mia",
             github: "https://github.com/paaolaola/prueba-react-2-paola-gonzalez",
             url: "https://pizzeria-mammamia.netlify.app/",
             image: "../img/proyectos/P3/1.png",
@@ -174,6 +178,7 @@ const ProjectProvider = ({ children }) => {
         {
             id: 5,
             name: "Plants Gallery Photo",
+            routename: "plants-gallery-photo",
             github: "https://github.com/paaolaola/desafio-2-react-II-paola-gonzalez",
             url: "https://plantsgalleryph.netlify.app/",
             image: "../img/proyectos/P5/0.png",
@@ -205,6 +210,7 @@ const ProjectProvider = ({ children }) => {
         {
             id: 6,
             name: "Selector Pokemon",
+            routename: "selector-pokemon",
             github: "https://github.com/paaolaola/desafio-3-react-II-paola-gonzalez",
             url: "https://pokemonselector.netlify.app/",
             image: "../img/proyectos/P6/0.png",
@@ -234,6 +240,7 @@ const ProjectProvider = ({ children }) => {
         {
             id: 7,
             name: "Feriados en Chile",
+            routename: "feriados-en-chile",
             github: "https://github.com/paaolaola/prueba-react-1-paola-gonzalez",
             url: "https://feriadoschile.netlify.app/",
             image: "../img/proyectos/P7/1.png",
@@ -261,6 +268,7 @@ const ProjectProvider = ({ children }) => {
         {
             id: 8,
             name: "Conversor de Monedas",
+            routename: "conversor-de-monedas",
             github: "https://github.com/paaolaola/prueba-js-paola-gonzalez",
             url: "https://paaolaola.github.io/prueba-js-paola-gonzalez/",
             image: "../img/proyectos/P8/1.png",
