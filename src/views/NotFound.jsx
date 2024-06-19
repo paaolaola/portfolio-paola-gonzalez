@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import "../assets/css/NotFound.css";
+import ArrowLeftIcon from "@mui/icons-material/ArrowLeft";
+
 const NotFound = () => {
     return (
         <div className="box-404">
@@ -9,7 +11,10 @@ const NotFound = () => {
 
             <div>
                 <Link to="/">
-                    <button className="btn-404">Volver al menu principal</button>
+                    <button className="btn-404">
+                        <ArrowLeftIcon />
+                        Volver
+                    </button>
                 </Link>
             </div>
         </div>

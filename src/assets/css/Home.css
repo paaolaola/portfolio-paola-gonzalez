@@ -8,6 +8,7 @@
 .names-perfil {
     display: flex;
     flex-direction: column;
+    height: 400px;
 }
 
 .names-perfil h1 {
@@ -30,26 +31,15 @@
 
 .under-title {
     font-family: "Bebas Neue", sans-serif;
-    font-size: 56px;
+    font-size: 58px;
     font-weight: 400;
     letter-spacing: 5px;
     text-align: center;
     color: #d486ea;
     margin-top: 1.5rem;
-    position: relative;
-    animation: undertitle 3s infinite;
-}
-
-@keyframes undertitle {
-    0% {
-        text-shadow: 0 0 10px rgba(83, 83, 83, 0.9);
-    }
-    50% {
-        text-shadow: 0 0 90px rgba(83, 83, 83, 0.87);
-    }
-    100% {
-        text-shadow: 0 0 10px rgba(83, 83, 83, 0.99);
-    }
+    white-space: nowrap;
+    overflow: hidden;
+    animation: blink-caret 0.75s step-end infinite;
 }
 
 .image {
@@ -90,7 +80,7 @@
 
 .text {
     font-size: 15px;
-    font-weight: 400;
+    font-weight: 200;
     color: #ffbd59;
     text-shadow: 0px 0px 8px #ffbd59;
     margin-bottom: 1rem;
@@ -98,7 +88,7 @@
 .text-hobbies {
     width: 50%;
     font-size: 15px;
-    font-weight: 400;
+    font-weight: 200;
     color: #ffbd59;
     text-shadow: 0px 0px 8px #ffbd59;
     margin-bottom: 1rem;
@@ -137,38 +127,38 @@
 }
 @keyframes shadowPulse {
     0% {
-        filter: drop-shadow(0 0 10px rgba(255, 189, 89, 0.8));
+        filter: drop-shadow(0 0 15px rgba(255, 189, 89, 0.8));
     }
     50% {
-        filter: drop-shadow(0 0 40px rgba(255, 200, 0, 1));
+        filter: drop-shadow(0 0 80px rgba(255, 200, 0, 8));
     }
     100% {
-        filter: drop-shadow(0 0 10px rgba(255, 189, 89, 0.8));
+        filter: drop-shadow(0 0 15px rgba(255, 189, 89, 0.8));
     }
 }
 
 .btn-links a > svg {
-    animation: shadowPulse 4s infinite;
+    animation: shadowPulse 2.5s infinite;
 }
 
 .section-btn-cv {
     background-color: #ffbd59;
     color: #545454;
     height: 40px;
-    width: 100px;
+    width: 120px;
     line-height: 40px;
     font-family: "Bebas Neue", sans-serif;
     font-size: 15px;
-    border-radius: 10px;
+    border-radius: 50px;
     border-style: none;
     cursor: pointer;
     transition: border-color 0.3s, box-shadow 0.3s;
     text-align: center;
-    box-shadow: 0 0 10px #ffbd59;
+    box-shadow: 0 0 5px #ffbd59;
 }
 .section-btn-cv:hover {
     border-color: #ffbd59;
-    box-shadow: 0px 0px 8px #ffbd59;
+    box-shadow: 0px 0px 20px #ffbd59;
 }
 
 /*seccion hobbies*/
@@ -215,6 +205,26 @@
 }
 .stack-image:hover {
     transform: scale(1.05);
+    animation: shake 0.5s infinite;
+}
+@keyframes shake {
+    0%,
+    100% {
+        transform: rotate(0deg);
+    }
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        transform: rotate(-2deg);
+    }
+    20%,
+    40%,
+    60%,
+    80% {
+        transform: rotate(2deg);
+    }
 }
 
 /*seccion estudios*/
@@ -243,36 +253,47 @@
 }
 .info {
     font-size: 15px;
-    font-weight: 400;
+    font-weight: 200;
     color: #ffbd59;
-    text-shadow: 0px 0px 8px #ffbd59;
+    text-shadow: 0px 0px 5px #ffbd59;
     margin-top: 1rem;
 }
 .info-2 {
     display: flex;
+    flex-direction: column;
 }
 
 .btn-more {
     font-family: "Bebas Neue", sans-serif;
-    font-size: 13px;
+    font-size: 15px;
     font-weight: 400;
     border-style: none;
-    border-radius: 8px;
-    background-color: #ffbd59;
-    color: #545454;
+    border-radius: 50px;
+    border: 1.5px solid #ffbd59;
+    background-color: transparent;
+    color: #ffbd59;
     height: 25px;
-    width: 60px;
+    width: 100px;
     cursor: pointer;
-    box-shadow: 0px 0px 5px #545454;
-    transition: border-color 0.3s, box-shadow 0.3s;
     text-align: center;
+    transition: border-color 0.3s, box-shadow 0.3s;
 }
 
 .btn-more:hover {
     text-shadow: 0 0 10px #ff66c4;
-    text-decoration: underline;
+    box-shadow: 0px 0px 5px #ffbd59;
+}
+.place-button-container {
+    display: flex;
+    align-items: center;
+    justify-content: start;
 }
 
+.place-button-container .date {
+    display: flex;
+    margin-right: 1rem;
+    width: 100%; /* Ajusta este margen según sea necesario */
+}
 /*seccion certificados*/
 .box-cert {
     /* background-color: rgba(0, 0, 0, 0.15); */
@@ -333,7 +354,7 @@
     line-height: 40px;
     font-family: "Bebas Neue", sans-serif;
     font-size: 15px;
-    border-radius: 10px;
+    border-radius: 50px;
     border-style: none;
     cursor: pointer;
     box-shadow: 0px 0px 5px #545454;
@@ -606,8 +627,8 @@
         height: 70px;
     }
     .under-title {
-        font-size: 21px;
-        letter-spacing: 3px;
+        font-size: 23px;
+        letter-spacing: 2px;
         margin-top: 0.5rem;
     }
     .image {

@@ -1,9 +1,8 @@
-import React, { useState, useContext, useEffect } from "react";
+import React, { useState, useContext, useEffect, useRef } from "react";
 import { ProjectContext } from "../context/ProjectContext";
 import { StackContext } from "../context/StackContext";
 import { StudyContext } from "../context/StudyContext";
 import { useNavigate } from "react-router-dom";
-import { animateScroll as scroll } from "react-scroll";
 import DescriptionIcon from "@mui/icons-material/Description";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
@@ -16,6 +15,30 @@ import RandomPokemon from "./RandomPokemon";
 import "../assets/css/Home.css";
 
 const Home = () => {
+    const [text, setText] = useState("");
+    const [index, setIndex] = useState(0);
+    const fullText = "DESARROLLADORA FRONT END";
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setText((prev) => prev + fullText.charAt(index));
+            setIndex((prevIndex) => {
+                if (prevIndex + 1 === fullText.length) {
+                    clearInterval(interval);
+                    setTimeout(() => {
+                        setText("");
+                        setIndex(0);
+                    }, 4000);
+                    return prevIndex;
+                } else {
+                    return prevIndex + 1;
+                }
+            });
+        }, 100);
+
+        return () => clearInterval(interval);
+    }, [index]);
+
     // Contextos
     const { proyectos, studiesRef, projectsRef, aboutRef } = useContext(ProjectContext);
     const { stacks } = useContext(StackContext);
@@ -103,7 +126,7 @@ const Home = () => {
                     <h1 className="title-name">PAOLA </h1>
                     <h1 className="title-last-name">GONZÁLEZ .</h1>
                     <div>
-                        <h4 className="under-title">DESARROLLADORA FRONT END</h4>
+                        <h4 className="under-title">{text}</h4>
                     </div>
                 </div>
             </header>
@@ -198,22 +221,18 @@ const Home = () => {
                                 <div key={id}>
                                     <h3 className="name">{name}</h3>
                                     <div className="info-2">
-                                        <p className="date">{place}</p>
-                                    </div>
-
-                                    {showMore[state] ? (
-                                        <>
-                                            <p className="info">{info}</p>
-
+                                        <div className="place-button-container">
+                                            <p className="date">{place}</p>
                                             <button className="btn-more" onClick={() => toggleShowMore(state)}>
-                                                Menos info
+                                                {showMore[state] ? "Menos info" : "Más info"}
                                             </button>
-                                        </>
-                                    ) : (
-                                        <button className="btn-more" onClick={() => toggleShowMore(state)}>
-                                            Más info
-                                        </button>
-                                    )}
+                                        </div>
+                                        {showMore[state] && (
+                                            <div>
+                                                <p className="info">{info}</p>
+                                            </div>
+                                        )}
+                                    </div>
                                 </div>
                             ))}
                         </section>

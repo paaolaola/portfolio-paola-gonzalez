@@ -23,16 +23,16 @@
 .btn-cv {
     background-color: #ffbd59;
     color: #545454;
-    height: 50px;
+    height: 40px;
     width: 150px;
     font-family: "Bebas Neue", sans-serif;
     font-size: 20px;
-    border-radius: 10px;
+    border-radius: 50px;
     border-style: none;
     cursor: pointer;
     box-shadow: 0px 0px 5px #545454;
     transition: border-color 0.3s, box-shadow 0.3s, transform 1s ease;
-    margin: 1rem auto;
+    margin: 2rem auto;
     animation: zoomInfinito 5s infinite;
 }
 

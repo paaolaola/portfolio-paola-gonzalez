@@ -23,6 +23,7 @@
 
 .box-pokemon {
     display: flex;
+    flex-direction: column;
     width: 100%;
     justify-content: space-evenly;
     align-items: center;
@@ -33,20 +34,21 @@
     font-size: 15px;
     font-weight: 400;
     border-style: none;
-    border-radius: 8px;
+    border-radius: 50px;
     background-color: #ffbd59;
     color: #545454;
     height: 30px;
     width: 80px;
+    margin-top: 1rem;
     cursor: pointer;
     box-shadow: 0px 0px 5px #545454;
     transition: border-color 0.3s, box-shadow 0.3s;
     text-align: center;
-    margin: 0px 30px;
 }
 
 .btn-pokemon:hover {
-    text-shadow: 0 0 10px #ff66c4;
+    border-color: #ffbd59;
+    box-shadow: 0px 0px 8px #ffbd59;
 }
 .name-pokemon {
     font-family: "Bebas Neue", sans-serif;
@@ -85,8 +87,6 @@
 /*RESPONSIVE*/
 @media screen and (min-width: 768px) and (max-width: 996px) {
     .box-pokemon {
-        display: flex;
-        justify-content: center;
         width: 100%;
     }
 }
@@ -96,9 +96,6 @@
         margin-top: 1rem;
     }
     .box-pokemon {
-        display: flex;
-        flex-direction: column;
-
         padding: 4rem 0;
     }
     .name-pokemon {
