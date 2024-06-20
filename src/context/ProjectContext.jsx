@@ -119,7 +119,7 @@ const ProjectProvider = ({ children }) => {
             routename: "mamma-mia",
             github: "https://github.com/paaolaola/prueba-react-2-paola-gonzalez",
             url: "https://pizzeria-mammamia.netlify.app/",
-            image: "../img/proyectos/P3/1.png",
+            image: "../img/proyectos/P3/4.png",
             video: "",
             images: {
                 image1: "../img/proyectos/P3/0.png",
@@ -128,6 +128,7 @@ const ProjectProvider = ({ children }) => {
                 image4: "../img/proyectos/P3/3.png",
                 image5: "../img/proyectos/P3/4.png",
                 image6: "../img/proyectos/P3/5.png",
+                image7: "../img/proyectos/P3/6.png",
             },
             info: "App Web de pedidos online de una pizzería que incluye catálogo, detalle del producto y carro de compras. Uso de JSON, animación con loader y Media Queries para su uso responsivo.",
             skills: {

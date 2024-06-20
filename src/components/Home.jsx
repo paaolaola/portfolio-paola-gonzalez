@@ -28,13 +28,13 @@ const Home = () => {
                     setTimeout(() => {
                         setText("");
                         setIndex(0);
-                    }, 4000);
+                    }, 3000);
                     return prevIndex;
                 } else {
                     return prevIndex + 1;
                 }
             });
-        }, 100);
+        }, 50);
 
         return () => clearInterval(interval);
     }, [index]);
