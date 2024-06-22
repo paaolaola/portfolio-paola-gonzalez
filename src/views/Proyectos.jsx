@@ -36,13 +36,14 @@ const Proyectos = () => {
 
                 <div className="projects-video">
                     {proyecto.video ? (
-                        <iframe
-                            className="iframe-video"
-                            src={proyecto.video}
-                            frameBorder="0"
-                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                            allowFullScreen
-                        />
+                        <div className="iframe-container">
+                            <iframe
+                                className="iframe-video"
+                                src={proyecto.video}
+                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                allowFullScreen
+                            ></iframe>
+                        </div>
                     ) : (
                         <p className="name">Video no encontrado</p>
                     )}

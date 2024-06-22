@@ -52,7 +52,7 @@ const ProjectProvider = ({ children }) => {
             github: "https://github.com/paaolaola/rie-project",
             url: "https://rieclinicadental.netlify.app/",
             image: "../img/proyectos/P1/0.png",
-            video: "https://www.youtube.com/embed/ZFIEnj8gANQ?si=IbLHyIxiEVMzSawt&amp;controls=0",
+            video: "https://www.loom.com/embed/84cf9762bdd84696b0ca869bd2f213d5?sid=40a79caa-98c5-4cde-b3a6-c4c6af3a82a5",
             images: {
                 image1: "../img/proyectos/P1/1.png",
                 image2: "../img/proyectos/P1/0.png",
@@ -84,7 +84,7 @@ const ProjectProvider = ({ children }) => {
             github: "https://github.com/paaolaola/proyecto-final-gary-chesi-pao",
             url: "https://recetappweb.netlify.app/",
             image: "../img/proyectos/P2/0.png",
-            video: "https://www.youtube.com/embed/YZ90kQ-aUiw?si=KsRUzyR0l-gkm1Pc",
+            video: "https://www.loom.com/embed/c511343f8094482698bba894ba8f3a0e?sid=6aad3db6-cf9c-4d7d-8c77-409270f01d23",
             images: {
                 image1: "../img/proyectos/P2/0.png",
                 image2: "../img/proyectos/P2/1.png",
@@ -120,7 +120,7 @@ const ProjectProvider = ({ children }) => {
             github: "https://github.com/paaolaola/prueba-react-2-paola-gonzalez",
             url: "https://pizzeria-mammamia.netlify.app/",
             image: "../img/proyectos/P3/4.png",
-            video: "",
+            video: "https://www.loom.com/embed/e05e072f6893493b86f9bade1e8f666b?sid=30be5af6-6438-4346-b12e-fdeaa94eacac",
             images: {
                 image1: "../img/proyectos/P3/0.png",
                 image2: "../img/proyectos/P3/1.png",
@@ -183,7 +183,7 @@ const ProjectProvider = ({ children }) => {
             github: "https://github.com/paaolaola/desafio-2-react-II-paola-gonzalez",
             url: "https://plantsgalleryph.netlify.app/",
             image: "../img/proyectos/P5/2.png",
-            video: "",
+            video: "https://www.loom.com/embed/2dce119bf61f4d2f9d77d17e24df0788?sid=39541dd5-61e6-47eb-95ac-d399efcea2ca",
             images: {
                 image1: "../img/proyectos/P5/0.png",
                 image2: "../img/proyectos/P5/1.png",
@@ -217,7 +217,7 @@ const ProjectProvider = ({ children }) => {
             github: "https://github.com/paaolaola/desafio-3-react-II-paola-gonzalez",
             url: "https://pokemonselector.netlify.app/",
             image: "../img/proyectos/P6/2.png",
-            video: "https://www.youtube.com/embed/y-6blCVfBIQ?si=SBcR9_iapCwkfAH0",
+            video: "https://www.loom.com/embed/3b983a39af314c44ae38d9bf7e9f4e90?sid=0de1df25-4a34-463b-94f2-3a3b5fc732bd",
             images: {
                 image1: "../img/proyectos/P6/0.png",
                 image2: "../img/proyectos/P6/1.png",
@@ -247,7 +247,7 @@ const ProjectProvider = ({ children }) => {
             github: "https://github.com/paaolaola/prueba-react-1-paola-gonzalez",
             url: "https://feriadoschile.netlify.app/",
             image: "../img/proyectos/P7/0.png",
-            video: "https://www.youtube.com/embed/XGRUurgplsE?si=vsfARtEQFD0B6Da0",
+            video: "https://www.loom.com/embed/f6041c5b6bcc43f5bb0c30d432b23967?sid=628b3e4d-69db-4b36-81a3-60bb86c9703d",
             images: {
                 image1: "../img/proyectos/P7/0.png",
                 image2: "../img/proyectos/P7/1.png",
@@ -268,6 +268,7 @@ const ProjectProvider = ({ children }) => {
                 skill11: "GitHub",
             },
         },
+
         {
             id: 8,
             name: "Conversor de Monedas",
@@ -275,7 +276,7 @@ const ProjectProvider = ({ children }) => {
             github: "https://github.com/paaolaola/prueba-js-paola-gonzalez",
             url: "https://paaolaola.github.io/prueba-js-paola-gonzalez/",
             image: "../img/proyectos/P8/1.png",
-            video: "https://www.youtube.com/embed/9OA8nM-veTw?si=oYMelfDZoiOCg1Ji",
+            video: "https://www.loom.com/embed/82ab4c4b1e7348448ecca23709e3001a?sid=79c303a8-6267-4697-878c-286a0960d6d8",
             images: {
                 image1: "../img/proyectos/P8/0.png",
                 image2: "../img/proyectos/P8/1.png",
