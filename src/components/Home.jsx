@@ -19,6 +19,7 @@ const Home = () => {
     const [index, setIndex] = useState(0);
     const fullText = "DESARROLLADORA FRONT END";
 
+    //Lógica para animación de subtítulo
     useEffect(() => {
         const interval = setInterval(() => {
             setText((prev) => prev + fullText.charAt(index));
@@ -28,7 +29,7 @@ const Home = () => {
                     setTimeout(() => {
                         setText("");
                         setIndex(0);
-                    }, 3000);
+                    }, 10000);
                     return prevIndex;
                 } else {
                     return prevIndex + 1;

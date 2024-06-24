@@ -3,12 +3,12 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    margin: 5rem 3rem 12rem 3rem;
+    margin: 5rem 3rem 8rem 3rem;
 }
 .names-perfil {
     display: flex;
     flex-direction: column;
-    height: 200px;
+    height: 400px;
 }
 
 .names-perfil h1 {
@@ -192,17 +192,18 @@
     text-align: justify;
 }
 
-.stack-image {
-    width: 120px;
-    overflow: hidden;
-    cursor: pointer;
-    transition: transform 0.2s ease;
-    margin: 0.5rem;
-}
-
 .box-image-stack {
     text-align: center;
 }
+.stack-image {
+    width: 120px;
+    margin: 0.5rem;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+/*Animación shake*/
 .stack-image:hover {
     transform: scale(1.05);
     animation: shake 0.5s infinite;
@@ -436,7 +437,9 @@
     .box-perfil {
         margin-top: 1rem;
     }
-
+    .names-perfil {
+        height: 300px;
+    }
     .names-perfil h1 {
         font-size: 100px;
         text-align: start;
@@ -610,6 +613,7 @@
         flex-direction: column;
         justify-content: space-evenly;
         margin-top: 1rem;
+        margin: 1rem 0rem;
     }
 
     .names-perfil h1 {
@@ -738,5 +742,8 @@
     .btn-sites {
         display: flex;
         flex-direction: row;
+    }
+    .btn-sites-projects {
+        width: 80%;
     }
 }
