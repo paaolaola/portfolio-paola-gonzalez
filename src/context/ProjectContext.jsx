@@ -27,6 +27,8 @@ const ProjectProvider = ({ children }) => {
                 image6: "../img/proyectos/P0/5.png",
                 image7: "../img/proyectos/P0/6.png",
                 image8: "../img/proyectos/P0/7.png",
+                image9: "../img/proyectos/P0/8.png",
+                image10: "../img/proyectos/P0/9.png",
             },
             info: "Proyecto grupal realizado en los meses de simulación laboral en No Country, con la colaboración de Diseñadores UX/UI, Desarrolladores Frontend y Backend. Creación de MPV bajo la metodología Kanban. Edunova es una plataforma edTech pensada para una institución en particular que integra un sistema de matriculación online y fácil contacto con su área administrativa. En estos meses el proyecto se enfocó en el rol de administrador como usuario. En la parte frontend se usó React js, Next js, Typescript y Tailwind CSS y en la parte backend, Node, PostgreSQL, Prisma, Insomnia y JWT.",
             skills: {
