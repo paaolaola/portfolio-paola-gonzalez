@@ -196,7 +196,7 @@
     text-align: center;
 }
 .stack-image {
-    width: 120px;
+    width: 100px;
     margin: 0.5rem;
     overflow: hidden;
     cursor: pointer;
@@ -745,5 +745,6 @@
     }
     .btn-sites-projects {
         width: 80%;
+        text-align: center;
     }
 }

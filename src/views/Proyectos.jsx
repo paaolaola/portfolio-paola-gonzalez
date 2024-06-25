@@ -56,7 +56,7 @@ const Proyectos = () => {
                 </div>
                 <h4 className="projects-title">Descripción</h4>
                 <p className="projects-text">{proyecto.info}</p>
-                <div className="btn-sites-projects">
+                <div className="btn-projects">
                     <a href={proyecto.github} target="_blank" rel="noopener noreferrer">
                         <button className="box-btn">GitHub</button>
                     </a>

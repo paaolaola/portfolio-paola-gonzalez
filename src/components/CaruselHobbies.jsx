@@ -8,11 +8,12 @@ function CaruselHobbies() {
     const { hobbies } = useContext(HobbieContext);
     return (
         <Carousel>
-            {hobbies.map(({ id, image, alt, title, description }) => (
+            {hobbies.map(({ id, image, alt, title, description, marco }) => (
                 <Carousel.Item key={id} className="custom-carousel-item">
-                    <img src={image} alt={alt} />
+                    <div className="image-container">
+                        <img src={image} alt={alt} className="background-image" />
+                    </div>
                     <Carousel.Caption>
-                        {" "}
                         <h5>{title}</h5>
                         <p>{description}</p>
                     </Carousel.Caption>

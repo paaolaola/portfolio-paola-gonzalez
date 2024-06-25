@@ -17,7 +17,7 @@ const ProjectProvider = ({ children }) => {
             github: "https://github.com/LuisVera1/c18-06-m-node-react",
             url: "https://c18-06-m-node-react.vercel.app",
             image: "../img/proyectos/P0/0.png",
-            video: "",
+            video: "https://www.loom.com/embed/2ff6d64e691143f18a974f7d8599615f?sid=395acff7-9db9-402d-89c9-d6d90b4603d1",
             images: {
                 image1: "../img/proyectos/P0/0.png",
                 image2: "../img/proyectos/P0/1.png",
@@ -30,7 +30,7 @@ const ProjectProvider = ({ children }) => {
                 image9: "../img/proyectos/P0/8.png",
                 image10: "../img/proyectos/P0/9.png",
             },
-            info: "Proyecto grupal realizado en los meses de simulación laboral en No Country, con la colaboración de Diseñadores UX/UI, Desarrolladores Frontend y Backend. Creación de MPV bajo la metodología Kanban. Edunova es una plataforma edTech pensada para una institución en particular que integra un sistema de matriculación online y fácil contacto con su área administrativa. En estos meses el proyecto se enfocó en el rol de administrador como usuario. En la parte frontend se usó React js, Next js, Typescript y Tailwind CSS y en la parte backend, Node, PostgreSQL, Prisma, Insomnia y JWT.",
+            info: "Proyecto grupal realizado en los meses de simulación laboral en No Country, con la colaboración de Diseñadores UX/UI, Desarrolladores Frontend y Backend. Creación de MPV bajo la metodología Kanban. Edunova es una plataforma edTech pensada para una institución en particular que integra un sistema de matriculación online y fácil contacto con su área administrativa. En estos meses el proyecto se enfocó en el rol de administrador como usuario. En la parte frontend se usó React js, Next js, Typescript y Tailwind CSS y en la parte backend, Node, PostgreSQL, Prisma, Insomnia y JWT. Diseño prototipado a través de Figma",
             skills: {
                 skill1: "React JS",
                 skill2: "Next JS",
@@ -42,9 +42,12 @@ const ProjectProvider = ({ children }) => {
                 skill8: "Insomnia",
                 skill9: "PostgreSQL",
                 skill10: "JWT",
-                skill11: "FIGMA",
-                skill12: "GIT",
-                skill13: "GitHub",
+                skill11: "GIT",
+                skill12: "GitHub",
+                skill13: "Vercel",
+                skill14: "Yarn",
+                skill15: "FIGMA",
+                skill16: "Trello",
             },
         },
         {

@@ -62,8 +62,11 @@
     width: 699px;
     height: 415px;
 }
-.btn-sites-projects {
-    margin-bottom: 2rem;
+
+.btn-projects {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
 }
 .box-btn {
     background-color: #ffbd59;
@@ -107,9 +110,7 @@
         justify-content: center;
         font-size: 12px;
     }
-    .btn-sites-projects {
-        text-align: center;
-    }
+
     .btn-home {
         margin-top: 2rem;
         text-align: center;

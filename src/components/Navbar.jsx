@@ -79,7 +79,7 @@ function DrawerAppBar(props) {
 
     //Logica de la navbar mobile
     const drawer = (
-        <Box onClick={handleDrawerToggle} sx={{ display: "flex", justifyContent: "space-between" }}>
+        <Box onClick={handleDrawerToggle} sx={{ display: "flex", justifyContent: "space-between", marginRight: "15px" }}>
             <Link to="/" style={{ textDecoration: "none" }}>
                 <Typography
                     variant="h6"
@@ -114,13 +114,13 @@ function DrawerAppBar(props) {
                                 fontWeight: "600",
                                 "&:hover": { textShadow: "0 0 10px #ffbd59" },
                                 fontSize: {
-                                    xs: "9px",
+                                    xs: "8px",
                                     sm: "12px",
                                     md: "14px",
                                     lg: "14px",
                                 },
                                 textAlign: "center",
-                                margin: "4px",
+                                margin: "1px",
                             }}
                             onClick={() => handleNavClick("/", aboutRef)}
                         >
@@ -134,7 +134,7 @@ function DrawerAppBar(props) {
                                 fontWeight: "600",
                                 "&:hover": { textShadow: "0 0 10px #ffbd59" },
                                 fontSize: {
-                                    xs: "9px",
+                                    xs: "8px",
                                     sm: "12px",
                                     md: "14px",
                                     lg: "14px",
@@ -154,7 +154,7 @@ function DrawerAppBar(props) {
                                 fontWeight: "600",
                                 "&:hover": { textShadow: "0 0 10px #ffbd59" },
                                 fontSize: {
-                                    xs: "9px",
+                                    xs: "8px",
                                     sm: "12px",
                                     md: "14px",
                                     lg: "14px",
@@ -177,7 +177,7 @@ function DrawerAppBar(props) {
                             fontWeight: "600",
                             "&:hover": { textShadow: "0 0 10px #ffbd59" },
                             fontSize: {
-                                xs: "9px",
+                                xs: "8px",
                                 sm: "12px",
                                 md: "14px",
                                 lg: "14px",
@@ -198,7 +198,7 @@ function DrawerAppBar(props) {
                             fontWeight: "600",
                             "&:hover": { textShadow: "0 0 10px #ffbd59" },
                             fontSize: {
-                                xs: "9px",
+                                xs: "8px",
                                 sm: "12px",
                                 md: "14px",
                                 lg: "14px",

@@ -9,29 +9,21 @@ const HobbieProvider = ({ children }) => {
             id: 1,
             image: "./img/fotos-hobbies/fotomontaje-1.jpg",
             alt: "fotomontaje-1",
-            title: "Serie de Luz",
-            description: "Fotomontajes",
         },
         {
             id: 2,
             image: "./img/fotos-hobbies/fotomontaje-2.jpg",
             alt: "fotomontaje-2",
-            title: "Serie de Luz",
-            description: "Fotomontajes",
         },
         {
             id: 3,
             image: "./img/fotos-hobbies/fotomontaje-3.jpg",
             alt: "fotomontaje-3",
-            title: "Serie de Luz",
-            description: "Fotomontajes",
         },
         {
             id: 4,
             image: "./img/fotos-hobbies/fotomontaje-4.jpg",
             alt: "fotomontaje-4",
-            title: "Serie de Luz",
-            description: "Fotomontajes",
         },
     ];
 

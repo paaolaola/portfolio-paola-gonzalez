@@ -66,6 +66,21 @@ const StackProvider = ({ children }) => {
             images: "../img/stack/stack img/12.png",
             alt: "Figma",
         },
+        {
+            id: 13,
+            images: "../img/stack/stack img/13.png",
+            alt: "Trello",
+        },
+        {
+            id: 14,
+            images: "../img/stack/stack img/14.png",
+            alt: "Miro",
+        },
+        {
+            id: 15,
+            images: "../img/stack/stack img/15.png",
+            alt: "Ps",
+        },
     ];
 
     return <StackContext.Provider value={{ stacks }}>{children}</StackContext.Provider>;

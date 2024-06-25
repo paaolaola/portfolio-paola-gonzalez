@@ -11,12 +11,11 @@ h5 {
 
 .custom-carousel-item img {
     width: 300px;
-    height: 300px;
-    border-radius: 50%;
+    height: 230px;
     object-fit: cover;
     display: block;
     margin: 0.4rem auto;
-    box-shadow: 0 0 6px #545454;
+    box-shadow: 0 0 2px #545454;
 }
 
 /*RESPONSIVE*/
@@ -27,18 +26,16 @@ h5 {
 }
 @media screen and (min-width: 768px) and (max-width: 996px) {
     .carousel-item img {
-        width: 320px;
-        height: 320px;
+        width: 250px;
+        height: 200px;
     }
 }
 
 @media screen and (min-width: 280px) and (max-width: 768px) {
     .custom-carousel-item img {
         width: 250px;
-        height: 250px;
-        border-radius: 50%;
+        height: 200px;
         object-fit: cover;
         display: block;
-        margin: 0.4rem auto;
     }
 }
