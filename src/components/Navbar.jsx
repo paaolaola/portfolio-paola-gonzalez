@@ -120,7 +120,7 @@ function DrawerAppBar(props) {
                                     lg: "14px",
                                 },
                                 textAlign: "center",
-                                margin: "1px",
+                                marginTop: "4px",
                             }}
                             onClick={() => handleNavClick("/", aboutRef)}
                         >
@@ -140,7 +140,7 @@ function DrawerAppBar(props) {
                                     lg: "14px",
                                 },
                                 textAlign: "center",
-                                margin: "1px",
+                                marginTop: "4px",
                             }}
                             onClick={() => handleNavClick("/", projectsRef)}
                         >
@@ -160,7 +160,7 @@ function DrawerAppBar(props) {
                                     lg: "14px",
                                 },
                                 textAlign: "center",
-                                margin: "1px",
+                                marginTop: "4px",
                             }}
                             onClick={() => handleNavClick("/", studiesRef)}
                         >
@@ -183,7 +183,9 @@ function DrawerAppBar(props) {
                                 lg: "14px",
                             },
                             textAlign: "center",
-                            margin: "-20px",
+                            marginTop: "4px",
+                            marginLeft: "-20px",
+                            marginRight: "-20px",
                         }}
                     >
                         CV
@@ -204,7 +206,7 @@ function DrawerAppBar(props) {
                                 lg: "14px",
                             },
                             textAlign: "center",
-                            margin: "1px",
+                            marginTop: "4px",
                         }}
                     >
                         Contacto
