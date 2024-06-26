@@ -1,7 +1,7 @@
 import React, { useContext, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import { ProjectContext } from "../context/ProjectContext";
-import "../assets/css/Proyectos.css";
+import "../assets/styles/Proyectos.css";
 import { animateScroll as scroll } from "react-scroll";
 import Footer from "../components/Footer";
 import ArrowLeftIcon from "@mui/icons-material/ArrowLeft";

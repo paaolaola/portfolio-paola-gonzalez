@@ -12,7 +12,7 @@ import CaruselHobbies from "./CaruselHobbies";
 import CaruselCert from "./CaruselCert";
 import Footer from "./Footer";
 import RandomPokemon from "./RandomPokemon";
-import "../assets/css/Home.css";
+import "../assets/styles/Home.css";
 
 const Home = () => {
     const [text, setText] = useState("");

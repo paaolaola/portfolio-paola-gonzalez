@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import "../assets/css/NotFound.css";
+import "../assets/styles/NotFound.css";
 import ArrowLeftIcon from "@mui/icons-material/ArrowLeft";
 
 const NotFound = () => {

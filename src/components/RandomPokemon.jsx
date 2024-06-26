@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "../assets/css/RandomPokemon.css";
+import "../assets/styles/RandomPokemon.css";
 
 const RandomPokemon = () => {
     // Se inicializan los estados de pokemon, loading y error

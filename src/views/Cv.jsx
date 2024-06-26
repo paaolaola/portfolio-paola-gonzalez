@@ -1,4 +1,4 @@
-import "../assets/css/Cv.css";
+import "../assets/styles/Cv.css";
 import React, { useEffect } from "react";
 import Footer from "../components/Footer";
 import { Link } from "react-router-dom";

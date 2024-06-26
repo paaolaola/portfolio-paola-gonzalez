@@ -1,7 +1,7 @@
 import React, { useState, useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { ProjectContext } from "../context/ProjectContext";
-import "../assets/css/Navbar.css";
+import "../assets/styles/Navbar.css";
 import PropTypes from "prop-types";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";

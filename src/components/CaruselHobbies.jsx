@@ -1,5 +1,5 @@
 import Carousel from "react-bootstrap/Carousel";
-import "../assets/css/CaruselHobbies.css";
+import "../assets/styles/CaruselHobbies.css";
 import { HobbieContext } from "../context/HobbieContext";
 import { useContext } from "react";
 
