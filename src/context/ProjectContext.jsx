@@ -280,7 +280,7 @@ const ProjectProvider = ({ children }) => {
             routename: "conversor-de-monedas",
             github: "https://github.com/paaolaola/prueba-js-paola-gonzalez",
             url: "https://paaolaola.github.io/prueba-js-paola-gonzalez/",
-            image: "../img/proyectos/P8/1.png",
+            image: "../img/proyectos/P8/0.png",
             video: "https://www.loom.com/embed/82ab4c4b1e7348448ecca23709e3001a?sid=79c303a8-6267-4697-878c-286a0960d6d8",
             images: {
                 image1: "../img/proyectos/P8/0.png",
