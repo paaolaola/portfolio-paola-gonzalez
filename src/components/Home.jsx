@@ -15,11 +15,12 @@ import RandomPokemon from "./RandomPokemon";
 import "../assets/styles/Home.css";
 
 const Home = () => {
+    // Hook para animación de subtítulo
     const [text, setText] = useState("");
     const [index, setIndex] = useState(0);
     const fullText = "DESARROLLADORA FRONT END";
 
-    //Lógica para animación de subtítulo
+    //useEffect para animación de subtítulo
     useEffect(() => {
         const interval = setInterval(() => {
             setText((prev) => prev + fullText.charAt(index));
@@ -52,11 +53,26 @@ const Home = () => {
         navigate(path);
     };
 
+    // Hook para mostrar proyectos
+    const [visibleProjects, setVisibleProjects] = useState(4);
+    const [showAllProjects, setShowAllProjects] = useState(false);
+
+    const showLessProjects = () => {
+        setVisibleProjects(4);
+        setShowAllProjects(false);
+    };
+
+    const showMoreProjects = () => {
+        setVisibleProjects(proyectos.length);
+        setShowAllProjects(true);
+    };
+
     // Sección estudios
     const initialShowMore = {};
     studies.forEach((study) => {
         initialShowMore[study.state] = false;
     });
+    // Hook para mostrar más info de estudios
     const [showMore, setShowMore] = useState(initialShowMore);
 
     const toggleShowMore = (state) => {
@@ -76,7 +92,7 @@ const Home = () => {
                 behavior: "smooth",
             });
         };
-
+        // Función para mostrar el botón de scroll
         const handleScroll = () => {
             if (window.scrollY >= document.body.scrollHeight / 2) {
                 setIsVisible(true);
@@ -84,7 +100,7 @@ const Home = () => {
                 setIsVisible(false);
             }
         };
-
+        //useEffect para mostrar el botón de scroll
         useEffect(() => {
             window.addEventListener("scroll", handleScroll);
             return () => {
@@ -137,15 +153,18 @@ const Home = () => {
                     <div>
                         <section ref={aboutRef} className="box-about">
                             <h1 className="title">Sobre Mi</h1>
-                            <p className="text">Soy una profesional con experiencia en Fotografía que ha dado un giro hacia el mundo tecnológico.</p>
                             <p className="text">
-                                Me apasiona crear cosas visualmente atractivas y llevar a cabo proyectos innovadores que tengan un impacto positivo a nivel de
-                                usuario. Me destaco por mi habilidad para trabajar en equipo, capacidad de aprendizaje y resolución de problemas, además del
-                                relacionamiento con clientes y conocimiento de metodologías ágiles.
+                                Soy Desarrolladora Front End con experiencia en HTML, CSS, JavaScript y especialización en React. He trabajado en diversos
+                                proyectos, donde me he enfocado en crear interfaces de usuario atractivas y funcionales. Disfruto colaborando en equipos
+                                multidisciplinarios y tengo conocimientos de metodologías ágiles como Scrum y Kanban para optimizar el desarrollo.
                             </p>
                             <p className="text">
-                                Actualmente estoy en busca de nuevos desafíos profesionales que me permitan seguir creciendo en el sector TI. Te invito a
-                                conocerme y que revises mi portfolio y currículum.
+                                Creo firmemente en los principios del código limpio y eficiente. En mi tiempo libre, me dedico a aprender nuevas tecnologías
+                                para seguir mejorando mis habilidades.
+                            </p>
+                            <p className="text">
+                                Mi objetivo es aportar valor a cada proyecto en el que participo y seguir creciendo como profesional. Te invito a conocerme y
+                                que revises mi portfolio y currículum.
                             </p>
 
                             <div className="btn-links">
@@ -186,9 +205,8 @@ const Home = () => {
             <div>
                 <section ref={projectsRef} className="box-projects">
                     <h1 className="title">Proyectos</h1>
-
                     <div className="content-projects">
-                        {proyectos.map(({ id, image, name, github, url, routename }) => (
+                        {proyectos.slice(0, visibleProjects).map(({ id, image, name, github, url, routename }) => (
                             <div key={id} className="contenedor-card">
                                 <img className="box-content-projects" src={image} alt={name} />
                                 <div className="box">
@@ -211,8 +229,21 @@ const Home = () => {
                             </div>
                         ))}
                     </div>
+                    <div className="box-btn-more">
+                        {!showAllProjects && (
+                            <button onClick={showMoreProjects} className="btn-more">
+                                Ver más
+                            </button>
+                        )}
+                        {showAllProjects && (
+                            <button onClick={showLessProjects} className="btn-more">
+                                Ver menos
+                            </button>
+                        )}
+                    </div>
                 </section>
             </div>
+
             <div className="box-container">
                 <div className="first-section">
                     <div>
@@ -259,13 +290,14 @@ const Home = () => {
                         </div>
                         <div className="text-hobbies">
                             <p>
-                                Me gusta participar en actividades al aire libre, como viajar, el trekking, acampar y los conciertos de música. Además disfruto
-                                mucho visitando exposiciones de arte para inspirarme.
+                                Fuera del ámbito profesional, disfruto de diversas actividades al aire libre como viajar, hacer trekking, acampar y asistir a
+                                conciertos de música. También me apasiona visitar exposiciones de arte, lo cual me sirve de inspiración.
                             </p>
-                            <p>En mi tiempo libre me dedico a la fotografía análoga y también a crear fotomontajes digitales de temática onírica.</p>
+
                             <p>
-                                Estas aficiones son parte importante en mi vida y me han dado espacio para desarrollar habilidades creativas y visuales
-                                relacionadas directamente con el diseño y que complementan mi experiencia como Front End.
+                                En mi tiempo libre, me dedico a la fotografía análoga y a la creación de fotomontajes digitales con temática onírica agregando
+                                IA. Estas aficiones no solo son una parte importante de mi vida, sino que también han contribuido significativamente al
+                                desarrollo de mis habilidades creativas y visuales, complementando así mi experiencia como desarrolladora Front End.
                             </p>
                         </div>
                     </div>
