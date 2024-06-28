@@ -16,7 +16,7 @@ const ProjectProvider = ({ children }) => {
             routename: "edunova",
             github: "https://github.com/LuisVera1/c18-06-m-node-react",
             url: "https://c18-06-m-node-react.vercel.app",
-            image: "../img/proyectos/P0/0.png",
+            image: "../img/proyectos/P0/4.png",
             video: "https://www.loom.com/embed/2ff6d64e691143f18a974f7d8599615f?sid=395acff7-9db9-402d-89c9-d6d90b4603d1",
             images: {
                 image1: "../img/proyectos/P0/0.png",
@@ -56,7 +56,7 @@ const ProjectProvider = ({ children }) => {
             routename: "rie-clinica-dental",
             github: "https://github.com/paaolaola/rie-project",
             url: "https://rieclinicadental.netlify.app/",
-            image: "../img/proyectos/P1/0.png",
+            image: "../img/proyectos/P1/3.png",
             video: "https://www.loom.com/embed/84cf9762bdd84696b0ca869bd2f213d5?sid=40a79caa-98c5-4cde-b3a6-c4c6af3a82a5",
             images: {
                 image1: "../img/proyectos/P1/1.png",
@@ -79,7 +79,7 @@ const ProjectProvider = ({ children }) => {
                 skill9: "SweetAlert",
                 skill10: "Git",
                 skill11: "GitHub",
-                skill12: "GitHub Pages",
+                skill12: "Netlify",
             },
         },
         {
@@ -88,7 +88,7 @@ const ProjectProvider = ({ children }) => {
             routename: "recetapp",
             github: "https://github.com/paaolaola/proyecto-final-gary-chesi-pao",
             url: "https://recetappweb.netlify.app/",
-            image: "../img/proyectos/P2/0.png",
+            image: "../img/proyectos/P2/4.png",
             video: "https://www.loom.com/embed/c511343f8094482698bba894ba8f3a0e?sid=6aad3db6-cf9c-4d7d-8c77-409270f01d23",
             images: {
                 image1: "../img/proyectos/P2/0.png",
@@ -106,7 +106,7 @@ const ProjectProvider = ({ children }) => {
                 skill4: "Context API",
                 skill5: "JSON",
                 skill6: "Vite",
-                skill7: "SCSS",
+                skill7: "SASS",
                 skill8: "CSS Flexbox",
                 skill9: "CSS Grid",
                 skill10: "CSS",

@@ -406,6 +406,15 @@
     align-items: center;
     margin-top: 1rem;
 }
+.loading-info {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    color: #545454;
+    border-color: #545454;
+    text-shadow: 0px 0px 2px #5170ff;
+    width: 100%;
+}
 
 /*Botón scroll top*/
 .btn-top {

@@ -56,15 +56,20 @@ const Home = () => {
     // Hook para mostrar proyectos
     const [visibleProjects, setVisibleProjects] = useState(4);
     const [showAllProjects, setShowAllProjects] = useState(false);
+    const [isLoading, setIsLoading] = useState(false);
 
     const showLessProjects = () => {
-        setVisibleProjects(4);
+        setVisibleProjects(3); // Cambia esto según el número inicial de proyectos a mostrar
         setShowAllProjects(false);
     };
 
     const showMoreProjects = () => {
-        setVisibleProjects(proyectos.length);
-        setShowAllProjects(true);
+        setIsLoading(true);
+        setTimeout(() => {
+            setVisibleProjects(proyectos.length);
+            setIsLoading(false);
+            setShowAllProjects(true);
+        }, 1000);
     };
 
     // Sección estudios
@@ -206,28 +211,32 @@ const Home = () => {
                 <section ref={projectsRef} className="box-projects">
                     <h1 className="title">Proyectos</h1>
                     <div className="content-projects">
-                        {proyectos.slice(0, visibleProjects).map(({ id, image, name, github, url, routename }) => (
-                            <div key={id} className="contenedor-card">
-                                <img className="box-content-projects" src={image} alt={name} />
-                                <div className="box">
-                                    <div>
-                                        <h5 className="proyect-name">{name}</h5>
-                                    </div>
-                                    <div className="btn-sites-projects">
-                                        <a href={github} target="_blank" rel="noopener noreferrer">
-                                            <button className="box-btn">GitHub</button>
-                                        </a>
-                                        <a href={url} target="_blank" rel="noopener noreferrer">
-                                            <button className="box-btn">Live Preview</button>
-                                        </a>
+                        {isLoading ? (
+                            <div className="loading-info">Cargando...</div>
+                        ) : (
+                            proyectos.slice(0, visibleProjects).map(({ id, image, name, github, url, routename }) => (
+                                <div key={id} className="contenedor-card">
+                                    <img className="box-content-projects" src={image} alt={name} />
+                                    <div className="box">
+                                        <div>
+                                            <h5 className="proyect-name">{name}</h5>
+                                        </div>
+                                        <div className="btn-sites-projects">
+                                            <a href={github} target="_blank" rel="noopener noreferrer">
+                                                <button className="box-btn">GitHub</button>
+                                            </a>
+                                            <a href={url} target="_blank" rel="noopener noreferrer">
+                                                <button className="box-btn">Live Preview</button>
+                                            </a>
 
-                                        <button onClick={() => handleClick(routename)} className="box-btn">
-                                            Ver más
-                                        </button>
+                                            <button onClick={() => handleClick(routename)} className="box-btn">
+                                                Ver más
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        ))}
+                            ))
+                        )}
                     </div>
                     <div className="box-btn-more">
                         {!showAllProjects && (

@@ -30,7 +30,6 @@ const RandomPokemon = () => {
         fetchRandomPokemon();
     }, []);
 
-    // if (loading) return <p className="name">Loading...</p>;
     if (error) return <p>{error}</p>;
 
     return (
