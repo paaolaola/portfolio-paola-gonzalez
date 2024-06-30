@@ -160,13 +160,13 @@ const Home = () => {
                             <h1 className="title">Sobre Mi</h1>
                             <p className="text">
                                 Soy Desarrolladora Front End con experiencia en HTML, CSS, JavaScript y especialización en React. He trabajado en diversos
-                                proyectos, donde me he enfocado en crear interfaces de usuario atractivas y funcionales. Disfruto colaborando en equipos
-                                multidisciplinarios y tengo conocimientos de metodologías ágiles como Scrum y Kanban para optimizar el desarrollo.
+                                proyectos, donde me he enfocado en crear interfaces de usuario atractivas y funcionales.
                             </p>
                             <p className="text">
-                                Creo firmemente en los principios del código limpio y eficiente. En mi tiempo libre, me dedico a aprender nuevas tecnologías
-                                para seguir mejorando mis habilidades.
+                                Disfruto colaborando en equipos multidisciplinarios y tengo conocimientos de metodologías ágiles como Scrum y Kanban para
+                                optimizar el desarrollo. Creo firmemente en los principios del código limpio y eficiente.
                             </p>
+                            <p className="text">En mi tiempo libre, me dedico a aprender nuevas tecnologías para seguir mejorando mis habilidades.</p>
                             <p className="text">
                                 Mi objetivo es aportar valor a cada proyecto en el que participo y seguir creciendo como profesional. Te invito a conocerme y
                                 que revises mi portfolio y currículum.
