@@ -8,11 +8,11 @@ import { animateScroll as scroll } from "react-scroll";
 const Cv = () => {
     //Función para descargar el currículum
     const handleDownloadClick = () => {
-        window.open("https://drive.google.com/file/d/1fC96Qf767KIYofYRS1vYtmdT0BovcdS1/view?usp=drive_link", "_blank");
+        window.open("https://drive.google.com/file/d/1dLvJ5iKUCCQIH5u0jP7tPFDQIxzzC5Uj/view?usp=sharing", "_blank");
     };
     //Función para descargar el currículum para ATS
     const handleDownloadClickPdf = () => {
-        window.open("https://drive.google.com/file/d/1vvcf-ET-Px-jYj-rQl1mil2jO3gligjp/view?usp=drive_link", "_blank");
+        window.open("https://drive.google.com/file/d/1q1emnaBecw_lKMr9EZHZ8CJKVCRmIl6i/view?usp=sharing", "_blank");
     };
     //Se utiliza useEffect para que el scroll se posicione en la parte superior de la página
     useEffect(() => {
