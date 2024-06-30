@@ -12,4 +12,4 @@ Al descargar el repositorio, debes obtener las dependencias con el comando "npm 
 
 #### Sitio web:
 
-https://paolagonzalez.netlify.app/
+https://paolagonzalez.vercel.app
