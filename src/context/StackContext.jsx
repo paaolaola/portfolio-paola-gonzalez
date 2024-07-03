@@ -59,27 +59,33 @@ const StackProvider = ({ children }) => {
         {
             id: 11,
             images: "../img/stack/stack img/11.png",
-            alt: "Bootstrap",
+            alt: "Storybook",
         },
         {
             id: 12,
             images: "../img/stack/stack img/12.png",
-            alt: "Figma",
+            alt: "Bootstrap",
         },
+
         {
             id: 13,
             images: "../img/stack/stack img/13.png",
-            alt: "Trello",
+            alt: "Figma",
         },
         {
             id: 14,
             images: "../img/stack/stack img/14.png",
-            alt: "Miro",
+            alt: "Ps",
         },
         {
             id: 15,
             images: "../img/stack/stack img/15.png",
-            alt: "Ps",
+            alt: "Trello",
+        },
+        {
+            id: 16,
+            images: "../img/stack/stack img/16.png",
+            alt: "Miro",
         },
     ];
 
