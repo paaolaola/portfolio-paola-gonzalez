@@ -1,4 +1,3 @@
-import React from "react";
 import Home from "../components/Home";
 import Proyectos from "../views/Proyectos";
 import Cv from "../views/Cv";
