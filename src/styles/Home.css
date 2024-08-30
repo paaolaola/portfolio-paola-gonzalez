@@ -372,11 +372,11 @@
 
 .box {
     display: flex;
-    width: 70%;
+    width: 350px;
     backdrop-filter: blur(10px);    
     border-radius: 10px;
-    padding: 1rem;
     background-color: rgba(0, 0, 0, -0.3);
+
     
 }
 
@@ -403,7 +403,7 @@
     flex-direction: row;
     margin: auto;
 }
-.proyect-name {
+.project-name {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 2rem;
     text-align: center;
@@ -774,6 +774,10 @@
     }
 
     /*seccion proyectos*/
+    .box{
+    width: 275px;
+    backdrop-filter: blur(0px);  
+    }
     .box-projects {
         margin: 1rem auto;
         width: 90%;
@@ -795,8 +799,12 @@
         width: 100px;
         margin: 5px;
     }
-    .proyect-name {
+    .project-name {
         font-size: 1.5rem;
+      
+            backdrop-filter: blur(20px);    
+    border-radius: 50px;
+    background-color: rgba(136, 115, 58, 0.3);
     }
 
     .btn-sites {

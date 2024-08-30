@@ -8,7 +8,7 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import GoogleIcon from '@mui/icons-material/Google';
 import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
-import CaruselHobbies from './CaruselHobbies';
+import CaruselHobbies from './Hobbies';
 import CaruselCert from './CaruselCert';
 import Footer from './Footer';
 import RandomPokemon from './RandomPokemon';
@@ -213,8 +213,8 @@ const Home = () => {
                     <h1 className='title'>Proyectos</h1>
                     <div className='content-projects'>
                         {isLoading ? (
-                            <div class="loading-overlay">
-    <div class="loading-info">
+                            <div className="loading-overlay">
+    <div className="loading-info">
         <img src="./img/favicon/PG.png" alt="Loading..."/>
     </div>
 </div>
@@ -226,7 +226,7 @@ const Home = () => {
                                     <img className='box-content-projects' src={image} alt={name} />
                                     <div className='box'>
                                         <div>
-                                            <h5 className='proyect-name'>{name}</h5>
+                                            <h5 className='project-name'>{name}</h5>
                                         </div>
                                         <div className='btn-sites-projects'>
                                             <a href={github} target='_blank' rel='noopener noreferrer'>
@@ -323,8 +323,6 @@ const Home = () => {
             </div>
 
             <Footer />
-
-            /* Se añade aquí el componente ScrollToTopButton */
             <ScrollToTopButton />
         </>
     );

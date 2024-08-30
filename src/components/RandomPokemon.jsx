@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import "../styles/RandomPokemon.css";
+import React, { useState, useEffect } from 'react';
+import '../styles/RandomPokemon.css';
 
 const RandomPokemon = () => {
     // Se inicializan los estados de pokemon, loading y error
@@ -15,12 +15,12 @@ const RandomPokemon = () => {
             const randomId = Math.floor(Math.random() * 1010) + 1;
             const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${randomId}`);
             if (!response.ok) {
-                throw new Error("Failed to fetch Pokémon");
+                throw new Error('Failed to fetch Pokémon');
             }
             const data = await response.json();
             setPokemon(data);
         } catch (err) {
-            setError("Failed to fetch Pokémon");
+            setError('Failed to fetch Pokémon');
         } finally {
             setLoading(false);
         }
@@ -36,18 +36,19 @@ const RandomPokemon = () => {
         <div>
             {pokemon && (
                 <>
-                    <div className="box-pokemon">
-                        <div className="pokemon-items">
-                            <p className="title-pokemon">Pausa, un Random Pokemon para ti!</p>
-                            <button className="btn-pokemon" onClick={fetchRandomPokemon}>
+                    <div className='box-pokemon'>
+                        <div className='pokemon-items'>
+                            <p className='title-pokemon'>Pausa, un Random Pokemon para ti!</p>
+                            <button className='btn-pokemon' onClick={fetchRandomPokemon}>
                                 Genéralo
                             </button>
                         </div>
 
                         <div>
-                            {" "}
-                            <img className="img-pokemon" src={pokemon.sprites.other["home"].front_default} alt={pokemon.name} />
-                            <p className="name-pokemon">{pokemon.name}</p>
+                            <div className='img-pokemon-container'>
+                                <img className='img-pokemon' src={pokemon.sprites.other['home'].front_default} alt={pokemon.name} />
+                            </div>
+                            <p className='name-pokemon'>{pokemon.name}</p>
                         </div>
                     </div>
                 </>

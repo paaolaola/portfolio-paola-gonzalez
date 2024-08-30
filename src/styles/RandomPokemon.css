@@ -1,18 +1,47 @@
-.img-pokemon {
+.img-pokemon-container {
+    position: relative;
     width: 300px;
+    display: inline-block; 
+}
+
+.img-pokemon {
+    width: 100%;
     animation: float 3s ease-in-out infinite;
 }
+
+.img-pokemon-container::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 10px;
+    background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0));
+    animation: shadow-float 3s ease-in-out infinite;
+    filter: blur(5px);
+    margin: -2rem 0rem;
+    z-index: -1;
+}
+
 @keyframes float {
-    0% {
+    0%, 100% {
         transform: translateY(0);
     }
     50% {
         transform: translateY(-20px);
     }
-    100% {
-        transform: translateY(0);
+}
+
+@keyframes shadow-float {
+    0%, 100% {
+        transform: translateX(-50%) scale(1);
+    }
+    50% {
+        transform: translateX(-50%) scale(0.8);
     }
 }
+
 
 .pokemon-items {
     display: flex;
@@ -41,7 +70,6 @@
     width: 80px;
     margin-top: 1rem;
     cursor: pointer;
-    box-shadow: 0px 0px 5px #545454;
     transition: border-color 0.3s, box-shadow 0.3s;
     text-align: center;
 }
@@ -57,19 +85,20 @@
     color: #ffbd59;
     border-color: #d67eee;
     text-align: center;
-    margin: 0;
+    margin-top: 3rem;
     animation: pokemonbtn 3s ease-in infinite;
+    
 }
 
 @keyframes pokemonbtn {
     0% {
-        text-shadow: 0 0 10px rgba(83, 83, 83, 0.9);
+        text-shadow: 0 0 10px rgba(241, 224, 109, 0.9);
     }
     50% {
-        text-shadow: 0 0 90px rgba(83, 83, 83, 0.87);
+        text-shadow: 0 0 30px rgba(241, 224, 109, 0.9);
     }
     100% {
-        text-shadow: 0 0 10px rgba(83, 83, 83, 0.99);
+        text-shadow: 0 0 10px rgba(241, 224, 109, 0.9);
     }
 }
 
@@ -89,6 +118,9 @@
     .box-pokemon {
         width: 100%;
     }
+    .img-pokemon-container {
+    width: 380px;
+    }
 }
 @media screen and (min-width: 280px) and (max-width: 768px) {
     .img-pokemon {
@@ -97,6 +129,9 @@
     }
     .box-pokemon {
         padding: 4rem 0;
+    }
+    .img-pokemon-container {
+    width: 100%;
     }
     .name-pokemon {
         font-size: 25px;
