@@ -223,7 +223,6 @@ const Home = () => {
                             proyectos.slice(0, visibleProjects).map(({ id, image, name, github, url, routename }) => (
                                 <div key={id} className='contenedor-card'>
                                     <div className='container-box-projects'>
-                                    <div className='other-box'>
                                     <img className='box-content-projects' src={image} alt={name} />
                                     <div className='box'>
                                         <div>
@@ -243,7 +242,6 @@ const Home = () => {
                                         </div>
                                     </div>
                                     </div>
-                                </div>
                                 </div>
                             ))
                         )}
@@ -326,7 +324,7 @@ const Home = () => {
 
             <Footer />
 
-            {/* Añadir el componente ScrollToTopButton */}
+            /* Se añade aquí el componente ScrollToTopButton */
             <ScrollToTopButton />
         </>
     );

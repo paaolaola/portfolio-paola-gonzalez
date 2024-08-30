@@ -15,11 +15,10 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import { animateScroll as scroll } from "react-scroll";
-//import FavoriteIcon from "@mui/icons-material/Favorite";
 
 const drawerWidth = { width: "100%" };
-const drawerHeight = { height: "50px" };
-const drawerColor = "linear-gradient(to top, #d486ea, #5170ff, #5170ff)";
+const drawerHeight = { height: "55px" };
+const drawerColor = "transparent";
 const navItems = ["contacto"];
 
 function DrawerAppBar(props) {
@@ -283,7 +282,6 @@ function DrawerAppBar(props) {
                                 sx={{
                                     color: "#ffbd59",
                                     fontFamily: "Montserrat",
-
                                     fontWeight: "800",
                                     "&:hover": { textShadow: "0 0 10px #ffbd59" },
                                     fontSize: {
@@ -416,7 +414,8 @@ function DrawerAppBar(props) {
                     }}
                     sx={{
                         display: { xs: "block", sm: "none", fontFamily: "Montserrat" },
-                        "& .MuiDrawer-paper": { boxSizing: "border-box", width: drawerWidth, height: drawerHeight, background: drawerColor },
+                        "& .MuiDrawer-paper": { boxSizing: "border-box", width: drawerWidth, height: drawerHeight, background: drawerColor, boxShadow: "none" , opacity: "1", backdropFilter: "blur(10px)" },
+
                     }}
                 >
                     {drawer}

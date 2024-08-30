@@ -16,14 +16,14 @@ const StudyProvider = ({ children }) => {
         {
             id: 2,
             name: "Next JS",
-            place: "Coderhouse (Actualmente cursando)",
+            place: "Coderhouse (Jul - Ago 2024)",
             info: "Fundamentos del Server Side Rendering y creación de un proyecto de aplicación web autoadministrable con NextJS, interactuando con servicios de autenticación y bases de datos con óptimos resultados en optimización de SEO.",
             state: "next",
         },
         {
             id: 3,
             name: "React + Next JS 14",
-            place: "Udemy (Actualmente cursando)",
+            place: "Udemy (Jun - Jul 2024)",
             info: "Uso de React y Next JS para crear SPA, SSG y SSR con Login, React Hooks, Context API & Firebase.",
             state: "next/react",
         },

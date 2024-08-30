@@ -12,7 +12,7 @@
 }
 
 .names-perfil h1 {
-    font-family: "Bebas Neue", sans-serif;
+    font-family: 'Bebas Neue', sans-serif;
     font-size: 180px;
     font-weight: 500;
     color: #ffbd59;
@@ -30,7 +30,7 @@
 }
 
 .under-title {
-    font-family: "Bebas Neue", sans-serif;
+    font-family: 'Bebas Neue', sans-serif;
     font-size: 53px;
     font-weight: 400;
     letter-spacing: 6px;
@@ -67,7 +67,7 @@
 }
 
 .title {
-    font-family: "Bebas Neue", sans-serif;
+    font-family: 'Bebas Neue', sans-serif;
     font-size: 50px;
     font-weight: 400;
     color: #ffbd59;
@@ -97,11 +97,10 @@
 
 /*seccion sobre mi*/
 .box-about {
-    /* background-color: rgba(0, 0, 0, 0.15); */
     border-radius: 30px;
     text-align: justify;
     margin: 5rem 1rem 1rem 1rem;
-    padding: 3rem 3rem 0.5rem 3rem;
+    padding: 5rem 3rem 0.5rem 3rem;
 }
 
 .mui-links {
@@ -148,7 +147,7 @@
     height: 40px;
     width: 120px;
     line-height: 40px;
-    font-family: "Bebas Neue", sans-serif;
+    font-family: 'Bebas Neue', sans-serif;
     font-size: 15px;
     border-radius: 50px;
     border-style: none;
@@ -164,7 +163,6 @@
 
 /*seccion hobbies*/
 .box-hobbies {
-    /* background-color: rgba(0, 0, 0, 0.15); */
     border-radius: 30px;
     text-align: justify;
     margin: 0 6rem;
@@ -183,13 +181,12 @@
 
 /*seccion skills*/
 .box-stack {
-    /* background-color: rgba(0, 0, 0, 0.15); */
     display: flex;
     flex-direction: column;
     justify-content: center;
     border-radius: 30px;
     margin: 5rem 1rem 1rem 1rem;
-    padding: 3rem;
+    padding: 5rem 3rem 0.5rem 3rem;
     text-align: justify;
 }
 
@@ -231,15 +228,14 @@
 
 /*seccion estudios*/
 .box-studies {
-    /* background-color: rgba(0, 0, 0, 0.15); */
     border-radius: 30px;
-    padding: 3rem;
+    padding: 5rem 3rem;
     text-align: justify;
     margin: 1rem;
 }
 .name {
     margin-top: 2rem;
-    font-family: "Bebas Neue", sans-serif;
+    font-family: 'Bebas Neue', sans-serif;
     font-size: 20px;
     font-weight: 400;
     color: #ffbd59;
@@ -248,7 +244,7 @@
 }
 .date {
     font-size: 15px;
-    font-weight: 100;
+    font-weight: 400;
     font-style: italic;
     color: #ffbd59;
     text-shadow: 0px 0px 10px #ffbd59;
@@ -259,7 +255,10 @@
     font-weight: 200;
     color: #ffbd59;
     text-shadow: 0px 0px 5px #ffbd59;
-    margin-top: 1rem;
+    margin-top: 1rem; 
+    border-radius: 10px;
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.1);
 }
 .info-2 {
     display: flex;
@@ -267,7 +266,7 @@
 }
 
 .btn-more {
-    font-family: "Bebas Neue", sans-serif;
+    font-family: 'Bebas Neue', sans-serif;
     font-size: 15px;
     font-weight: 400;
     border-style: none;
@@ -295,16 +294,15 @@
 .place-button-container .date {
     display: flex;
     margin-right: 1rem;
-    width: 100%; /* Ajusta este margen según sea necesario */
+    width: 100%
 }
 /*seccion certificados*/
 .box-cert {
-    /* background-color: rgba(0, 0, 0, 0.15); */
     border-radius: 30px;
     text-align: center;
     width: 100%;
     margin: 1rem;
-    padding: 3rem;
+    padding: 5rem 3rem;
 }
 .box-content-cert {
     display: flex;
@@ -314,18 +312,16 @@
 
 /*seccion proyectos*/
 .box-projects {
-    /* background-color: rgba(0, 0, 0, 0.15); */
     border-radius: 30px;
     text-align: justify;
     margin: 0 6rem;
-    padding: 3rem;
+    padding: 5rem;
     text-align: justify;
 }
 
 .content-projects {
     display: grid;
     grid-template-columns: repeat(2, 2fr);
-    
 }
 .contenedor-card {
     margin: auto;
@@ -336,7 +332,8 @@
 }
 
 .contenedor-card .box-content-projects {
-    filter: opacity(0.4);
+    filter: opacity(0.6);
+    border: 2px solid #ffbd59;
 }
 
 .contenedor-card .box {
@@ -347,10 +344,12 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    
 }
 
 .contenedor-card .box a {
     margin-bottom: 10px;
+    
 }
 
 .contenedor-card .box-btn {
@@ -359,7 +358,7 @@
     height: 40px;
     width: 100px;
     line-height: 40px;
-    font-family: "Bebas Neue", sans-serif;
+    font-family: 'Bebas Neue', sans-serif;
     font-size: 15px;
     border-radius: 50px;
     border-style: none;
@@ -368,17 +367,17 @@
     transition: border-color 0.3s, box-shadow 0.3s;
     text-align: center;
     margin: 5px;
+    
 }
 
 .box {
-    /*agregar background-color:*/
     display: flex;
-    width: 100%;
-    
-}
-.container-box-projects{
-    border: 1.5px solid #ffbd59;
+    width: 70%;
+    backdrop-filter: blur(10px);    
     border-radius: 10px;
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, -0.3);
+    
 }
 
 .box-content-projects {
@@ -391,12 +390,7 @@
     transition: all 0.3s;
     
 }
-.other-box{
-    filter: blur(1px);
-}
-.other-box:hover{
-    filter: blur(0px);
-}
+
 .box-btn {
     margin-top: 1rem;
 }
@@ -410,14 +404,15 @@
     margin: auto;
 }
 .proyect-name {
-    font-family: "Bebas Neue", sans-serif;
+    font-family: 'Bebas Neue', sans-serif;
     font-size: 2rem;
     text-align: center;
-    color: #fcd79e;
+    color: #ffbd59;
     border-color: #ffbd59;
-    text-shadow: 0px 0px 10px #ffbd59;
+    text-shadow: 0px 0px 10px #ff66c4;
+    padding: 0px 10px;
+    
 }
-
 
 .box-btn-more {
     display: flex;
@@ -426,7 +421,7 @@
     margin-top: 1rem;
 }
 
-/*Clases para el Loader de proyectos*/
+/*Loader de proyectos*/
 .loading-overlay {
     position: fixed;
     top: 0;
@@ -440,7 +435,6 @@
     z-index: 9999;
 }
 
-
 .loading-info {
     display: flex;
     justify-content: center;
@@ -449,31 +443,21 @@
     width: 200px;
 }
 
-
-
-
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-@keyframes fadeOut {
-    0% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
-}
-
 .loading-info img {
     width: 100%;
-    animation: fadeIn 2s ease-in-out infinite alternate;
-    /* Para fade out: animation: fadeOut 2s ease-in-out infinite alternate; */
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
 
 
@@ -487,7 +471,7 @@
     height: 40px;
     width: 40px;
     line-height: 40px;
-    font-family: "Bebas Neue", sans-serif;
+    font-family: 'Bebas Neue', sans-serif;
     font-size: 15px;
     border-radius: 50%;
     border-style: none;
@@ -625,6 +609,7 @@
     .box-studies {
         margin: 1rem auto;
         width: 90%;
+      
     }
 
     /*seccion hobbies*/
@@ -810,6 +795,10 @@
         width: 100px;
         margin: 5px;
     }
+    .proyect-name {
+        font-size: 1.5rem;
+    }
+
     .btn-sites {
         display: flex;
         flex-direction: row;
