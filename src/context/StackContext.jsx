@@ -47,6 +47,11 @@ const StackProvider = ({ children }) => {
             alt: "GitHub",
         },
         {
+            id: 18,
+            images: "../img/stack/stack img/18.png",
+            alt: "Firebase",
+        },
+        {
             id: 9,
             images: "../img/stack/stack img/9.png",
             alt: "Css",

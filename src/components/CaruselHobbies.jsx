@@ -1,4 +1,4 @@
-import "../assets/styles/CaruselHobbies.css";
+import "../styles/CaruselHobbies.css";
 import { HobbieContext } from "../context/HobbieContext";
 import { useContext } from "react";
 

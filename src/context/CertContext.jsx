@@ -6,6 +6,12 @@ const CertProvider = ({ children }) => {
     //Se puede agregar o quitar certificaciones de la lista para que se muestren en la sección de certificaciones
     const certs = [
         {
+            id: 0,
+            image: "./img/certificaciones/certificacion-10.png",
+            alt: "No Country",
+            url: "",
+        },
+        {
             id: 1,
             image: "./img/certificaciones/certificacion-9.png",
             alt: "No Country",

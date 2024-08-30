@@ -1,4 +1,4 @@
-import "../assets/styles/FormContact.css";
+import "../styles/FormContact.css";
 import React, { useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Footer from "../components/Footer";

@@ -1,7 +1,7 @@
 import { useState, useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { ProjectContext } from "../context/ProjectContext";
-import "../assets/styles/Navbar.css";
+import "../styles/Navbar.css";
 import PropTypes from "prop-types";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
@@ -79,7 +79,7 @@ function DrawerAppBar(props) {
 
     //Logica de la navbar mobile
     const drawer = (
-        <Box onClick={handleDrawerToggle} sx={{ display: "flex", justifyContent: "space-between", marginRight: "15px" }}>
+        <Box onClick={handleDrawerToggle} sx={{ display: "flex", justifyContent: "space-between", marginRight: "15px"}}>
             <Link to="/" style={{ textDecoration: "none" }}>
                 <Typography
                     variant="h6"
@@ -214,6 +214,7 @@ function DrawerAppBar(props) {
                 </Link>
             </List>
         </Box>
+      
     );
 
     //logica de la desktop navbar
@@ -222,8 +223,15 @@ function DrawerAppBar(props) {
     return (
         <Box sx={{ display: "flex" }}>
             <CssBaseline />
-
-            <AppBar component="nav" sx={{ backgroundColor: "transparent", boxShadow: "none" }}>
+<div className="box-navbar">
+           <AppBar 
+  component="nav" 
+  sx={{ 
+    backgroundColor: "transparent", 
+    backdropFilter: "blur(10px)", 
+    boxShadow: "none" 
+  }}
+>
                 <Toolbar>
                     {/* <button onClick={handleLikeClick} className={liked ? "not-like-text " : "like-text"}>
                         {liked ? "Te gusta esta página!" : ""}
@@ -395,6 +403,7 @@ function DrawerAppBar(props) {
                     </Box>
                 </Toolbar>
             </AppBar>
+            </div>
 
             <nav>
                 <Drawer

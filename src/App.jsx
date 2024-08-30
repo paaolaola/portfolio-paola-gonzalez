@@ -1,4 +1,4 @@
-import "./assets/styles/App.css";
+import "./styles/App.css";
 import Navbar from "./components/Navbar";
 import Router from "./router/router.jsx";
 import { BrowserRouter } from "react-router-dom";
@@ -10,7 +10,7 @@ import StudyProvider from "./context/StudyContext";
 
 function App() {
     return (
-        //Se envuelven los componentes con los contextos para que puedan ser consumidos por los componentes hijos de la aplicación
+        //Envolviendo los componentes con los contextos para que puedan ser consumidos por los componentes hijos de la aplicación
         <>
             {" "}
             <StudyProvider>

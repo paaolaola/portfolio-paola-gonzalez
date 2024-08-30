@@ -1,5 +1,5 @@
 import Carousel from "react-bootstrap/Carousel";
-import "../assets/styles/CaruselCert.css";
+import "../styles/CaruselCert.css";
 import { CertContext } from "../context/CertContext";
 import { useContext } from "react";
 

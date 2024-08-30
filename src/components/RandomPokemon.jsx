@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "../assets/styles/RandomPokemon.css";
+import "../styles/RandomPokemon.css";
 
 const RandomPokemon = () => {
     // Se inicializan los estados de pokemon, loading y error
@@ -46,7 +46,7 @@ const RandomPokemon = () => {
 
                         <div>
                             {" "}
-                            <img className="img-pokemon" src={pokemon.sprites.other["official-artwork"].front_default} alt={pokemon.name} />
+                            <img className="img-pokemon" src={pokemon.sprites.other["home"].front_default} alt={pokemon.name} />
                             <p className="name-pokemon">{pokemon.name}</p>
                         </div>
                     </div>

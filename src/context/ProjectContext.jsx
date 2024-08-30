@@ -10,7 +10,7 @@ const ProjectProvider = ({ children }) => {
     //Array de los proyectos actualizados
     //Se puede agregar o quitar proyectos de la lista para que se muestren en la sección de proyectos y en la página de proyectos
     const proyectos = [
-         {
+        {
             id: 0,
             name: "De Gatos y Perros",
             routename: "de gatos y perros",
@@ -24,9 +24,8 @@ const ProjectProvider = ({ children }) => {
                 image3: "../img/proyectos/Pecommerce/2.png",
                 image4: "../img/proyectos/Pecommerce/3.png",
                 image5: "../img/proyectos/Pecommerce/4.png",
-               
             },
-            info: "De Gatos y Perros es un ecommerce especializado en la venta de productos para mascotas, centrado especialmente en gatos y perros. El catálogo está organizado en diversas categorías que incluyen alimentos, accesorios, juguetes y productos de cuidado. Con un enfoque en la calidad y la variedad, la idea es ofrecer al cliente una llamativa selección de artículos que satisfacen las necesidades específicas de sus mascotas. Utilizando las últimas tecnologías y una interfaz amigable, facilitando una experiencia de compra intuitiva y personalizada para todos los amantes de los animales. Este proyecto está en proceso y siendo manejado con tecnologías principales como Next, React, Javascript y Tailwind CSS. El diseño es de mi autoría y todas las imágenes que se han usado en el proyecto han sido editadas por mi a través de Photoshop mediante IA generative. Totalmente responsive.",
+            info: "De Gatos y Perros es un ecommerce especializado en la venta de productos para mascotas, centrado especialmente en gatos y perros. El catálogo está organizado en diversas categorías y subcategorías que incluyen alimentos, accesorios, juguetes y productos de cuidado. Con un enfoque en la calidad y la variedad, la idea es ofrecer al cliente una llamativa selección de artículos que satisfacen las necesidades específicas de sus mascotas. Utilizando las últimas tecnologías y una interfaz amigable, facilitando una experiencia de compra intuitiva y personalizada para todos los amantes de los animales. Este proyecto está en proceso y es manejado con tecnologías principales como Next, React, Javascript, Firebase, Tailwind CSS y Sass Modules. El diseño es de mi autoría y todas las imágenes que se han usado en el proyecto han sido editadas por mi a través de Photoshop mediante IA generative. Totalmente responsive.",
             skills: {
                 skill1: "React JS",
                 skill2: "Next JS",
@@ -37,9 +36,11 @@ const ProjectProvider = ({ children }) => {
                 skill7: "GitHub",
                 skill8: "Vercel",
                 skill9: "NPM",
+                skill10: "Firebase",
+                skill11: "Schema",
             },
         },
-         {
+        {
             id: 1,
             name: "Cosmos",
             routename: "cosmos",
@@ -49,7 +50,6 @@ const ProjectProvider = ({ children }) => {
             video: "https://www.youtube.com/embed/tIDytMvCe0M?si=d20clS8AF_akSRRY",
             images: {
                 image1: "../img/proyectos/Pcosmos/0.png",
-               
             },
             info: "Cosmos es una plataforma de e-commerce de tipo marketplace diseñada para evolucionar la manera en que los vendedores presentan sus productos en línea. Con un enfoque centrado en Customer Success Management (CSM), nuestro objetivo es proporcionar a los vendedores herramientas customizables para destacar en el mercado digital. Objetivo: Entregarles a los usuarios la oportunidad de crear publicaciones atractivas y personalizadas a través de landing pages adaptables. Estas páginas no solo permiten a los vendedores exhibir sus productos de manera llamativa, sino que también optimizan la experiencia del usuario final, incrementando así las posibilidades de venta.En estas semanas de trabajo, el proyecto se enfocó en las opciones customizables que se le ofrecen al usuario para agregar sus productos y personalizar su publicación.",
             skills: {
@@ -134,7 +134,7 @@ const ProjectProvider = ({ children }) => {
                 skill13: "Vercel",
             },
         },
-          {
+        {
             id: 4,
             name: "Clínica Dental RIE",
             routename: "rie-clinica-dental",

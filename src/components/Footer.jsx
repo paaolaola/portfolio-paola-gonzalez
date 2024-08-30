@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "../assets/styles/Footer.css";
+import "../styles/Footer.css";
 import SendIcon from "@mui/icons-material/Send";
 import ContentCopyIcon from "@mui/icons-material/ContentCopy";
 import { ToastContainer, Zoom, toast } from "react-toastify";
