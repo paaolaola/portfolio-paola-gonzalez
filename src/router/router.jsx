@@ -9,6 +9,7 @@ const Router = () => {
     //Rutas de la aplicación
     return (
         <>
+
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/curriculum" element={<Cv />} />
@@ -16,6 +17,7 @@ const Router = () => {
                 <Route path="/proyectos/:routename" element={<Proyectos />} />
                 <Route path="*" element={<NotFound />} />
             </Routes>
+      
         </>
     );
 };

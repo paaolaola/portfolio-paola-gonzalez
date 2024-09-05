@@ -8,6 +8,7 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import GoogleIcon from '@mui/icons-material/Google';
 import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
+import Skeleton from '@mui/material/Skeleton';
 import CaruselHobbies from './Hobbies';
 import CaruselCert from './CaruselCert';
 import Footer from './Footer';
@@ -141,7 +142,7 @@ const Home = () => {
                 </div>
 
                 <div className='image-perfil'>
-                    <img className='image' src='./img/perfil/fotoperfil.jpg' alt='foto de perfil de paola'></img>
+                    <img className='image' src='./img/perfil/fotoperfil.webp' alt='foto de perfil de paola' loading='lazy' />
                 </div>
 
                 <div className='names-perfil'>
@@ -160,18 +161,14 @@ const Home = () => {
                             <h1 className='title'>Sobre Mi</h1>
                             <p className='text'>
                                 Soy Desarrolladora Frontend con experiencia en HTML, CSS, JavaScript y especialización en React. He trabajado en proyectos donde
-                                me he enfocado en crear interfaces de usuario atractivas y funcionales. 
+                                me he enfocado en crear interfaces de usuario atractivas y funcionales.
                             </p>
                             <p className='text'>
                                 Disfruto colaborando en equipos multidisciplinarios y tengo conocimientos de metodologías ágiles como Scrum y Kanban para
                                 optimizar el desarrollo de los proyectos.
                             </p>
-                            <p className='text'>En mi tiempo libre me dedico a aprender nuevas
-                                tecnologías para seguir mejorando mis habilidades.</p>
-                            <p className='text'>
-                                Mi objetivo es aportar valor a cada proyecto en el que participo y seguir
-                                creciendo como profesional.
-                            </p>
+                            <p className='text'>En mi tiempo libre me dedico a aprender nuevas tecnologías para seguir mejorando mis habilidades.</p>
+                            <p className='text'>Mi objetivo es aportar valor a cada proyecto en el que participo y seguir creciendo como profesional.</p>
 
                             <div className='btn-links'>
                                 <a href='https://github.com/paaolaola' target='_blank' rel='noopener noreferrer'>
@@ -200,7 +197,7 @@ const Home = () => {
                             <h1 className='title'>Skills</h1>
                             <div className='box-image-stack'>
                                 {stacks.map(({ id, images, alt }) => (
-                                    <img key={id} className='stack-image' src={images} alt={alt} />
+                                    <img key={id} className='stack-image' src={images} alt={alt} loading='lazy' />
                                 ))}
                             </div>
                         </section>
@@ -208,58 +205,63 @@ const Home = () => {
                 </div>
             </div>
 
-            <div>
-                <section ref={projectsRef} className='box-projects'>
-                    <h1 className='title'>Proyectos</h1>
-                    <div className='content-projects'>
-                        {isLoading ? (
-                            <div className="loading-overlay">
-    <div className="loading-info">
-        <img src="./img/favicon/PG.png" alt="Loading..."/>
-    </div>
-</div>
-                            
-                        ) : (
-                            proyectos.slice(0, visibleProjects).map(({ id, image, name, github, url, routename }) => (
-                                <div key={id} className='contenedor-card'>
-                                    <div className='container-box-projects'>
-                                    <img className='box-content-projects' src={image} alt={name} />
-                                    <div className='box'>
-                                        <div>
-                                            <h5 className='project-name'>{name}</h5>
-                                        </div>
-                                        <div className='btn-sites-projects'>
-                                            <a href={github} target='_blank' rel='noopener noreferrer'>
-                                                <button className='box-btn'>GitHub</button>
-                                            </a>
-                                            <a href={url} target='_blank' rel='noopener noreferrer'>
-                                                <button className='box-btn'>Live Preview</button>
-                                            </a>
-
-                                            <button onClick={() => handleClick(routename)} className='box-btn'>
-                                                Ver más
-                                            </button>
-                                        </div>
-                                    </div>
-                                    </div>
+           <div>
+    <section ref={projectsRef} className='box-projects'>
+        <h1 className='title'>Proyectos</h1>
+        <div className='content-projects'>
+            {isLoading ? (
+                Array.from(new Array(visibleProjects)).map((_, index) => (
+                    <div key={index} className='contenedor-card'>
+                        <Skeleton
+                        className='skeleton-card'
+                            variant='rectangular'
+                          
+                        />
+                    </div>
+                ))
+            ) : (
+                proyectos.slice(0, visibleProjects).map(({ id, image, name, github, url, routename }) => (
+                    <div key={id} className='contenedor-card'>
+                        <div className='container-box-projects'>
+                            <div className='image-gradient-overlay'>
+                                <img className='box-content-projects' src={image} alt={name} loading='lazy' />
+                            </div>
+                            <div className='box'>
+                                <div>
+                                    <h5 className='project-name'>{name}</h5>
                                 </div>
-                            ))
-                        )}
+                                <div className='btn-sites-projects'>
+                                    <a href={github} target='_blank' rel='noopener noreferrer'>
+                                        <button className='box-btn'>GitHub</button>
+                                    </a>
+                                    <a href={url} target='_blank' rel='noopener noreferrer'>
+                                        <button className='box-btn'>Live Preview</button>
+                                    </a>
+                                    <button onClick={() => handleClick(routename)} className='box-btn'>
+                                        Ver más
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div className='box-btn-more'>
-                        {!showAllProjects && (
-                            <button onClick={showMoreProjects} className='btn-more'>
-                                Más proyectos
-                            </button>
-                        )}
-                        {showAllProjects && (
-                            <button onClick={showLessProjects} className='btn-more'>
-                                Menos proyectos
-                            </button>
-                        )}
-                    </div>
-                </section>
-            </div>
+                ))
+            )}
+        </div>
+        <div className='box-btn-more'>
+            {!showAllProjects && (
+                <button onClick={showMoreProjects} className='btn-more'>
+                    Más proyectos
+                </button>
+            )}
+            {showAllProjects && (
+                <button onClick={showLessProjects} className='btn-more'>
+                    Menos proyectos
+                </button>
+            )}
+        </div>
+    </section>
+</div>
+
 
             <div className='box-container'>
                 <div className='first-section'>
@@ -313,8 +315,7 @@ const Home = () => {
 
                             <p>
                                 En mi tiempo libre, me dedico a la fotografía análoga y a la creación de fotomontajes digitales con temática onírica agregando
-                                IA. Estas aficiones no solo son una parte importante de mi vida, 
-                                sino que también han contribuido significativamente al
+                                IA. Estas aficiones no solo son una parte importante de mi vida, sino que también han contribuido significativamente al
                                 desarrollo de mis habilidades creativas y visuales, complementando así mi experiencia como desarrolladora Front End.
                             </p>
                         </div>

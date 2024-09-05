@@ -7,12 +7,12 @@ const HobbieProvider = ({ children }) => {
     const hobbies = [
         {
             id: 1,
-            image: './img/fotos-hobbies/fotomontaje-3.jpg',
+            image: './img/fotos-hobbies/fotomontaje.webp',
             alt: 'fotomontaje',
         },
         {
             id: 2,
-            image: './img/fotos-hobbies/me.jpg',
+            image: './img/fotos-hobbies/retrato.webp',
             alt: 'photo me',
         },
     ];

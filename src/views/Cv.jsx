@@ -27,13 +27,13 @@ const Cv = () => {
             <h1 className="title-form">Currículum </h1>
             <div className="box-content-cv">
                 <div className="box-cv">
-                    <img className="img-cv" src="./img/cv/cv-2.png" alt="foto de cv" />
+                    <img className="img-cv" src="./img/cv/cv-2.webp" alt="foto de cv" loading="lazy"/>
                     <button className="btn-cv" onClick={handleDownloadClickPdf}>
                         Descarga PARA ATS
                     </button>
                 </div>
                 <div className="box-cv">
-                    <img className="img-cv" src="./img/cv/cv-1.png" alt="foto de cv" />
+                    <img className="img-cv" src="./img/cv/cv-1.webp" alt="foto de cv" loading="lazy" />
                     <button className="btn-cv" onClick={handleDownloadClick}>
                         Descarga CV
                     </button>

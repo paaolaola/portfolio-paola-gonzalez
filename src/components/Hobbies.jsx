@@ -2,13 +2,13 @@ import { HobbieContext } from "../context/HobbieContext";
 import { useContext } from "react";
 import "../styles/Hobbies.css";
 
-function CaruselHobbies() {
-    //Se consume el contexto de hobbies para mostrarlos en el carrusel
+function Hobbies() {
+
     const { hobbies } = useContext(HobbieContext);
     return (
 <div className="image-container">
     {hobbies.map(({ id, image, alt }) => (
-        <img key={id} src={image} alt={alt} className="background-image" />
+        <img key={id} src={image} alt={alt} className="background-image" loading="lazy" />
     ))}
 </div>
 
@@ -16,4 +16,4 @@ function CaruselHobbies() {
     );
 }
 
-export default CaruselHobbies;
+export default Hobbies;

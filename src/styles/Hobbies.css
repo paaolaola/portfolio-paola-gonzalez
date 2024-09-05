@@ -17,7 +17,7 @@
     left: 0;
     object-fit: cover;
     opacity: 0;
-    animation: fade 8s infinite;
+    animation: fade 16s infinite; ;
 }
 
 .background-image:nth-child(1) {
@@ -25,20 +25,21 @@
 }
 
 .background-image:nth-child(2) {
-    animation-delay: 4s;
+    animation-delay: 8s;
 }
 
+
 @keyframes fade {
-    0%,
+    0%, 40% {
+        opacity: 0;
+    }
+    50%, 90% {
+        opacity: 1;
+    }
     100% {
         opacity: 0;
     }
-    25%,
-    75% {
-        opacity: 1;
-    }
 }
-
 /*RESPONSIVE*/
 @media screen and (min-width: 996px) and (max-width: 1080px) {
    .image-container {

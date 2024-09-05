@@ -46,7 +46,7 @@ const RandomPokemon = () => {
 
                         <div>
                             <div className='img-pokemon-container'>
-                                <img className='img-pokemon' src={pokemon.sprites.other['home'].front_default} alt={pokemon.name} />
+                                <img className='img-pokemon' src={pokemon.sprites.other['home'].front_default} alt={pokemon.name} loading="lazy" />
                             </div>
                             <p className='name-pokemon'>{pokemon.name}</p>
                         </div>

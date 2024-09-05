@@ -12,7 +12,7 @@ function CaruselCert() {
                 {certs.map(({ id, image, alt, url }) => (
                     <Carousel.Item key={id}>
                         <a href={url} target="_blank" rel="noopener noreferrer">
-                            <img className="box-content-img" src={image} alt={alt} />
+                            <img className="box-content-img" src={image} alt={alt} loading="lazy" />
                         </a>
                     </Carousel.Item>
                 ))}

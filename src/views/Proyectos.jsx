@@ -68,7 +68,7 @@ const Proyectos = () => {
                 <h4 className="projects-title">Vistas de desarrollo</h4>
                 <div className="projects-views">
                     {Object.values(proyecto.images).map((image, index) => (
-                        <img key={index} className="projects-image" src={image} alt={proyecto.name} />
+                        <img key={index} className="projects-image" src={image} alt={proyecto.name} loading="lazy" />
                     ))}
                 </div>
                 <div className="btn-home">
