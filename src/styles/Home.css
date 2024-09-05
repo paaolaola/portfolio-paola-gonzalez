@@ -318,12 +318,16 @@
     margin: 1rem;
     padding: 5rem 3rem;
     color: #545454;
-    height: 380px;
-    width: 380px;
+    
     border-radius: 20px;
     box-shadow: 0px 0px 5px #545454;
     transition: border-color 0.3s, box-shadow 0.3s;
- 
+
+      width: 300px;
+    height: auto;
+  
+   
+   
 }
 .box-projects {
     border-radius: 30px;
@@ -659,6 +663,14 @@
     }
 
     /*seccion proyectos*/
+    .skeleton-card{
+       
+   
+     margin: 1rem auto;
+         height: 380px;
+    width: 380px;
+       
+    }
     .box-projects {
         margin: 1rem auto;
         width: 90%;
@@ -804,6 +816,20 @@
     }
 
     /*seccion proyectos*/
+    .skeleton-card{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 1rem auto;
+        padding: 5rem 3rem;
+        color: #545454;
+        height: 275px;
+        width: 275px;
+        border-radius: 20px;
+        box-shadow: 0px 0px 5px #545454;
+        transition: border-color 0.3s, box-shadow 0.3s;
+    }
+
     .box{
     width: 275px;
     }
