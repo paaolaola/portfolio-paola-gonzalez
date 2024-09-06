@@ -1,20 +1,20 @@
 import React, { useContext, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
-import { ProjectContext } from "../context/ProjectContext";
-import "../styles/Proyectos.css";
 import { animateScroll as scroll } from "react-scroll";
+import { ProjectContext } from "../context/ProjectContext";
 import Footer from "../components/Footer";
 import ArrowLeftIcon from "@mui/icons-material/ArrowLeft";
+import "../styles/Proyectos.css";
 
 const Proyectos = () => {
     //Se obtiene el nombre del proyecto de los parámetros de la URL
     const { routename } = useParams();
     const { proyectos } = useContext(ProjectContext);
 
-    //Se busca el proyecto en el contexto de proyectos
+    // Se busca el proyecto en el contexto de proyectos
     const proyecto = proyectos.find((proyecto) => proyecto.routename === routename);
 
-    //Se realiza un scroll hacia arriba al cargar la página
+    // Se realiza un scroll hacia arriba al cargar la página
     useEffect(() => {
         scroll.scrollToTop({
             duration: 500,
@@ -22,7 +22,7 @@ const Proyectos = () => {
         });
     }, []);
 
-    //Si no se encuentra el proyecto se muestra un mensaje de error 404 y se redirige al home
+    // Si no se encuentra el proyecto se muestra un mensaje de error 404 y se redirige al home
     if (!proyecto) {
         return <p className="title-404">Proyecto no encontrado</p>;
     }

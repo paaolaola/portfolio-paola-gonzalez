@@ -6,7 +6,6 @@ import NotFound from "../views/NotFound.jsx";
 import { Routes, Route } from "react-router-dom";
 
 const Router = () => {
-    //Rutas de la aplicación
     return (
         <>
 
@@ -17,7 +16,6 @@ const Router = () => {
                 <Route path="/proyectos/:routename" element={<Proyectos />} />
                 <Route path="*" element={<NotFound />} />
             </Routes>
-      
         </>
     );
 };

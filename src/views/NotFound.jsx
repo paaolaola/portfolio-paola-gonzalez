@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import "../styles/NotFound.css";
 import ArrowLeftIcon from "@mui/icons-material/ArrowLeft";
+import "../styles/NotFound.css";
 
 const NotFound = () => {
     return (

@@ -1,18 +1,18 @@
 import { useState, useContext, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { ProjectContext } from '../context/ProjectContext';
 import { StackContext } from '../context/StackContext';
 import { StudyContext } from '../context/StudyContext';
-import { useNavigate } from 'react-router-dom';
+import CaruselHobbies from './Hobbies';
+import CaruselCert from './CaruselCert';
+import Footer from './Footer';
+import RandomPokemon from './RandomPokemon';
 import DescriptionIcon from '@mui/icons-material/Description';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import GoogleIcon from '@mui/icons-material/Google';
 import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
 import Skeleton from '@mui/material/Skeleton';
-import CaruselHobbies from './Hobbies';
-import CaruselCert from './CaruselCert';
-import Footer from './Footer';
-import RandomPokemon from './RandomPokemon';
 import '../styles/Home.css';
 
 const Home = () => {
@@ -60,7 +60,7 @@ const Home = () => {
     const [isLoading, setIsLoading] = useState(false);
 
     const showLessProjects = () => {
-        setVisibleProjects(3); // Cambia esto según el número inicial de proyectos a mostrar
+        setVisibleProjects(4); // Número inicial de proyectos a mostrar
         setShowAllProjects(false);
     };
 
@@ -215,7 +215,6 @@ const Home = () => {
                         <Skeleton
                         className='skeleton-card'
                             variant='rectangular'
-                          
                         />
                     </div>
                 ))

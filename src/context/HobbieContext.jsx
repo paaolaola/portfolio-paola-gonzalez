@@ -1,9 +1,8 @@
-import { imageListClasses } from '@mui/material';
 import { createContext } from 'react';
 export const HobbieContext = createContext();
 
 const HobbieProvider = ({ children }) => {
-    //Objeto de la imagen de hobbies
+    //Objetos de las imagenes de hobbies
     const hobbies = [
         {
             id: 1,

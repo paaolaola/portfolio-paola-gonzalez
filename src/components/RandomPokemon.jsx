@@ -7,7 +7,7 @@ const RandomPokemon = () => {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
 
-    // Se crea la función fetchRandomPokemon que se encarga de hacer la petición a la API de pokémon
+    // Función fetchRandomPokemon que hace la petición a la API de pokémon
     const fetchRandomPokemon = async () => {
         setLoading(true);
         setError(null);
@@ -25,7 +25,7 @@ const RandomPokemon = () => {
             setLoading(false);
         }
     };
-    // Se utiliza useEffect para que la función fetchRandomPokemon se ejecute una vez que el componente se haya montado
+    // useEffect para que la función fetchRandomPokemon se ejecute una vez que el componente se haya montado
     useEffect(() => {
         fetchRandomPokemon();
     }, []);

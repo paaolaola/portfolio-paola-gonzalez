@@ -1,30 +1,36 @@
 import { useState } from "react";
-import "../styles/Footer.css";
+import { ToastContainer, Zoom, toast } from "react-toastify";
 import SendIcon from "@mui/icons-material/Send";
 import ContentCopyIcon from "@mui/icons-material/ContentCopy";
-import { ToastContainer, Zoom, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 import RocketIcon from "@mui/icons-material/Rocket";
+import "react-toastify/dist/ReactToastify.css";
+import "../styles/Footer.css";
+
 
 const Footer = () => {
     const defaultEmail = "paolagonzalez.contacto@gmail.com";
     const [email] = useState(defaultEmail);
 
-    const handleCopyBtn = () => {
-        navigator.clipboard.writeText(email);
+ const handleCopyBtn = () => {
+    // navigator.clipboard.writeText(email);
 
-        const toastStyle = {
-            background: "linear-gradient(to top, #ff66c4, #cb6ce6, #5170ff)",
-            color: "#ffbd59",
-        };
-        toast.warn("Correo copiado!", {
-            transition: Zoom,
-            position: "bottom-center",
-            style: toastStyle,
-            icon: <RocketIcon />,
-            autoClose: 1000,
-        });
+    const toastStyle = {
+        background: "transparent",
+        color: "#ffbd59",
+        backdropFilter: "blur(10px)",
+        border: "1.5px solid rgba(255, 189, 89, 0.5)", 
+        borderRadius: "10px",
+        
     };
+
+    toast.warn("Correo copiado!", {
+        transition: Zoom,
+        position: "bottom-center",
+        style: toastStyle,
+        icon: <RocketIcon />,
+        autoClose: 1000,
+    });
+};
 
     const handleEmailBtn = () => {
         window.open(`mailto:${email}`, "_blank");

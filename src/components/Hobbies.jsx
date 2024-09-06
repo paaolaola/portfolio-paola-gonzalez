@@ -3,6 +3,7 @@ import { useContext } from "react";
 import "../styles/Hobbies.css";
 
 function Hobbies() {
+    //Se consume el contexto de hobbies para mostrar las imágenes
 
     const { hobbies } = useContext(HobbieContext);
     return (

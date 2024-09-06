@@ -15,9 +15,8 @@ function App() {
 
 
     return (
-        //Envolviendo los componentes con los contextos para que puedan ser consumidos por los componentes hijos de la aplicación
+        //Envolviendo los componentes con los contextos para que puedan ser consumidos por los componentes hijos de la app
         <>
-        
                 <ProjectProvider>
                     <StackProvider>
                         <CertProvider>
@@ -32,7 +31,6 @@ function App() {
                         </CertProvider>
                     </StackProvider>
                 </ProjectProvider>
-          
         </>
     );
 }
