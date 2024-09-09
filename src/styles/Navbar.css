@@ -1,9 +1,5 @@
 /*Menu navbar*/
 
-.box-nav {
-    margin-top: "-400px";
-}
-
 .menu-icon {
     filter: drop-shadow(0 0 5px #ffbd59);
 }
@@ -12,81 +8,4 @@
     padding: 1rem;
     color: #ffbd59;
 }
-button.like-text {
-    margin: 0;
-}
 
-.like-text {
-    font-family: "Montserrat", sans-serif;
-    font-size: 12px;
-    font-weight: 600;
-    color: #ffddf2;
-    transition: border-color 0.3s, box-shadow 0.3s;
-    background-color: transparent;
-    border: none;
-}
-
-.like-text:hover {
-    border-color: #ffbd59;
-    text-shadow: 0px 0px 8px #ffbd59;
-    cursor: pointer;
-}
-
-.not-like-text {
-    color: #ffddf2;
-    background-color: transparent;
-    border: none;
-    text-shadow: 0px 0px 8px #ffddf2;
-    font-family: "Montserrat", sans-serif;
-    font-size: 12px;
-    font-weight: 600;
-}
-
-.like-message {
-    font-family: "Montserrat", sans-serif;
-    font-size: 12px;
-    font-weight: 400;
-    color: #ffbd59;
-    transition: border-color 0.3s, box-shadow 0.3s;
-    margin-left: 2rem;
-    background-color: transparent;
-    border: none;
-}
-
-/*RESPONSIVE*/
-@media screen and (min-width: 768px) and (max-width: 996px) {
-    .logo-text {
-        width: 100px;
-    }
-    .like-text {
-        font-family: "Montserrat", sans-serif;
-        font-size: 12px;
-        font-weight: 600;
-        color: #ffddf2;
-        transition: border-color 0.3s, box-shadow 0.3s;
-        margin-left: 2rem;
-        background-color: transparent;
-        border: none;
-    }
-    .not-like-text {
-        font-size: 10px;
-    }
-}
-@media screen and (min-width: 280px) and (max-width: 768px) {
-    .logo-text {
-        width: 100px;
-    }
-    .like-text {
-        font-family: "Montserrat", sans-serif;
-        font-size: 12px;
-        font-weight: 600;
-        color: #ffddf2;
-        transition: border-color 0.3s, box-shadow 0.3s;
-        margin-left: 2rem;
-        background-color: transparent;
-        border: none;
-    }
-    .not-like-text {
-        font-size: 10px;
-    }
-}

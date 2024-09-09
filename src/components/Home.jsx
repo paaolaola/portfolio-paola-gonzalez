@@ -136,7 +136,7 @@ const Home = () => {
                     <a href='mailto:paolagonzalez.contacto@gmail.com' target='_blank' rel='noopener noreferrer'>
                         <GoogleIcon sx={{ fontSize: 30, color: '#ffbd59', filter: 'drop-shadow(0 0 15px #ffbd59)' }} />
                     </a>
-                    <a href='https://drive.google.com/file/d/1SxBCw7e558eD_rrWddDaXcSbPZpNnfOH/view?usp=drive_link' target='_blank' rel='noopener noreferrer'>
+                    <a href='https://drive.google.com/file/d/1bmdiYG1uZxFLp0g-emt0WugAVMkQqBOW/view?usp=drive_link' target='_blank' rel='noopener noreferrer'>
                         <DescriptionIcon sx={{ fontSize: 30, color: '#ffbd59', filter: 'drop-shadow(0 0 15px #ffbd59)' }} />
                     </a>
                 </div>
@@ -181,7 +181,7 @@ const Home = () => {
                                     <GoogleIcon sx={{ fontSize: 40, color: '#ffbd59' }} className='animated-icon' />
                                 </a>
                                 <a
-                                    href='https://drive.google.com/file/d/1SxBCw7e558eD_rrWddDaXcSbPZpNnfOH/view?usp=drive_link'
+                                    href='https://drive.google.com/file/d/1bmdiYG1uZxFLp0g-emt0WugAVMkQqBOW/view?usp=drive_link'
                                     target='_blank'
                                     rel='noopener noreferrer'
                                 >

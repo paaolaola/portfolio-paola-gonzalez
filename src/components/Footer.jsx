@@ -19,7 +19,7 @@ const Footer = () => {
         color: "#ffbd59",
         backdropFilter: "blur(10px)",
         border: "1.5px solid rgba(255, 189, 89, 0.5)", 
-        borderRadius: "10px",
+        borderRadius: "20px",
         
     };
 

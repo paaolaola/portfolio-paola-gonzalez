@@ -61,11 +61,11 @@ const StackProvider = ({ children }) => {
             images: "../img/stack/stack img/10.webp",
             alt: "Html",
         },
-        {
-            id: 11,
-            images: "../img/stack/stack img/11.webp",
-            alt: "Storybook",
-        },
+        // {
+        //     id: 11,
+        //     images: "../img/stack/stack img/11.webp",
+        //     alt: "Storybook",
+        // },
         {
             id: 12,
             images: "../img/stack/stack img/12.webp",

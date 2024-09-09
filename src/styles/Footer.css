@@ -5,25 +5,37 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    font-family: "Bebas Neue", sans-serif;
+    font-family: 'Bebas Neue', sans-serif;
     font-size: 18px;
     font-weight: 600;
     color: #ffbd59;
     letter-spacing: 1px;
     margin-top: 2rem;
+
+    @media (280px <= width <= 768px) {
+        width: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: row;
+    }
 }
 .input-footer {
     font-size: 12px;
     font-weight: 400;
-    font-family: "Montserrat", sans-serif;
+    font-family: 'Montserrat', sans-serif;
     background-color: #ffbd59;
     border-style: none;
     border: 1.5px solid #ffbd59;
-    border-radius: 8px;
+    border-radius: 20px;
     text-align: center;
     width: 250px;
     height: 30px;
     color: #5170ff;
+
+    @media (280px <= width <= 768px) {
+        font-size: 10px;
+        width: 200px;
+    }
 }
 .btn-footer {
     background-color: #ffbd59;
@@ -31,12 +43,16 @@
     height: 30px;
     width: 50px;
     line-height: 10px;
-    border-radius: 10px;
+    border-radius: 20px;
     border: 1.5px solid #ffbd59;
     cursor: pointer;
     transition: border-color 0.3s, box-shadow 0.3s;
     text-align: center;
     margin: 3px;
+
+    @media (280px <= width <= 768px) {
+        width: 40px;
+    }
 }
 .btn-footer:hover {
     border-color: #ffbd59;
@@ -46,27 +62,10 @@
 .text-footer {
     display: flex;
     justify-content: center;
-    font-family: "Bebas Neue", sans-serif;
+    font-family: 'Bebas Neue', sans-serif;
     font-size: 18px;
     font-weight: 400;
     color: #ffbd59;
     letter-spacing: 1px;
     margin: 2rem 0 3rem 0;
-}
-
-/*RESPONSIVE*/
-@media screen and (min-width: 280px) and (max-width: 768px) {
-    .footer {
-        width: 100%;
-        text-align: center;
-        display: flex;
-        flex-direction: row;
-    }
-    .input-footer {
-        font-size: 10px;
-        width: 200px;
-    }
-    .btn-footer {
-        width: 40px;
-    }
 }
