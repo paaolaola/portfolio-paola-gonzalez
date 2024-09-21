@@ -55,22 +55,22 @@ const Home = () => {
     };
 
     // Estados para mostrar proyectos
-    const [visibleProjects, setVisibleProjects] = useState(4);
-    const [showAllProjects, setShowAllProjects] = useState(false);
-    const [isLoading, setIsLoading] = useState(false);
+  const [visibleProjects, setVisibleProjects] = useState(4); 
+    const [loadingMore, setLoadingMore] = useState(false);
+    const [projectsLoaded, setProjectsLoaded] = useState(4);
 
-    const showLessProjects = () => {
-        setVisibleProjects(4); // Número inicial de proyectos a mostrar
-        setShowAllProjects(false);
+  const showLessProjects = () => {
+        setVisibleProjects(4);
+        setProjectsLoaded(4); 
     };
 
-    const showMoreProjects = () => {
-        setIsLoading(true);
+  const showMoreProjects = () => {
+        setLoadingMore(true); 
         setTimeout(() => {
-            setVisibleProjects(proyectos.length);
-            setIsLoading(false);
-            setShowAllProjects(true);
-        }, 1000);
+            setVisibleProjects(prevVisibleProjects => prevVisibleProjects + 4);
+            setProjectsLoaded(prev => prev + 4); 
+            setLoadingMore(false); 
+        }, 1000); 
     };
 
     // Sección estudios
@@ -169,7 +169,6 @@ const Home = () => {
                             </p>
                             <p className='text'>En mi tiempo libre me dedico a aprender nuevas tecnologías para seguir mejorando mis habilidades.</p>
                             <p className='text'>Mi objetivo es aportar valor a cada proyecto en el que participo y seguir creciendo como profesional.</p>
-
                             <div className='btn-links'>
                                 <a href='https://github.com/paaolaola' target='_blank' rel='noopener noreferrer'>
                                     <GitHubIcon sx={{ fontSize: 40, color: '#ffbd59' }} className='animated-icon' />
@@ -205,63 +204,56 @@ const Home = () => {
                 </div>
             </div>
 
-           <div>
-    <section ref={projectsRef} className='box-projects'>
-        <h1 className='title'>Proyectos</h1>
-        <div className='content-projects'>
-            {isLoading ? (
-                Array.from(new Array(visibleProjects)).map((_, index) => (
-                    <div key={index} className='contenedor-card'>
-                        <Skeleton
-                        className='skeleton-card'
-                            variant='rectangular'
-                        />
-                    </div>
-                ))
-            ) : (
-                proyectos.slice(0, visibleProjects).map(({ id, image, name, github, url, routename }) => (
-                    <div key={id} className='contenedor-card'>
-                        <div className='container-box-projects'>
-                            <div className='image-gradient-overlay'>
-                                <img className='box-content-projects' src={image} alt={name} loading='lazy' />
-                            </div>
-                            <div className='box'>
-                                <div>
-                                    <h5 className='project-name'>{name}</h5>
+            <div>
+            <section ref={projectsRef} className='box-projects'>
+                <h1 className='title'>Proyectos</h1>
+                <div className='content-projects'>
+                    {proyectos.slice(0, projectsLoaded).map(({ id, image, name, github, url, routename }) => (
+                        <div key={id} className='contenedor-card'>
+                            <div className='container-box-projects'>
+                                <div className='image-gradient-overlay'>
+                                    <img className='box-content-projects' src={image} alt={name} loading='lazy' />
                                 </div>
-                                <div className='btn-sites-projects'>
-                                    <a href={github} target='_blank' rel='noopener noreferrer'>
-                                        <button className='box-btn'>GitHub</button>
-                                    </a>
-                                    <a href={url} target='_blank' rel='noopener noreferrer'>
-                                        <button className='box-btn'>Live Preview</button>
-                                    </a>
-                                    <button onClick={() => handleClick(routename)} className='box-btn'>
-                                        Ver más
-                                    </button>
+                                <div className='box'>
+                                    <div>
+                                        <h5 className='project-name'>{name}</h5>
+                                    </div>
+                                    <div className='btn-sites-projects'>
+                                        <a href={github} target='_blank' rel='noopener noreferrer'>
+                                            <button className='box-btn'>GitHub</button>
+                                        </a>
+                                        <a href={url} target='_blank' rel='noopener noreferrer'>
+                                            <button className='box-btn'>Live Preview</button>
+                                        </a>
+                                        <button onClick={() => handleClick(routename)} className='box-btn'>
+                                            Ver más
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                ))
-            )}
+                    ))}
+                    {loadingMore &&
+                        Array.from(new Array(4)).map((_, index) => (
+                            <div key={projectsLoaded + index} className='contenedor-card'>
+                                <Skeleton className='skeleton-card' variant='rectangular' />
+                            </div>
+                        ))}
+                </div>
+                <div className='box-btn-more'>
+                  {projectsLoaded > 4 && (
+                      <button onClick={showLessProjects} className='btn-more'>
+                          Menos proyectos
+                      </button>
+                  )}
+                    {projectsLoaded < proyectos.length && (
+                        <button onClick={showMoreProjects} className='btn-more'>
+                            Más proyectos
+                        </button>
+                    )}
+                </div>
+            </section>
         </div>
-        <div className='box-btn-more'>
-            {!showAllProjects && (
-                <button onClick={showMoreProjects} className='btn-more'>
-                    Más proyectos
-                </button>
-            )}
-            {showAllProjects && (
-                <button onClick={showLessProjects} className='btn-more'>
-                    Menos proyectos
-                </button>
-            )}
-        </div>
-    </section>
-</div>
-
-
             <div className='box-container'>
                 <div className='first-section'>
                     <div>

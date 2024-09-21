@@ -508,7 +508,7 @@
     text-shadow: 0px 0px 5px #ffbd59;
     margin-top: 1rem;
     padding: 1rem;
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(157, 157, 157, 0.1);
     border-radius: 30px;
     box-shadow: 0px 0px 4px #ffbd59;
     border: 1px solid #ffbd59;
@@ -532,6 +532,7 @@
     cursor: pointer;
     text-align: center;
     transition: border-color 0.3s, box-shadow 0.3s;
+    margin: 0 10px;
 
     @media (280px <= width <= 768px) {
         line-height: 24px;

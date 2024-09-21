@@ -29,7 +29,7 @@ const Cv = () => {
                 <div className="box-cv">
                     <img className="img-cv" src="./img/cv/cv-0.webp" alt="foto de cv" loading="lazy"/>
                     <button className="btn-cv" onClick={handleDownloadClickPdf}>
-                        Descarga PARA ATS
+                        Descarga CV
                     </button>
                 </div>
                 {/* <div className="box-cv">
