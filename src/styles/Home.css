@@ -18,6 +18,7 @@
     @media (280px <= width <= 768px) {
         flex-direction: column;
         margin-top: 1rem;
+        margin: 1rem 3rem 1rem 3rem;
     }
 }
 .names-perfil {
@@ -509,9 +510,9 @@
     margin-top: 1rem;
     padding: 1rem;
     background-color: rgba(157, 157, 157, 0.1);
-    border-radius: 30px;
-    box-shadow: 0px 0px 4px #ffbd59;
-    border: 1px solid #ffbd59;
+    border-radius: 15px;
+    box-shadow: 0px 0px 2px #ffbd59; 
+    /* border: 1px solid #ffbd59; */
 }
 .info-2 {
     display: flex;

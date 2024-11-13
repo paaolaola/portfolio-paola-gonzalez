@@ -5,7 +5,13 @@ const CertProvider = ({ children }) => {
     //Array de certificaciones actualizado
     //Se pueden agregar o quitar certificaciones de la lista para que se muestren en la sección de certificaciones
     const certs = [
-          {
+        {
+            id: 0,
+            image: "./img/certificaciones/certificacion-12.webp",
+            alt: "Udemy",
+            url: "https://www.udemy.com/certificate/UC-3d9be773-7fc2-4bf2-af62-a0a37be6fd77",
+        },
+        {
             id: 0,
             image: "./img/certificaciones/certificacion-11.webp",
             alt: "Coderhouse",

@@ -12,7 +12,7 @@ const Cv = () => {
     // };
     // Función para descargar el currículum para ATS
     const handleDownloadClickPdf = () => {
-        window.open("https://drive.google.com/file/d/1bmdiYG1uZxFLp0g-emt0WugAVMkQqBOW/view?usp=drive_link", "_blank");
+        window.open("https://drive.google.com/file/d/1NrQ_uNFc3i6lhxxCXv8O4zOLeNtkuPoO/view?usp=drive_link", "_blank");
     };
     // useEffect para que el scroll se posicione en la parte superior de la página
     useEffect(() => {

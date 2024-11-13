@@ -7,57 +7,72 @@ const StackProvider = ({ children }) => {
 
     const stacks = [
         {
+            id: 0,
+            images: "./img/stack/stack img/21.webp",
+            alt: "Modyo",
+        },
+        {
+            id: 0,
+            images: "./img/stack/stack img/20.webp",
+            alt: "Wordpress",
+        },
+        {
             id: 1,
+            images: "./img/stack/stack img/19.webp",
+            alt: "Astro",
+        },
+        {
+            id: 2,
             images: "./img/stack/stack img/1.webp",
             alt: "React js",
         },
         {
-            id: 2,
+            id: 3,
             images: "./img/stack/stack img/2.webp",
             alt: "Next js",
         },
         {
-            id: 3,
+            id: 4,
             images: "../img/stack/stack img/3.webp",
             alt: "TypeScript",
         },
         {
-            id: 4,
+            id: 5,
             images: "../img/stack/stack img/4.webp",
             alt: "JavaScript",
         },
         {
-            id: 5,
+            id: 6,
             images: "../img/stack/stack img/5.webp",
             alt: "Sass",
         },
         {
-            id: 6,
+            id: 7,
             images: "../img/stack/stack img/6.webp",
             alt: "Tailwind css",
         },
         {
-            id: 7,
+            id: 8,
             images: "../img/stack/stack img/7.webp",
             alt: "Git",
         },
         {
-            id: 8,
+            id: 9,
             images: "../img/stack/stack img/8.webp",
             alt: "GitHub",
         },
         {
-            id: 18,
+            id: 10,
             images: "../img/stack/stack img/18.webp",
             alt: "Firebase",
         },
         {
-            id: 9,
+            id: 11,
             images: "../img/stack/stack img/9.webp",
             alt: "Css",
         },
         {
-            id: 10,
+            id: 12,
             images: "../img/stack/stack img/10.webp",
             alt: "Html",
         },
@@ -67,33 +82,33 @@ const StackProvider = ({ children }) => {
         //     alt: "Storybook",
         // },
         {
-            id: 12,
+            id: 13,
             images: "../img/stack/stack img/12.webp",
             alt: "Bootstrap",
         },
 
         {
-            id: 13,
+            id: 14,
             images: "../img/stack/stack img/13.webp",
             alt: "Figma",
         },
         {
-            id: 14,
+            id: 15,
             images: "../img/stack/stack img/14.webp",
             alt: "Ps",
         },
         {
-            id: 15,
+            id: 16,
             images: "../img/stack/stack img/15.webp",
             alt: "Trello",
         },
         {
-            id: 16,
+            id: 17,
             images: "../img/stack/stack img/16.webp",
             alt: "Miro",
         },
         {
-            id: 17,
+            id: 18,
             images: "../img/stack/stack img/17.webp",
             alt: "Jira",
         },
