@@ -19,7 +19,7 @@ const Home = () => {
     // Estados para animación de subtítulo
     const [text, setText] = useState('');
     const [index, setIndex] = useState(0);
-    const fullText = 'DESARROLLADORA FRONT END';
+    const fullText = 'FRONTEND DEVELOPER';
 
     //useEffect para animación de subtítulo
     useEffect(() => {
@@ -55,22 +55,22 @@ const Home = () => {
     };
 
     // Estados para mostrar proyectos
-  const [visibleProjects, setVisibleProjects] = useState(4); 
+    const [visibleProjects, setVisibleProjects] = useState(4);
     const [loadingMore, setLoadingMore] = useState(false);
     const [projectsLoaded, setProjectsLoaded] = useState(4);
 
-  const showLessProjects = () => {
+    const showLessProjects = () => {
         setVisibleProjects(4);
-        setProjectsLoaded(4); 
+        setProjectsLoaded(4);
     };
 
-  const showMoreProjects = () => {
-        setLoadingMore(true); 
+    const showMoreProjects = () => {
+        setLoadingMore(true);
         setTimeout(() => {
-            setVisibleProjects(prevVisibleProjects => prevVisibleProjects + 4);
-            setProjectsLoaded(prev => prev + 4); 
-            setLoadingMore(false); 
-        }, 1000); 
+            setVisibleProjects((prevVisibleProjects) => prevVisibleProjects + 4);
+            setProjectsLoaded((prev) => prev + 4);
+            setLoadingMore(false);
+        }, 1000);
     };
 
     // Sección estudios
@@ -136,7 +136,7 @@ const Home = () => {
                     <a href='mailto:paolagonzalez.contacto@gmail.com' target='_blank' rel='noopener noreferrer'>
                         <GoogleIcon sx={{ fontSize: 30, color: '#ffbd59', filter: 'drop-shadow(0 0 15px #ffbd59)' }} />
                     </a>
-                    <a href='https://drive.google.com/file/d/1NrQ_uNFc3i6lhxxCXv8O4zOLeNtkuPoO/view?usp=drive_link' target='_blank' rel='noopener noreferrer'>
+                    <a href='https://drive.google.com/file/d/1F3Rm1cERwCt5JTKD-bFHXBQN27_kV2zs/view?usp=drive_link' target='_blank' rel='noopener noreferrer'>
                         <DescriptionIcon sx={{ fontSize: 30, color: '#ffbd59', filter: 'drop-shadow(0 0 15px #ffbd59)' }} />
                     </a>
                 </div>
@@ -160,15 +160,19 @@ const Home = () => {
                         <section ref={aboutRef} className='box-about'>
                             <h1 className='title'>Sobre Mi</h1>
                             <p className='text'>
-                                Soy Desarrolladora Frontend con experiencia en HTML, CSS, JavaScript y especialización en React. He trabajado en proyectos donde
-                                me he enfocado en crear interfaces de usuario atractivas y funcionales.
+                                ‣ Soy Frontend Developer con experiencia en HTML, CSS, JavaScript, React y desarrollo de sitios en WordPress. Me apasiona crear
+                                interfaces atractivas, intuitivas y eficientes, siempre enfocándome en la mejor experiencia de usuario.
                             </p>
                             <p className='text'>
-                                Disfruto colaborando en equipos multidisciplinarios y tengo conocimientos de metodologías ágiles como Scrum y Kanban para
-                                optimizar el desarrollo de los proyectos.
+                                ‣ He colaborado en equipos multidisciplinarios realizando grandes proyectos de la mano con UX/UI y desarrolladores Frontend y
+                                Backend con ayuda de metodologías ágiles.
                             </p>
-                            <p className='text'>En mi tiempo libre me dedico a aprender nuevas tecnologías para seguir mejorando mis habilidades.</p>
-                            <p className='text'>Mi objetivo es aportar valor a cada proyecto en el que participo y seguir creciendo como profesional.</p>
+                            <p className='text'>
+                                ‣ Actualmente me desempeño como Web Content Manager, gestionando y optimizando contenido de PLP y PDP con enfoque SEO en un
+                                sitio web E-commerce. También soy apoyo en desarrollo frontend creando landings de contenido, programación de banners, entre
+                                otros usando Modyo como CMS.
+                            </p>
+
                             <div className='btn-links'>
                                 <a href='https://github.com/paaolaola' target='_blank' rel='noopener noreferrer'>
                                     <GitHubIcon sx={{ fontSize: 40, color: '#ffbd59' }} className='animated-icon' />
@@ -180,7 +184,7 @@ const Home = () => {
                                     <GoogleIcon sx={{ fontSize: 40, color: '#ffbd59' }} className='animated-icon' />
                                 </a>
                                 <a
-                                    href='https://drive.google.com/file/d/1NrQ_uNFc3i6lhxxCXv8O4zOLeNtkuPoO/view?usp=drive_link'
+                                    href='https://drive.google.com/file/d/1F3Rm1cERwCt5JTKD-bFHXBQN27_kV2zs/view?usp=drive_link'
                                     target='_blank'
                                     rel='noopener noreferrer'
                                 >
@@ -205,55 +209,55 @@ const Home = () => {
             </div>
 
             <div>
-            <section ref={projectsRef} className='box-projects'>
-                <h1 className='title'>Proyectos</h1>
-                <div className='content-projects'>
-                    {proyectos.slice(0, projectsLoaded).map(({ id, image, name, github, url, routename }) => (
-                        <div key={id} className='contenedor-card'>
-                            <div className='container-box-projects'>
-                                <div className='image-gradient-overlay'>
-                                    <img className='box-content-projects' src={image} alt={name} loading='lazy' />
-                                </div>
-                                <div className='box'>
-                                    <div>
-                                        <h5 className='project-name'>{name}</h5>
+                <section ref={projectsRef} className='box-projects'>
+                    <h1 className='title'>Proyectos</h1>
+                    <div className='content-projects'>
+                        {proyectos.slice(0, projectsLoaded).map(({ id, image, name, github, url, routename }) => (
+                            <div key={id} className='contenedor-card'>
+                                <div className='container-box-projects'>
+                                    <div className='image-gradient-overlay'>
+                                        <img className='box-content-projects' src={image} alt={name} loading='lazy' />
                                     </div>
-                                    <div className='btn-sites-projects'>
-                                        <a href={github} target='_blank' rel='noopener noreferrer'>
-                                            <button className='box-btn'>GitHub</button>
-                                        </a>
-                                        <a href={url} target='_blank' rel='noopener noreferrer'>
-                                            <button className='box-btn'>Live Preview</button>
-                                        </a>
-                                        <button onClick={() => handleClick(routename)} className='box-btn'>
-                                            Ver más
-                                        </button>
+                                    <div className='box'>
+                                        <div>
+                                            <h5 className='project-name'>{name}</h5>
+                                        </div>
+                                        <div className='btn-sites-projects'>
+                                            <a href={github} target='_blank' rel='noopener noreferrer'>
+                                                <button className='box-btn'>GitHub</button>
+                                            </a>
+                                            <a href={url} target='_blank' rel='noopener noreferrer'>
+                                                <button className='box-btn'>Live Preview</button>
+                                            </a>
+                                            <button onClick={() => handleClick(routename)} className='box-btn'>
+                                                Ver más
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                    ))}
-                    {loadingMore &&
-                        Array.from(new Array(4)).map((_, index) => (
-                            <div key={projectsLoaded + index} className='contenedor-card'>
-                                <Skeleton className='skeleton-card' variant='rectangular' />
                             </div>
                         ))}
-                </div>
-                <div className='box-btn-more'>
-                  {projectsLoaded > 4 && (
-                      <button onClick={showLessProjects} className='btn-more'>
-                          Menos proyectos
-                      </button>
-                  )}
-                    {projectsLoaded < proyectos.length && (
-                        <button onClick={showMoreProjects} className='btn-more'>
-                            Más proyectos
-                        </button>
-                    )}
-                </div>
-            </section>
-        </div>
+                        {loadingMore &&
+                            Array.from(new Array(4)).map((_, index) => (
+                                <div key={projectsLoaded + index} className='contenedor-card'>
+                                    <Skeleton className='skeleton-card' variant='rectangular' />
+                                </div>
+                            ))}
+                    </div>
+                    <div className='box-btn-more'>
+                        {projectsLoaded > 4 && (
+                            <button onClick={showLessProjects} className='btn-more'>
+                                Menos proyectos
+                            </button>
+                        )}
+                        {projectsLoaded < proyectos.length && (
+                            <button onClick={showMoreProjects} className='btn-more'>
+                                Más proyectos
+                            </button>
+                        )}
+                    </div>
+                </section>
+            </div>
             <div className='box-container'>
                 <div className='first-section'>
                     <div>
@@ -300,14 +304,11 @@ const Home = () => {
                         </div>
                         <div className='text-hobbies'>
                             <p>
-                                Fuera del ámbito profesional, disfruto de diversas actividades al aire libre como viajar, hacer trekking, acampar y asistir a
-                                conciertos de música.
-                            </p>
-
-                            <p>
-                                En mi tiempo libre, me dedico a la fotografía análoga y a la creación de fotomontajes digitales con temática onírica agregando
-                                IA. Estas aficiones no solo son una parte importante de mi vida, sino que también han contribuido significativamente al
-                                desarrollo de mis habilidades creativas y visuales, complementando así mi experiencia como desarrolladora Front End.
+                                Antes de especializarme en Desarrollo Frontend, obtuve un título en Fotografía Profesional. Me apasiona hacer fotos con cámaras
+                                análogas en mis viajes y crear proyectos autorales en color y blanco y negro. Además, me gusta explorar la creatividad a través
+                                de fotomontajes digitales y la restauración de fotografías antiguas/dañadas, integrando herramientas de IA como soporte
+                                creativo. Esta experiencia me ha dado una visión estética y una sensibilidad visual que intento aplicar en mis proyectos de
+                                desarrollo web.
                             </p>
                         </div>
                     </div>

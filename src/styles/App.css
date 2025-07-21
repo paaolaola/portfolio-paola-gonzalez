@@ -9,7 +9,8 @@
 body {
     background: #5170ff;
     background: -webkit-linear-gradient(to top, #ff66c4 #cb6ce6 #5170ff);
-    background: linear-gradient(to top, #cf70aa, #cb6ce6, #5170ff);
+    background: linear-gradient(to top, #242424,
+    #5170ff, #ff66c4, #242424);
     font-size: 15px;
     color: #545454;
     min-height: 100vh;

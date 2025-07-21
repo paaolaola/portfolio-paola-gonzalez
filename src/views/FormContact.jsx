@@ -18,11 +18,11 @@ function FormContact() {
             <h1 className="title-form">Contacto </h1>
             <p className="text-form">
                 ¡Gracias por visitar mi portfolio! <br />
-                Si tienes preguntas, comentarios o simplemente quieres saludar, estaré atenta y con gusto te responderé.{" "}
+                Si tienes preguntas, comentarios, sugerencias o simplemente quieres saludar, contáctame. Estaré atenta y responderé a la brevedad.{" "}
             </p>
-            <div className="box-form">
+            {/* <div className="box-form">
                 <iframe id="typeform-full" src="https://6sujha3j6m7.typeform.com/to/cdgzp9LA?typeform-source=admin.typeform.com"></iframe>{" "}
-            </div>{" "}
+            </div>{" "} */}
             <div className="btn-home">
                 <Link to="/">
                     <button className="btn-404">
