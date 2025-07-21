@@ -111,21 +111,21 @@
     animation: step-end infinite;
 
     @media (996 <= width <= 1080px) {
-        font-size: 30px;
+        font-size: 43px;
         letter-spacing: 3px;
         margin-top: 2rem;
     }
 
     @media (768px <= width <= 996px) {
-        font-size: 30px;
+        font-size: 43px;
         letter-spacing: 3px;
         margin-top: 2rem;
     }
 
     @media (280px <= width <= 768px) {
-        font-size: 23px;
+        font-size: 33px;
         letter-spacing: 2px;
-        margin-top: 0.5rem;
+        margin-top: 0.8rem;
     }
 }
 
