@@ -7,6 +7,18 @@ const CertProvider = ({ children }) => {
     const certs = [
         {
             id: 0,
+            image: "./img/certificaciones/certificacion-14.webp",
+            alt: "Alura Latam",
+            url: "https://credsverse.com/credentials/52592ad4-f26e-4e6f-8081-5ed8cf13ad7c",
+        },
+        {
+            id: 0,
+            image: "./img/certificaciones/certificacion-13.webp",
+            alt: "Coderhouse",
+            url: "https://pub.coderhouse.com/legacy-certificates/678bdc4867be2fbac0aedfdf?lang=es",
+        },
+        {
+            id: 0,
             image: "./img/certificaciones/certificacion-12.webp",
             alt: "Udemy",
             url: "https://www.udemy.com/certificate/UC-3d9be773-7fc2-4bf2-af62-a0a37be6fd77",

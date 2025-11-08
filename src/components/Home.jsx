@@ -136,7 +136,7 @@ const Home = () => {
                     <a href='mailto:paolagonzalez.contacto@gmail.com' target='_blank' rel='noopener noreferrer'>
                         <GoogleIcon sx={{ fontSize: 30, color: '#ffbd59', filter: 'drop-shadow(0 0 15px #ffbd59)' }} />
                     </a>
-                    <a href='https://drive.google.com/file/d/1F3Rm1cERwCt5JTKD-bFHXBQN27_kV2zs/view?usp=drive_link' target='_blank' rel='noopener noreferrer'>
+                    <a href='https://drive.google.com/file/d/1X-Dn_uvskqkvs5B_HX614FPEyyyIlxML/view?usp=drive_link' target='_blank' rel='noopener noreferrer'>
                         <DescriptionIcon sx={{ fontSize: 30, color: '#ffbd59', filter: 'drop-shadow(0 0 15px #ffbd59)' }} />
                     </a>
                 </div>
@@ -184,7 +184,7 @@ const Home = () => {
                                     <GoogleIcon sx={{ fontSize: 40, color: '#ffbd59' }} className='animated-icon' />
                                 </a>
                                 <a
-                                    href='https://drive.google.com/file/d/1F3Rm1cERwCt5JTKD-bFHXBQN27_kV2zs/view?usp=drive_link'
+                                    href='https://drive.google.com/file/d/1X-Dn_uvskqkvs5B_HX614FPEyyyIlxML/view?usp=drive_link'
                                     target='_blank'
                                     rel='noopener noreferrer'
                                 >
@@ -305,10 +305,9 @@ const Home = () => {
                         <div className='text-hobbies'>
                             <p>
                                 Antes de especializarme en Desarrollo Frontend, obtuve un título en Fotografía Profesional. Me apasiona hacer fotos con cámaras
-                                análogas en mis viajes y crear proyectos autorales en color y blanco y negro. Además, me gusta explorar la creatividad a través
-                                de fotomontajes digitales y la restauración de fotografías antiguas/dañadas, integrando herramientas de IA como soporte
-                                creativo. Esta experiencia me ha dado una visión estética y una sensibilidad visual que intento aplicar en mis proyectos de
-                                desarrollo web.
+                                análogas y crear proyectos autorales. Además me gusta la edición a través de fotomontajes digitales y la restauración de
+                                fotografías, integrando herramientas de IA como soporte creativo. Esta experiencia me ha dado una visión estética y una
+                                sensibilidad visual que intento aplicar en mis proyectos de desarrollo web.
                             </p>
                         </div>
                     </div>

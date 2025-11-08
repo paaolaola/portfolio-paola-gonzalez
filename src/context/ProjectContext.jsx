@@ -12,7 +12,7 @@ const ProjectProvider = ({ children }) => {
     const proyectos = [
         {
             id: 3,
-            name: 'Techsite',
+            name: 'Techsite (Wordpress)',
             routename: 'techsite',
 
             url: 'https://dev-techsite-web.pantheonsite.io',

@@ -54,7 +54,7 @@ const Footer = () => {
                 </div>
             </div>
             <div>
-                <p className="text-footer">HECHO CON 💛 PAOLA GONZÁLEZ. 2024</p>
+                <p className="text-footer">HECHO CON 💛 PAOLA GONZÁLEZ. 2025</p>
             </div>
         </>
     );
